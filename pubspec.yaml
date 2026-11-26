@@ -1,0 +1,34 @@
+name: xc_ski_coach
+description: Privater Langlaufcoach für Jan und Karina.
+publish_to: none
+version: 0.6.0+6
+environment:
+  sdk: ^3.12.2
+workspace:
+  - packages/xc_coach
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  xc_coach: any
+  path_provider: ^2.1.5
+  file_selector: ^1.1.0
+  sqlite3_flutter_libs: 0.5.42
+  flutter_secure_storage: ^10.3.1
+  crypto: ^3.0.0
+  http: ^1.2.0
+  url_launcher: ^6.3.3
+  flutter_web_auth_2: ^5.1.0
+dev_dependencies:
+  integration_test:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/nordic-dawn.jpg
+    - docs/evidence/sources.json
+    - docs/evidence/claims.json

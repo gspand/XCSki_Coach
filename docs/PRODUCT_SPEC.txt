@@ -1,0 +1,965 @@
+KOMPLETTANWEISUNG: EIGENSTÄNDIGE LANGLAUF-TRAININGSPLATTFORM
+Version 1.1 | 26. November 2026 | Ergänzt: Lactate Scout und Laktatdiagnostik
+Auftraggeber: Jan Gspandl | Erste Athleten: Jan und Karina
+Adressat: der im lokalen Projekt arbeitende Entwicklungsagent
+
+Diese Anweisung beschreibt das vollständige Zielprodukt und die Reihenfolge seiner Umsetzung. Sie ist kein Bericht über bereits fertiggestellte Software. Aussagen aus früheren Chats über vorhandenen Code, Datenmigrationen, erfolgreiche Builds und Tests sind im Projekt zu überprüfen.
+
+1. AUFTRAG UND PRODUKTZIEL
+
+Entwickle eine eigenständige Trainingsplattform für Langläufer. Die Plattform übernimmt langfristig die Planungs-, Darstellungs-, Analyse- und Coachingaufgaben, für die ein Athlet heute TrainingPeaks verwendet, und ergänzt sie um einen wissenschaftlich fundierten, adaptiven Langlauftrainer.
+
+Alle Kernfunktionen, Datenmodelle, Berechnungen, Kalender, Diagramme, Editoren und Coach-Entscheidungen werden in unserem eigenen System umgesetzt. Das Produkt muss ohne TrainingPeaks-Konto und ohne GIULIA-Installation funktionieren. TrainingPeaks und GIULIA werden später optionale Integrationspartner. Garmin ist eine zentrale Datenquelle, jedoch keine Voraussetzung für lokale Planung, Dateiimport und Analyse.
+
+Der existierende Coach unter /Users/jangspandl/Documents/Giulia bildet den Ausgangspunkt. Er darf im GIULIA-Code weiterbestehen. Löse seine fachlichen Fähigkeiten in ein eigenes Produkt heraus und bewahre nachweislich funktionierende Logik. Ein neuer Name kann vorläufig bleiben; Markenfindung darf die Umsetzung nicht blockieren.
+
+Jan besitzt einen Lactate Scout. Diese vom Nutzer bestätigte Ausstattung wird verbindlich in die Diagnostik eingeplant. Das genaue Modell und dessen digitale Schnittstelle sind noch offen. Laktaterfassung und -auswertung müssen bereits ohne direkte Geräteanbindung vollständig nutzbar sein; die Modellklärung darf diesen Produktpfad nicht blockieren.
+
+Das erste nutzbare Produkt ist für Jan und Karina bestimmt. Beide erhalten getrennte Identitäten, Daten, Ziele, Trainingshistorien, Einwilligungen, Verbindungen und persönliche Modelle. Die Architektur soll später weitere Athleten sowie ein bezahltes Modul ermöglichen. Eine fest eingebaute Zwei-Personen-Sonderlösung ist zu vermeiden.
+
+Die zuletzt zurückgestellte Neuentwicklung des GIULIA-Dashboards bleibt zurückgestellt. Das eigene Dashboard gehört zum neuen Produkt. Zuerst werden die eigenständige Daten- und Coach-Kette und vorhandene Arbeiten stabilisiert; danach folgt die vollständige Erweiterung der neuen Plattform. Die zusätzlichen Garmin-Gesundheitsfunktionen bleiben Bestandteil des Zielumfangs und erhalten eine eigene Umsetzungsetappe.
+
+2. ARBEITSWEISE UND BESTANDSAUFNAHME
+
+Arbeite selbstständig in überprüfbaren Etappen. Nutze vorhandene lokale Projektanweisungen. Vor Änderungen: Repository-Zustand, laufende Arbeit, Branches und vorhandene Zielprojekte prüfen. Erhalte fremde Änderungen und arbeite bei Bedarf in einer isolierten Arbeitskopie. Eine Datenmigration wird zunächst an Kopien durchgeführt.
+
+Prüfe im tatsächlichen Code und in den tatsächlichen Daten:
+- Sprache, Frameworks, Projektstruktur, Build-Konfiguration und Plattformen.
+- Einstiegspunkte des Coaches, Tagesentscheidung, Wochenplanung und Saisonplanung.
+- Datenbanken, Archive, Backups, Profile, Zonen, Check-ins, Wettkampfziele und Trainingshistorie.
+- Aktivitätsimporte, FIT-Parser, Garmin-/Strava-Adapter und vorhandene Apple-Watch-Komponenten.
+- Tests, Datenmigrationen, bekannte Fehler und bereits implementierte neue App-Teile.
+- Fest hinterlegte Zugangsdaten, ohne sie in Logs, Berichte oder neue Dateien zu kopieren.
+
+Folgende frühere Aussagen sind gezielt zu verifizieren: gemeinsamer Entscheidungspfad für Tages- und Wochenansicht; Archiv mit beiden Profilen; bereits übernommene Mac-Datenbank; enthaltene Watch-App; behobene Langlauf-FIT-Zuordnung; Garmin-404. Weder ein alter Chatbericht noch ein erfolgreicher Build beweist die heutige Funktionsfähigkeit.
+
+Erstelle einen knappen Bestandsbericht: Funktion, konkrete Codequelle, Datenquelle, Status, Wiederverwendung, erforderliche Änderung und Nachweis. Existiert das neue Zielprojekt bereits, setze es fort. Ist der lokale Pfad in deiner Umgebung nicht verfügbar, melde den konkreten Zugriffsmangel und bearbeite unabhängig mögliche Spezifikation und Recherche. Erfinde keinen Projektzugriff.
+
+3. FUNKTIONSUMFANG UND PARITÄTSMATRIX
+
+Erfasse den aktuellen offiziellen Funktionsumfang von TrainingPeaks in einer datierten Vergleichsmatrix. Jede Funktion erhält Anforderungs-ID, Quellenlink, eigene Umsetzung, benötigte Daten, Plattformen, Umsetzungsetappe und prüfbares Abnahmekriterium. Die Matrix ist ein Arbeitsinstrument: Parität wird durch erfüllte Anforderungen belegt, nicht durch eine pauschale Behauptung.
+
+Pflichtbereiche des eigenen Produkts:
+- Athletenprofil, Onboarding, Geräte und Verbindungen.
+- Tagesdashboard und konfigurierbare Übersichten.
+- Trainingskalender in Tages-, Wochen-, Monats- und Saisonansicht.
+- Jahres-/Saisonplanung mit mehreren Wettkampf- und Entwicklungszielen.
+- Strukturierter Workout-Editor, Workout-Bibliothek und wiederverwendbare Trainingspläne.
+- Aktivitätsimport, Detailanalyse, Karten, Runden, Intervalle und frei wählbare Abschnitte.
+- Umfangs-, Intensitäts-, Belastungs-, Entwicklungs- und Soll-Ist-Analysen.
+- Langfristige und kurzfristige Belastungskurven, Formmodell und Planungsszenarien.
+- Bestleistungen, Leistungs-Dauer-Kurven und sportartspezifische Diagnostik.
+- Laktatmessungen, standardisierte Testprotokolle, Laktatkurven, methodisch bezeichnete Schwellen und daraus abgeleitete Zonenvorschläge.
+- Kraftplanung, Übungsbibliothek, Durchführung und Progression.
+- Technikbibliothek, Technikblöcke, Video-/Trainerfeedback und Lernverlauf.
+- Erholung, subjektive Check-ins, Schlaf, HRV und verfügbare Gesundheitsdaten.
+- Freiwilliges Modul für Zyklus, Symptome und individuelle Frauengesundheitsaspekte.
+- Verpflegung bei Training und Wettkampf sowie Energieversorgung.
+- Wissenschaftliche Wissensbasis und nachvollziehbare adaptive Coach-Entscheidungen.
+- Trainingsnotizen, Rückmeldungen, Erinnerungen, Suche, Filter, Berichte und Exporte.
+- Ausrüstung und Strecken-/Kursbibliothek, soweit für Langlauf relevant.
+- Später berechtigte Coach-/Athletenbeziehungen, geteilte Pläne und kommerzielle Zugänge.
+
+Prüfe in der Paritätsmatrix auch neuere Analyse- und Kraftfunktionen sowie Coach-Workflows. Angebote wie virtuelle Trainingswelten, öffentliche Planmarktplätze oder ein Trainerverzeichnis bekommen einen ausdrücklich dokumentierten Ausbauplatz und eigenen Umfang. Sie dürfen weder stillschweigend verschwinden noch die erste unabhängige Langlauf-App blockieren. Solange solche Punkte offen sind, darf kein vollständiger Ersatz des gesamten Fremdökosystems behauptet werden.
+
+Eigenständigkeit bedeutet eigene Logik und Datenhoheit. Geeignete gepflegte Bibliotheken für Diagramme, Datenbanken oder Dateiformate dürfen verwendet werden; Lizenz, Plattformunterstützung und Austauschbarkeit sind zu prüfen.
+
+4. PLATTFORMEN UND ARCHITEKTUR
+
+Zielplattformen: Android, iPhone, iPad, macOS, Windows und Apple Watch. Flutter ist die bevorzugte gemeinsame App-Basis für Mobilgeräte und Desktop. watchOS wird als natives Target, vorzugsweise mit SwiftUI, umgesetzt. Die offizielle Flutter-Plattformliste enthält Android, iOS, macOS und Windows, jedoch kein watchOS; siehe Technikquellen T01 und T02.
+
+Verwende einen klar gegliederten modularen Aufbau. Für die erste Version genügt ein gut strukturierter Kern mit einem überschaubaren Backend. Vermeide unnötige verteilte Dienste.
+
+Trenne fachlich:
+1. Identität, Athletenprofil, Berechtigungen und Einstellungen.
+2. Rohdaten, Dateiimporte, Normalisierung und Anbieteradapter.
+3. Aktivitätsdaten, Zeitreihen, Gesundheitsbeobachtungen und Datenqualität.
+4. Berechnungen und Leistungsdiagnostik.
+5. Ziele, Saisonplanung, Kalender, Workouts und Bibliotheken.
+6. Coach-Entscheidungen, Rückmeldungen und persönliche Anpassung.
+7. Wissenschaftliche Quellen, Evidenzaussagen und freigegebene Regeln.
+8. Ansichten, Geräte-Synchronisierung und Benachrichtigungen.
+9. Spätere GIULIA-/TrainingPeaks-Adapter und Bezahlberechtigungen.
+
+Der fachliche Kern darf keine UI-Abhängigkeit und keine zwingende Abhängigkeit von einem Datenanbieter haben. Lege fest, wo autoritative Entscheidungen berechnet und gespeichert werden. Verwende eine gemeinsame deterministische Implementierung beziehungsweise klar versionierte Dienste; pflege keine voneinander abweichenden Coach-Algorithmen in Flutter, Backend und Swift.
+
+Lokal müssen Kalender, zuletzt synchronisierte Historie, Workoutdetails, Check-ins und die letzte gültige Empfehlung nutzbar sein. Änderungen erhalten eine zuverlässige Warteschlange. Definiere Konfliktregeln, Wiederholungen, Versionen, Löschmarkierungen und Datenabgleich. Offline erzeugte Vorschläge müssen bis zur Klärung ihres Versionsstandes als solche erkennbar sein.
+
+Verspätete und ungeordnete Ereignisse dürfen keine neueren Revisionen überschreiben, gelöschte Daten wiederherstellen oder nach einem Widerruf weiter importieren. Sperre ausstehende Retry-/Backfill-Jobs beim Entzug der Verbindung. Löschmarkierungen müssen Offline-Phasen und Wiederverbindungen überstehen.
+
+Auf dem Desktop braucht es Maus-/Tastaturbedienung, große Tabellen und mehrspaltige Analyse. Auf dem Handy stehen Tagesentscheidung und schnelle Erfassung im Vordergrund. Die Watch erhält einen kleinen auf Training ausgerichteten Funktionsumfang. Nicht alle Geräte müssen dieselbe Informationsdichte zeigen, aber dieselbe freigegebene Entscheidung.
+
+5. DOMÄNENMODELL UND DATENWAHRHEIT
+
+Mindestens erforderlich sind Objekte für Account, Athlete, Consent, ProviderConnection, RawImport, Activity, ActivityStream, Lap, HealthObservation, DailyCheckIn, ZoneSet, PerformanceTest, LactateMeasurement, LactateTestSession, TestStage, ThresholdEstimate, ZoneProposal, Equipment, Route, RaceGoal, SeasonPlan, PlannedSession, WorkoutDefinition, Exercise, TechniqueDrill, CompletedSet, CoachDecision, PlanRevision, EvidenceSource, EvidenceClaim, CoachRule und SyncEvent.
+
+Account und Athlet sind getrennte Begriffe. Auch wenn anfangs jeweils eine Person ein Profil verwendet, muss jede Datenabfrage, Hintergrundaufgabe, Datei, Empfehlung und Gerätesynchronisierung den richtigen Athletenkontext tragen. Eine auswählbare Profilkarte allein ist keine Zugriffskontrolle.
+
+Für Daten und daraus berechnete Werte speichere, soweit sinnvoll:
+- Eindeutige ID, Athlete-ID und Herkunftsverbindung.
+- Original-ID, Originaldatei beziehungsweise autorisierte Rohantwort, Hash und Importzeit.
+- UTC-Zeit, ursprünglichen Offset, relevante lokale Zeitzone und fachliches Tagesdatum.
+- Einheit, Messverfahren, Quelle, Gerät, Genauigkeits-/Qualitätsangaben.
+- Unterscheidung: gemessen, vom Gerät geschätzt, selbst berichtet oder von uns berechnet.
+- Parser-, Schema-, Zonen-, Algorithmus- und Regelversion.
+- Nutzungsberechtigung, Datenherkunft und gegebenenfalls Aufbewahrungsgrenze.
+
+Rohdaten bleiben bis zu einer vorgesehenen Löschung nachvollziehbar; Bereinigungen erfolgen in abgeleiteten Versionen. Änderungen am Parser dürfen eine erneute Berechnung ermöglichen, ohne Originale umzuschreiben. Herkunfts- und Nutzungsgrenzen gelten auch für abgeleitete Daten.
+
+Geplante Einheit und absolvierte Aktivität sind separate Objekte mit expliziter Zuordnung. Unterstütze mehrere Aktivitäten pro Plan sowie aufgeteilte oder zusammengeführte Aufzeichnungen. Datenlücken, bestätigte Ruhetage und fehlende Synchronisierung sind unterschiedliche Zustände.
+
+Zonen und Schwellenwerte haben Gültigkeitszeiträume und Sport-/Technikbezug. Ein heute geänderter Schwellenwert darf alte Analysen nicht unbemerkt verändern. Historische Neubewertungen werden als neue Berechnungsversion sichtbar. Fehlende Schwellen werden als fehlend geführt.
+
+Eine Migration muss die Vollständigkeit pro Profil belegen: Datensatzzahlen je Tabelle/Objekttyp, referenzielle Zuordnung, relevante Summen, Zeiträume, Stichproben und nicht migrierbare Felder. Beschreibe Rückkehr zum vorherigen Zustand. Keine gemeinsame Trainingsdatenbank als versteckte Laufzeitabhängigkeit von GIULIA.
+
+6. LANGLAUFSPEZIFISCHE SPORTSYSTEMATIK
+
+Unterscheide Schnee-Klassisch, Schnee-Skating, Skiroller-Klassisch, Skiroller-Skating, Doppelstocktraining, SkiErg, Skiimitation/Stocklauf, Laufen, Radfahren, allgemeine Ausdauer, Kraft, Mobilität und Regeneration. Reine Technikblöcke können Teil einer Ausdauereinheit sein. Erhalte den Originalsportcode zusätzlich zur eigenen Zuordnung.
+
+Untertechniken werden in einem zentralen Begriffsregister geführt: Diagonalschritt, Doppelstock, Doppelstock mit Zwischenschritt, Grätenschritt sowie Skating-Untertechniken einschließlich G2/V1/1:2 asymmetrisch, G3/V2/1:1, G4/V2 alternate/1:2 symmetrisch und Skating ohne Stöcke. Regionale Bezeichnungen und abweichende Zählweisen werden als Aliase erklärt, nicht als unterschiedliche Sportarten missverstanden.
+
+Erfasse Disziplin, Untergrund, Schnee-/Gleitbedingungen, Gelände, Höhenprofil, Höhe, Temperatur, Material und Technik, wenn diese Daten vorliegen. Fehlende Rahmenbedingungen bleiben unbekannt. Gleiche Geschwindigkeit auf unterschiedlichen Schneeverhältnissen ist kein ausreichend kontrollierter Leistungsvergleich.
+
+Rennprofile unterscheiden Sprint, Distanzrennen und Langdistanz sowie Klassisch, Skating und Doppelstockausrichtung. Die Anforderungen bestimmen die Planung; ein 50-km-Rennen erhält nicht einfach einen verlängerten Sprintplan.
+
+7. IMPORTE, DATEIEN UND VERBINDUNGEN
+
+7.1 Gemeinsamer Importpfad
+
+Unterstütze FIT prioritär, ergänzend TCX, GPX und strukturierte manuelle Eingaben. CSV/JSON dienen transparentem Datenexport und dokumentierten Importfällen. Formate mit weniger Informationen dürfen keine scheinbar vollständigen Sensorströme erzeugen.
+
+Dekodiere Sport/Subsport, Timer-/Pausenereignisse, Zeitstempel, Runden, Position, Höhe, Herzfrequenz, Kadenz und tatsächliche Leistungsfelder anhand des verwendeten SDK-Profils. Erhalte unbekannte beziehungsweise zusätzliche Felder nachvollziehbar. Behandle beschädigte Dateien, Invalid-Werte, unrealistische Spitzen und Lücken ausdrücklich.
+
+Pflichtregeln: Langlauf ohne Watt bleibt Langlauf. Geschwindigkeit wird niemals als Watt übernommen. Fehlende Leistung ist kein gemessener Nullwert. Garmin-Skileistung, SkiErg-Leistung und Radleistung bleiben nach Herkunft und Verfahren getrennt. Netto-Trainingszeit, verstrichene Zeit und Bewegungsschätzung sind getrennte Größen.
+
+Dedupliziere innerhalb eines Athleten über Anbieterkennung und Inhalt beziehungsweise verlässliche Merkmale. Dieselbe Einheit von Gerätedatei, Garmin und einer späteren anderen Verbindung darf nicht dreimal in die Belastung eingehen. Konflikte und unsichere Zusammenführungen müssen nachvollziehbar bleiben. Erhalte für jeden Datenwert seine Herkunft; eine Zusammenführung hebt Nutzungsgrenzen nicht auf.
+
+Bidirektionale Synchronisierung benötigt ein Mapping zwischen eigener ID, externer ID, Ursprung und Revision. Ein exportierter Workout darf beim Rückimport nicht als neuer Plan erscheinen; ein Plan ist auch dann keine absolvierte Aktivität. Verhindere Synchronisierungsschleifen. Pagination und historische Importe erhalten Checkpoints und lassen sich ohne Duplikate fortsetzen.
+
+7.2 Garmin
+
+Erstelle eine Capability-Matrix für Profil, Zugangsmodell, Datenkategorie, konkretes Feld und Gerät. Wunschumfang: Aktivitäten und Zeitreihen; Schlaf; Ruhepuls; HRV; Stress; Body Battery; verfügbare Erholungs-/Trainingsmetriken; gegebenenfalls Atmung, weitere relevante Gesundheitsdaten und Women’s Health; später Workout-/Kalenderexport.
+
+Verifiziere verfügbare Endpunkte und tatsächliche Berechtigungen. Die öffentlich dokumentierte Personal API ist für eigene Daten vorgesehen; die Business-APIs dienen Mehrnutzeranwendungen. Personal ist laut Übersicht pull-only. Business Starter enthält unter anderem Activity, Health, Training und Women’s Health, hat aber eingeschränkte Nutzerkapazität und keine historische Datenabfrage. Das ist ein technischer Stand zum Recherchezeitpunkt, keine Garantie für einen erteilten Zugang. Prüfe vor Umsetzung die aktuellen Bedingungen und die konkrete Betriebsform für Jan und Karina. Quellen T03 bis T09.
+
+Credentials werden je Athlet sicher gespeichert. Personal- und Business-Authentifizierung erhalten getrennte Implementierungen. In der geprüften Personal-FAQ sind Access-Tokens auf bis zu 24 Stunden begrenzt und Refresh-Tokens nicht vorgesehen; dort ist ein erneuter Tokenbezug über den persönlichen Key erforderlich. Nicht blind einen generischen Refresh-Flow einbauen.
+
+Garmin weist darauf hin, dass nicht jede Kennzahl verfügbar ist. Die App zeigt je Feld: verfügbar, Berechtigung fehlt, nicht unterstützt, nicht aufgezeichnet, noch nicht synchronisiert oder vorübergehend fehlgeschlagen. Ein leerer API-Wert wird weder als Null noch als gute Erholung dargestellt.
+
+Importiere historische Daten bei Bedarf über autorisierte Dateiarchive. Ein alter 404-Fehler beweist weder funktionierende noch grundsätzlich unmögliche Garmin-Anbindung. Untersuche die konkret betroffene Schnittstelle. Verwende keine private Passwort-/Scraping-Lösung als unbegründete Voraussetzung.
+
+Für Workout-Export prüfe Sportart, Zieltyp, Schritte, Wiederholungen und unterstützte Geräte. Erfolgreicher API-Aufruf, Eintrag im Garmin-Kalender, Übertragung auf das Gerät und ausführbarer Workout sind getrennte Nachweise. Wenn ein Langlaufzieltyp nicht unterstützt wird, gib eine ehrliche gerätespezifische Alternative aus und erhalte den vollständigen eigenen Plan.
+
+7.3 Strava
+
+Strava bleibt ein gewünschter, optionaler Adapter. Die am 26.11.2026 geprüfte API Policy enthält jedoch erhebliche Einschränkungen zu konkurrierenden Anwendungen, Analyse, Datenzusammenführung und KI-Nutzung einschließlich Prompt-Kontext, RAG und abgeleiteter Daten. Deshalb gilt für dieses Produkt zunächst ein Integrationsblocker: Adapter deaktiviert halten, bis der konkrete Einsatz nachweislich zulässig beziehungsweise freigegeben ist. Eine bloße technische Trennung innerhalb der App löst ein Verbot der Gesamtanwendung nicht. Quellen T10 und T11.
+
+Keine Strava-API-Daten oder daraus abgeleiteten Werte in Coach, Embeddings, Modelltraining oder eigene Analysen einspeisen, solange die nötige Grundlage fehlt. Nicht durch Umbenennen, Anonymisieren oder Export/Reimport umgehen. Unabhängig direkt vom Gerät oder von Garmin bezogene Daten bilden bei entsprechender Berechtigung einen eigenen Datenpfad mit eigener Herkunft.
+
+Bei später zulässiger Integration: OAuth, getrennte Athletentokens, tatsächlich gewährte Scopes, Quoten, Webhooks, Widerruf, Löschung und Aufbewahrung gemäß den dann geltenden Bedingungen umsetzen. Fehlender Strava-Zugang blockiert die Kernplattform nicht.
+
+7.4 Weitere Adapter
+
+Apple Health kann später ein eigener optionaler Datenpfad sein, sofern der Nutzer ihn aktiviert. Import und Export müssen Duplikate aus Garmin-/Watch-/Health-Synchronisierung verhindern. Android-spezifische Gesundheitsanbindungen nur als eigene, überprüfte Capability ergänzen.
+
+TrainingPeaks wird später angebunden, sofern Partnerzugang verfügbar ist. Die offizielle API-Seite beschränkt Zugang auf genehmigte Entwickler; persönlicher Zugang ist dort nicht vorgesehen. GIULIA erhält später eine versionierte Schnittstelle mit expliziten Datenfreigaben und bezahlten Berechtigungen. Keine dieser Integrationen wird zur Voraussetzung des Kerns. Quelle T12.
+
+8. EIGENE ANALYSEN UND BELASTUNGSMODELLE
+
+8.1 Belastung
+
+Unterstütze parallele Methoden mit klarer Bezeichnung: Zeit/Distanz/Höhenmeter als äußere Belastung, sRPE, dokumentierte herzfrequenzbasierte Last und bei geeigneten Daten leistungsbasierte Last. Kraft und neuromuskuläre Belastung erhalten eigene Dimensionen.
+
+Für sRPE gilt als implementierbarer Ausgangspunkt: Last = definierte Einheitsdauer in Minuten × subjektive Session-RPE auf einer dokumentierten 0–10-Skala. Erfassungszeitpunkt und Dauerdefinition dokumentieren. Beispiel für den Rechentest: 60 Minuten × RPE 4 = 240 willkürliche Einheiten. Das ist keine TSS-Einheit und kein gemessener physiologischer Zustand. Grundlage: Foster et al. 2001 im Quellenanhang.
+
+Nicht sRPE, HR-Last und leistungsbasierte Punkte derselben Einheit aufsummieren. Jede Tageskurve muss wissen, welche Lastmethode sie benutzt. Methodenwechsel und Schätzungen kennzeichnen; Vergleichbarkeit gegebenenfalls zuerst kalibrieren. Für Kraft erfasse mindestens Übung, Sätze, Wiederholungen, äußere Last, RIR/RPE und beanspruchte Regionen. Niedriger Durchschnittspuls darf kein schweres Krafttraining zu einem Erholungstag machen.
+
+8.2 Langfristige/kurzfristige Last und Form
+
+Implementiere eigene nachvollziehbare Belastungskurven mit funktionalem Gegenstück zu CTL, ATL und TSB. Verwende im Produkt klare eigene Bezeichnungen und dokumentiere etwaige terminologische oder formale Kompatibilität. Behaupte keine numerische Gleichheit mit proprietären Kennzahlen ohne nachgewiesene Definition und identische Eingangsgrößen.
+
+Ein transparenter technischer Ausgangspunkt ist eine exponentielle Glättung:
+L[t] = L[t-1] + alpha × (D[t] - L[t-1])
+alpha = 1 - exp(-1 / tau), bei einem Zeitschritt von einem Tag.
+
+Kurze und lange Zeitkonstante getrennt konfigurieren. Häufig verwendete 7-/42-Tage-Einstellungen sind allenfalls dokumentierte Konventionen, keine individuell gemessenen biologischen Konstanten. Wenn alpha = 1/tau als alternative Diskretisierung verwendet wird, muss dies eine andere dokumentierte Methode sein. Initialisierung, Aufwärmzeit, Zeitzone, Tagesgrenze, Prognosebeginn und Fehlwertbehandlung sind Teil der Spezifikation.
+
+Ein Formindikator kann als Differenz der definierten langen und kurzen Lastkurve dargestellt werden. Lege fest, ob der Wert den Zustand vor oder nach dem jeweiligen Trainingstag abbildet. Fehlende Importtage dürfen nicht still als Ruhetage behandelt werden. Szenarien mit geplanten Einheiten werden ab ihrem Beginn optisch von der tatsächlichen Historie getrennt.
+
+Diese Kurven modellieren Belastung und mögliche Anpassung. Sie messen weder tatsächliche Fitness noch klinische Ermüdung noch Verletzungswahrscheinlichkeit. Vermeire 2022 und Marchal 2025 sind Pflichtquellen für Modellgrenzen. Keine automatische Verletzungsampel aus einer einzelnen Ratio oder einer pauschalen Laststeigerungsregel.
+
+8.3 Leistungsdiagnostik
+
+Darzustellen sind Bestleistungen und Entwicklung nach Sport, Technik, Gerät und vergleichbaren Bedingungen; Herzfrequenz-/Intensitätsverteilungen; Leistung über unterschiedliche Dauern, wenn geeignete Leistungsdaten vorliegen; standardisierte Feld-/Labortests; Entwicklung von Schwellen, Kraft, Doppelstockfähigkeit und Leistung nach Vorermüdung.
+
+CP-/W′-Modelle und ähnliche Verfahren verlangen geeignete Tests, Daten und Güteprüfungen. CP, FTP und Laktatschwelle werden nicht gleichgesetzt. Eine Herzfrequenz-Dauer-Kurve ist eine deskriptive Ansicht und kein automatischer Fitnessbeweis. Geschwindigkeitsrekorde auf Schnee sind ohne Kontext keine saubere Rangfolge physiologischer Leistung.
+
+Durability und Pulsdrift bleiben unterscheidbar. Definiere vergleichbare Belastungsabschnitte, Datenqualität und Einflussfaktoren. Kein allgemeiner Durability-Score aus einem beliebigen GPS-Training. Jede Kennzahl erhält Formel, Einheit, Gültigkeitsbereich, Datenanforderungen, Version und Referenzfälle.
+
+8.4 Laktatdiagnostik und Lactate Scout
+
+8.4.1 Ziel und Arbeitsabläufe
+
+Laktat wird als eigener gemessener Kanal der Leistungsdiagnostik und als ergänzender Kontext für Training verwendet. Entwickle drei vollständige Abläufe: standardisierter Stufentest, gezielte Einzelmessungen während beziehungsweise nach definierten Trainingsabschnitten und Vergleich wiederholter Tests unter vergleichbaren Bedingungen. Ergänze protokollierte konstante Belastungstests dort, wo eine konkrete Fragestellung und ein geeignetes fachlich geprüftes Protokoll dies erfordern. Die erste Version muss auch manuelle Übernahme bestehender Labor-/Trainertests ermöglichen.
+
+Vor jedem Test werden Athlet, Sport/Technik, Testziel und Protokoll gewählt. Eine Testvorlage enthält Aufwärmen, Stufendauer, Belastungssteigerung, eventuelle Messpausen, geplante Probenzeitpunkte und Abbruchmöglichkeiten. Sie ist vom tatsächlichen Testablauf getrennt. Dokumentiere Abweichungen, verkürzte Stufen und verspätete Messungen. Keine allgemeine Maximaltestpflicht; konkrete Belastungsprotokolle und deren Eignung benötigen eigene fachliche Beurteilung.
+
+8.4.2 Messwert und Kontext
+
+Jede Laktatmessung erhält Athlet, Test-/Aktivitätszuordnung, gegebenenfalls Stufe oder Intervall, Wert in mmol/L, tatsächlichen oder als geschätzt gekennzeichneten Probenzeitpunkt, Ergebnis-/Importzeitpunkt und Abstand zum Stufenende. Ruhe-, Belastungs- und Nachbelastungsmessungen bleiben unterscheidbar. Das sind einzelne Blutmessungen; zwischen den Proben wird keine kontinuierlich gemessene Laktatkurve behauptet.
+
+Zusätzlich erfassen: tatsächlich absolvierte Stufendauer und Pause; äußere Belastung mit Einheit, Quelle und Mittelungszeitraum; Herzfrequenz mit Quelle und Aggregationsmethode; RPE; Sport und Untertechnik; Gerät/Modell und bei Bedarf Gerätespeicher-ID; Entnahmestelle und Probenmatrix; Qualitätskennzeichen und Korrekturhistorie. Verfügbare Bedingungen wie Schnee, Rollwiderstand, Steigung, Temperatur, Vorbelastung und Verpflegung können ergänzt werden. Charge, Streifencode, Ablaufdatum und Kontrollstatus sind optionale Qualitätsfelder, soweit verfügbar.
+
+Unterscheide beispielsweise SkiErg-Leistung von Skileistungsschätzungen und Laufbandgeschwindigkeit plus Steigung. Aus einer Laktatprobe entstehen weder gemessene Watt noch VO2max. Ein fehlender Kontextwert wird nicht erfunden. Unbekannter Probenzeitpunkt darf nicht als exakt gelten.
+
+Das Gerät kann für verschiedene Personen eingesetzt werden. Eine Bluetooth-Verbindung oder Speicher-ID identifiziert keinen Athleten. Die Zuordnung ist ausdrücklich zu bestätigen; unklare importierte Proben bleiben bis zur Klärung unzugeordnet. Dedupliziere anhand einer belastbaren Kombination aus Gerätekennung, Originalkennung, Zeit und Importherkunft. Manuell vorerfasste und später digital übertragene Werte dürfen nicht doppelt gezählt werden.
+
+8.4.3 Auswertung, Schwellen und Zonen
+
+Zeige Rohpunkte und verwendete Auswertungsmethode. LT1-/LT2-Schätzungen, Dmax-/modifizierte-Dmax-Verfahren und feste Konzentrationsreferenzen sind unterschiedliche Methoden und werden nicht austauschbar bezeichnet. Unterstütze nur vollständig spezifizierte, für das konkrete Protokoll begründete Verfahren; Version, erforderliche Stufen, Auswahlregeln, Kurvenanpassung und Ableitungsgrenzen dokumentieren. Falls Daten oder Protokoll nicht ausreichen, lautet das Ergebnis nicht zuverlässig bestimmbar. Kein erzwungener Schwellenwert aus wenigen Punkten und keine Extrapolation über den beobachteten Bereich als gesicherte Diagnose.
+
+Keine automatische Regel LT1 = 2 mmol/L oder LT2 = 4 mmol/L. Solche Konzentrationen dürfen als klar benannte Referenzlinien erscheinen, aber nicht als automatisch individuelle Stoffwechselgrenzen. Ein Laktatwert ist keine direkte Anzeige fehlenden Sauerstoffs oder eines schlagartigen Wechsels in einen rein anaeroben Stoffwechsel. Grundlagen und Begriffsgrenzen: LA01 und LA07.
+
+Ein aus einer Stufenkurve geschätzter LT2 ist keine direkt gemessene MLSS. Konstante Belastungstests, MLSS-Ermittlung, Critical Power und FTP behalten ihre eigenen Methodenkennungen. Eine Untersuchung im Doppelstock zeigt gerade, warum feste Werte oder einzelne Kurvenmethoden nicht ungeprüft übernommen werden dürfen; ihr Gruppenmittel darf ebenfalls nicht zur neuen festen Vorgabe werden. Quellen LA03 und LA06.
+
+Zonenvorschläge gelten für Athlet, Sport/Technik, Protokoll, Datum und Methode. Skating, Doppelstock, Laufen und SkiErg werden nicht automatisch gleichgesetzt. Schlage passende Puls-/Leistungsbereiche auf Basis der tatsächlich erhobenen Testdaten vor und zeige die Begründung. Freigabe und Versionswechsel werden protokolliert; vorhandene Zonen werden nicht still überschrieben. Nur der explizit freigegebene Zonensatz beeinflusst neue Workoutziele und Coach-Entscheidungen. Historische Tests und Analysen behalten ihre ursprünglichen Versionen.
+
+8.4.4 Verlauf und Einfluss auf den Coach
+
+Vergleiche Tests bevorzugt bei gleichem Gerät, Protokoll, Sport/Technik und ausreichend ähnlichen Bedingungen. Markiere Geräte- und Protokollwechsel. Unterschiede werden zusammen mit Messunsicherheit und natürlicher Schwankung beurteilt; keine automatischen allgemeinen Gerätekorrekturfaktoren aus einer einzelnen Studie. Quellen LA02, LA04 und LA05.
+
+Niedrigeres Laktat bei derselben nominellen Belastung ist allein kein Fortschrittsbeweis. Testkontext, Belastungsgefühl und weitere Leistungsdaten werden gemeinsam betrachtet. Vorbelastung, Versorgung und Messbedingungen können die Interpretation beeinflussen. Ein einzelner unerwarteter Wert löst weder eine neue Schwelle noch automatisch höhere Trainingslast aus. Prüfe zuerst Kontext und Qualität. Laktat liefert keine eigenständige Diagnose von Übertraining, Energiemangel oder Krankheit und ersetzt die übrigen Signale des Coach-Loops nicht.
+
+Ein freigegebener Test kann die Intensitätsvorgaben künftiger Einheiten präzisieren. Einzelproben können helfen, eine geplante Belastung im Kontext zu beurteilen. Messungen sind freiwillig und gezielt; der Coach bleibt ohne Blutmessung bei jeder Einheit funktionsfähig. Kraft- und Technikprogression werden nicht allein aus Laktatwerten gesteuert.
+
+8.4.5 Darstellung und Bedienung
+
+Erstelle einen Bereich Diagnostik > Laktat mit Testliste, Rohwerttabelle, Kurven über geeigneter äußerer Belastung und Herzfrequenz, Probenmarkierungen in der Aktivitätszeitreihe, Methodenwahl, Qualitätshinweisen, Testvergleich und versioniertem Zonenvorschlag. Linien zwischen Messpunkten sind Visualisierung beziehungsweise Fit, keine zusätzlichen Messungen. Zeige Modellunsicherheit nur dann numerisch, wenn sie mit einer dokumentierten Methode tatsächlich berechnet wurde.
+
+Die schnelle Eingabe braucht Athlet, Wert und Zeitpunkt/Zuordnung; Details können ergänzt werden. Verarbeite deutsches Dezimalkomma korrekt. Korrekturen müssen rückverfolgbar sein. Geräteanzeigen unterhalb/oberhalb des Messbereichs werden als begrenzte Angaben gespeichert, nicht in Null oder einen erfundenen exakten Wert umgewandelt. Exporte enthalten Rohwerte, Kontext, Protokoll und Auswertungsmethode, damit ein Trainer oder Sportwissenschaftler sie nachvollziehen kann.
+
+8.4.6 Geräteintegration und Qualitätsgrenzen
+
+Ermittle zunächst das konkrete Lactate-Scout-Modell. Reihenfolge: manuelle Eingabe vollständig umsetzen; tatsächliche Beispielexporte und deren Formate prüfen; eine direkte Übertragung danach über eine dokumentierte, verfügbare Schnittstelle und reale Gerätetests ergänzen. Bluetooth allein belegt kein frei zugängliches SDK und keine schon funktionierende Flutter-/iOS-Integration. Eine zusätzliche Hersteller- oder Partner-App ist keine Pflichtabhängigkeit für unsere eigene Auswertung.
+
+Für den Scout Sport bestätigen die offiziellen Quellen BLE und einen dokumentierten PC-Übertragungsweg. Das Handbuch nennt als Messbedingungen +10 bis +45 °C; Messungen direkt im Frost dürfen deshalb nicht vorausgesetzt werden. Modellgerechte Temperatur-/Probenqualität und Hygienehinweise werden aus der jeweiligen Anleitung abgeleitet, keine medizinische Diagnose aus Sportmesswerten. Quellen T25 und T26.
+
+Wichtig beim Import aus dem Scout Sport: Der zu einem Stufentestwert gespeicherte Puls entspricht laut Handbuch dem Maximum der letzten Minute vor der Laktatmessung. Er darf nicht als mittlerer Stufenpuls gespeichert werden. Eine separat aus Garmin berechnete mittlere Herzfrequenz ist ein eigener Wert mit eigenem Zeitfenster. Exakte Modelleigenschaften erst nach Identifikation des vorhandenen Geräts übernehmen. Quelle T26, Abschnitte 4.2 und 5.
+
+9. PLANUNG, KALENDER UND WORKOUT-EDITOR
+
+Der Kalender erlaubt Anlegen, Kopieren, Verschieben, Wiederholen, Bearbeiten, Zuordnen, Abschließen und Kommentieren von Einheiten. Drag-and-drop am Desktop, gleichwertige bedienbare Aktionen am Handy. Zeige geplante und absolvierte Dauer, Distanz, Intensität und Belastung mit klaren Einheiten. Wochenzusammenfassungen, Suche, Filter, Kalenderexport und Notizen gehören dazu.
+
+Die Saisonplanung berücksichtigt Wettkampfdatum, Priorität A/B/C, Disziplin, Distanz, voraussichtliche Dauer, Gelände, verfügbare Trainingszeit, Trainingsalter, Schnee-/Skirollermöglichkeiten, Reisen und berufliche Einschränkungen. Plane allgemeine Vorbereitung, spezifischen Aufbau, Wettkampfphasen, Tapering und Übergangsphasen. Mehrere Ziele und Planänderungen müssen möglich sein.
+
+Plane nicht starr eine Profi-Jahresstundenzahl herunter. Umfang und Progression ergeben sich aus Ausgangslage, bisherigen verträglichen Belastungen, Alltag und Ziel. Ausgefallene Einheiten erzeugen keine automatische Trainingsschuld, die am Folgetag nachgeholt wird. Ein vom Athleten fixierter Termin bleibt geschützt, bis eine Änderung ausdrücklich angenommen wird.
+
+Der Workout-Editor unterstützt Aufwärmen, Hauptteile, Wiederholungsgruppen, Pausen, Ausfahren/Auslaufen, Technikblöcke, Kraftblöcke und gemischte Einheiten. Ziele: Zeit, Distanz, Herzfrequenz, Zone, RPE oder geeignete Leistung. Ziele, Priorität und flexible Grenzen getrennt speichern. Die Gesamtdauer muss rechnerisch stimmen. Bibliotheksvorlagen sind von terminierten individuellen Instanzen getrennt; Änderungen an einer Vorlage überschreiben keine alten Trainings.
+
+Definiere Varianten nach Trainingszeit, Ausrüstung, Schnee und Tageszustand. Der Coach kann beispielsweise eine technisch passende Alternative wählen, wenn Skiroller oder Schnee fehlen. Eine Alternative muss denselben beabsichtigten Trainingszweck und ihre Einschränkungen erklären.
+
+10. DASHBOARD UND AKTIVITÄTSANALYSE
+
+Entwickle eine hochwertige, ruhige Oberfläche mit klarer Hierarchie. Deutsch ist die erste Produktsprache; metrische Einheiten und österreichische Datumsdarstellung sind passende Vorgaben. Zeitzonen bleiben pro Nutzer und Ereignis korrekt. Farbcodierung wird durch Text/Symbole ergänzt. Große Schrift, Dark Mode, Screenreader, Tastaturbedienung und ausreichend große Interaktionsflächen mitdenken.
+
+Das Tagesdashboard zeigt:
+- Aktives Athletenprofil und den betreffenden lokalen Tag.
+- Verbindliche Tagesentscheidung: Einheit, Umfang, Intensität, Schwerpunkt und kurze Begründung.
+- Datenstand, fehlende Informationen und Erholungs-/Befindenskontext.
+- Wochenplan mit Soll/Ist und nächster wichtiger Einheit.
+- Aktuelle Lasttrends und Entwicklung mit lesbaren Modellbezeichnungen.
+- Nächstes Wettkampfziel und Stand der Vorbereitung.
+- Schnellen Check-in, Trainingsfeedback, manuelle Anpassung und Verbindungsstatus.
+
+Jede Karte öffnet eine tatsächliche Detailansicht. Produktionsdaten und Demo-Daten dürfen nicht verwechselt werden. Bei Datenmangel zeige nützliche Leerstati und mögliche nächste Schritte. Keine erfundenen HRV-, Fitness-, Garmin- oder Readiness-Werte zur optischen Vervollständigung.
+
+Die Aktivitätsansicht umfasst eine Karte, Höhenprofil, Zeitreihen und gemeinsame Auswahlposition. Zoom, Kanalwahl, Runden, automatische und manuelle Intervalle, Markierung beliebiger Abschnitte, Statistiken und Rundenvergleiche. Originaldaten, Gerätewerte und eigene Berechnungen müssen unterscheidbar sein. Ausreißerbereinigung ist reversibel. Die UI zeigt Datenlücken und Einheiten korrekt.
+
+Langfristige Analysen zeigen Umfang nach Sport und Technik, Intensitätsverteilung nach dokumentierter Zählmethode, Lastverlauf, Erholungsdaten, Zielerreichung, Testentwicklung und Kraftprogression. Einheitenbasierte Intensitätsverteilung und Zeit-in-Zonen sind unterschiedliche Ansichten. Mehr Training ist nicht automatisch als Erfolg zu werten.
+
+11. KRAFT- UND TECHNIKTRAINING
+
+11.1 Kraft
+
+Die Kraftbibliothek umfasst Oberkörperzug/Doppelstock, Unterkörperkraft, Hüftstreckung, einbeinige Kraft, Rumpfstabilität, Explosivität, Sprünge, Schulterkontrolle und sportartspezifische Kraftausdauer. Übungsbeispiele sind Klimmzug/Latzug, Kniebeuge, Split Squat, Hüftstreckvarianten, Zugübungen und geeignete Rumpf-/Stabilitätsübungen. Diese Beispiele sind eine praktische Systematik; sie sind nicht sämtlich einzeln durch Langlaufstudien validiert.
+
+Jeder Eintrag enthält Ziel, Ausrüstung, Ausführung, Lernvoraussetzungen, Sätze, Wiederholungen, Pause, Laststeuerung, Varianten, typische Fehler, Abbruch-/Anpassungshinweise, Progression und Evidenzstatus. Erfasse absolvierte Sätze und subjektive Beanspruchung. Steigerung oder Entlastung anhand überprüfbarer Kriterien, Erfahrung und technischer Qualität; kein erzwungener Maximalkrafttest für jede Person.
+
+Kraft muss in der Wochenplanung mit intensiver Ausdauer, Doppelstockbelastung und Wettkämpfen abgestimmt werden. Unterscheide allgemeine Kraftverbesserung, Bewegungsökonomie und tatsächlich nachgewiesenen Transfer in Langlaufleistung. Positive wie negative Interventionsbefunde aufnehmen, insbesondere die Studie ohne Leistungsverbesserung bei Juniorinnen. Der Review von 2022 und die retrospektive Integrationsstudie von 2026 erfüllen unterschiedliche Evidenzfunktionen.
+
+11.2 Technik
+
+Erstelle Lernpfade für Klassisch und Skating, einschließlich beider Führungsseiten, Balance, Gewichtsübertragung, Timing, Stockeinsatz, Abdruck, Rhythmus, Gleiten, Kurven und Abfahrtskontrolle. Übungen ohne Stöcke und Technikwechsel erhalten konkrete Aufgaben statt bloßer Namen.
+
+Jede Übung braucht Lernziel, Anwendungsfall, Erklärung, Gelände/Untergrund, Dauer oder Wiederholungen, Qualitätskriterium, häufige Fehler, Coaching-Hinweis, einfachere/schwerere Variante und Quellenstatus. Ein Technikblock muss so verständlich sein, dass ein Athlet ihn durchführen und rückmelden kann.
+
+Video-/Trainerfeedback wird zunächst über klare Aufnahmeanweisungen, manuelle Markierungen und Beobachtungen umgesetzt. Automatische Video-/IMU-Technikerkennung erhält ein eigenes Forschungsmodul. Validierung mit anderer Sensorposition oder mehreren Sensoren darf nicht als Beweis für eine einzelne Apple Watch ausgegeben werden. Erforderlich sind gelabelte Daten, Trennung von Trainings-/Testpersonen, Tests auf Schnee und Skiroller sowie dokumentierte Fehler pro Technik.
+
+12. ERHOLUNG, GESUNDHEIT, FRAUENGESUNDHEIT UND ERNÄHRUNG
+
+12.1 Erholung und Check-ins
+
+Kombiniere verfügbare Daten zu Schlaf, Ruhepuls, HRV, jüngster Last und selbst berichteter Müdigkeit, Stress, Motivation, Schmerz, Krankheitssymptomen und muskulärer Beanspruchung. Arme, Beine und Rumpf können getrennt rückgemeldet werden. Die Erfassung soll im Alltag kurz bleiben und bei Bedarf Details ermöglichen.
+
+HRV und Schlaf bleiben an Gerät, Messdefinition, Zeitfenster und persönliche Ausgangswerte gebunden. Fehlende Messung bedeutet unbekannt. Verschiedene HRV-Maße oder Geräteprotokolle werden nicht ungeprüft in dieselbe Baseline gemischt. Ein einzelner niedriger oder hoher Wert löst keine starre Trainingsentscheidung aus.
+
+Readiness ist eine abgeleitete Einschätzung. Falls ein numerischer Score angezeigt wird, müssen Berechnung, Datenabdeckung, Kalibrierung und Interpretation dokumentiert sein. Ohne diese Grundlage sind verständliche Hinweise mit begründeten Handlungsmöglichkeiten angemessener als scheinpräzise 82/100. Garmin-eigene Scores werden als Garmin-Schätzungen mit Aktualität gezeigt, sofern zugänglich.
+
+Eine Gesundheitsgrenze hat Vorrang vor Trainingsoptimierung: relevante Krankheitssymptome oder Beschwerden dürfen nicht durch einen hohen Fitness-/Readiness-Wert überstimmt werden. Die App stellt keine Diagnose und ersetzt keine ärztliche Freigabe. Konkrete gesundheitsbezogene Regeln benötigen aktuelle fachliche Quellen und eine fachliche Prüfung vor Freigabe.
+
+12.2 Frauengesundheit
+
+Das Modul ist freiwillig, deaktivierbar und getrennt freizugeben. Für Karina werden keine Zyklusdaten vorausgesetzt oder erfunden. Menstruationsereignisse, Symptome, vom Anbieter geschätzte Phasen, selbst berichtete Angaben und objektive Messungen sind unterschiedliche Datentypen. Hormonelle Kontrazeption, unregelmäßige Zyklen und besondere Lebensphasen sind nur nach freiwilliger Angabe Kontext; sie werden nicht aus Verhalten erraten.
+
+Keine pauschale Regel wie harte Einheiten in einer bestimmten Phase oder automatische Entlastung in einer anderen. Berücksichtige tatsächliche Beschwerden, gewünschte Anpassungen und erst nach ausreichender Beobachtung belastbare individuelle Muster. Aus Korrelation wird keine hormonale Ursache abgeleitet. Die Arbeit McNulty et al. 2020 begründet gerade eine individualisierte und vorsichtige Interpretation; aktualisiere die Evidenz bei der Umsetzung.
+
+Zyklus-/Gesundheitsdaten werden standardmäßig nicht an Jan, andere Athleten oder spätere Coaches weitergegeben. Ein Profilwechsel auf gemeinsamem Gerät darf diese Grenze nicht umgehen. Auch ein Freigabetoken für Trainingspläne berechtigt nicht automatisch zum Lesen sensibler Gesundheitsdaten.
+
+Wiederkehrende Auffälligkeiten dürfen sachliche Hinweise zur fachlichen Abklärung ermöglichen. Keine automatische REDs-, Anämie- oder Hormonstörungsdiagnose. REDs-relevante Energieversorgung betrifft grundsätzlich das Gesamtprodukt und darf nicht ausschließlich als Frauenthema behandelt werden.
+
+12.3 Ernährung
+
+Baue Trainings- und Wettkampfverpflegung um Einheitsdauer, Intensität, Bedingungen, Verträglichkeit, bisherige Erfahrung und Ziel auf. Erfasse geplante und ausprobierte Verpflegung, Flüssigkeitsstrategie und Rückmeldungen. Lange Langlaufrennen benötigen eine vorbereitete, im Training erprobte Strategie.
+
+Konkrete Mengenempfehlungen stammen aus entsprechend geprüften Quellen und enthalten Gültigkeitsbereich und Individualisierung. Wearable-Kalorien sind kein exakter Nachweis der Energieverfügbarkeit. Keine automatischen Abnehmziele, kein Leistungsversprechen durch Energiemangel und keine Standardanweisung zu Nüchterntraining. Ernährungsdaten bleiben optional; fehlende Protokolle sind kein Beleg für Unterversorgung.
+
+13. GESCHLOSSENER COACH-LOOP
+
+Die Coach-Kette lautet: erlaubte Daten übernehmen, Qualität prüfen, aktuellen Athletenkontext zusammenstellen, gültigen Saison-/Wochenplan berücksichtigen, Tagesentscheidung erstellen, Ausführung erfassen, tatsächliche Reaktion auswerten und künftige Planung begründet anpassen.
+
+Eingänge sind Ziele, verfügbare Zeit, Trainingshistorie, individuell gültige Zonen, letzte Einheiten, Befinden, verfügbare Erholungssignale, Kraft-/Technikbelastung, Umwelt und fixierte Termine. Fehlende Eingänge werden dokumentiert. Ein neues Profil beginnt mit konservativen und erkennbaren Ausgangsannahmen; der Coach behauptet keine bereits erlernte individuelle Reaktion.
+
+Eine CoachDecision enthält mindestens Athlete-ID, fachliches Datum/Zeitzone, Entscheidungs-ID, Version, Datenstichtag, Eingabe-Fingerabdruck, Planversion, Regelversion, vorgeschlagene Einheit, Alternativen, Begründung, Datenabdeckung, Gültigkeit und Status. Status unterscheiden vorgeschlagen, angenommen, manuell geändert, ersetzt, ausgeführt und abgebrochen.
+
+Eine Tagesentscheidung kann null, eine oder mehrere geplante Einheiten enthalten. Sie beschreibt Reihenfolge, Abstände und gemeinsame Belastungsannahmen. Ein bestätigter Ruhetag ist eine gültige Entscheidung. Ändert sich eine Einheit, prüfe die Auswirkungen auf weitere Einheiten desselben Tages und der Folgetage.
+
+Tagesansicht, Kalender, Wochenplan und Watch beziehen dieselbe freigegebene Entscheidung. Eine Neuberechnung erzeugt eine neue nachvollziehbare Version. Bereits absolvierte Abschnitte und die ursprüngliche Planung werden nicht rückwirkend überschrieben. Ein laufendes Workout darf bei neuen Beschwerden, veränderten Bedingungen oder auf Wunsch des Athleten unterbrochen, beendet oder für die verbleibenden Schritte angepasst werden. Die Änderung wird mit Grund und Zeitpunkt dokumentiert und geräteübergreifend synchronisiert. Eine Neuberechnung darf keine Endlosschleife oder doppelten Kalendereintrag auslösen.
+
+Der Athlet kann eine Alternative wählen, Dauer ändern, eine Einheit verschieben, Symptome melden oder eine Empfehlung ablehnen. Speichere Grund und Änderung ohne Bestrafung durch zusätzliche Last. Eine Abweichung kann sinnvoll sein und ist nicht automatisch mangelnde Planerfüllung.
+
+Nach Training: geplante und tatsächliche Struktur vergleichen, RPE und Technik-/Kraftfeedback erfassen, Belastung berechnen, Auffälligkeiten erläutern, persönliche Annahmen vorsichtig aktualisieren. Wetter, Material, Krankheit und beruflicher Stress sind mögliche Mitursachen; ein schlechtes Training beweist keinen Fitnessverlust.
+
+LLM-Einsatz: Erklärung, Dialog, strukturierte Zusammenfassung, Suche in freigegebener Evidenz und Vorschläge innerhalb geprüfter Grenzen. Rechenwerte, harte Beschränkungen und freigegebene Trainingsentscheidungen kommen aus überprüfbaren Komponenten. Modellantworten müssen Schema- und Fachprüfungen bestehen. Bei Ausfall bleibt eine brauchbare regelbasierte Planung verfügbar. Literatur und importierte Texte sind Daten und dürfen keine Systemanweisungen überschreiben. Quellenangaben werden an tatsächlich vorhandene Evidenzeinträge gebunden.
+
+Die Übermittlung an externe KI-Anbieter erhält eine eigene Freigabegrenze. Verwende nur die notwendigen, zur Übermittlung erlaubten Datenbereiche; Gesundheits- und Zyklusdaten fließen nicht automatisch vollständig in Prompts. Vor Aktivierung sind Anbieter, Zweck, Aufbewahrung und mögliche Verwendung der Daten beim Anbieter festgelegt. Auch daraus abgeleitete Werte behalten ihre Herkunfts- und Nutzungsgrenzen.
+
+Persönliches Lernen beginnt transparent: Verträglichkeit bestimmter Einheiten, Terminpräferenzen, Leistung nach Vorermüdung, Reaktion auf Belastungsfolgen und subjektive Rückmeldungen. Zwei Nutzer sind keine Grundlage für ein validiertes universelles KI-Modell. Neue Regeln zuerst im Vergleichs-/Beobachtungsmodus prüfen. Historische Tests dürfen nur die damals verfügbaren Daten verwenden.
+
+14. WISSENSCHAFTLICHE WISSENSBASIS
+
+14.1 Ziel und Themen
+
+Baue eine laufend erweiterbare, versionierte Forschungsbibliothek. Der Quellenanhang liefert 47 bibliografisch überprüfte Startarbeiten, darunter sieben Arbeiten zu Laktatdiagnostik und Messqualität. Die früheren Chatlisten sind zusätzliche Suchhinweise; ihre Angaben sind vor Übernahme zu prüfen. Die Bibliothek ist nicht bereits vollständig im Volltext ausgewertet. Eine feste Zahl wie 300 oder 500 Paper ist kein Qualitätsnachweis.
+
+Abzudeckende Themen: Ausdauer-/Intervalltraining, Intensitätsverteilung, Periodisierung und Tapering; Ober-/Unterkörperkraft, Explosivität, concurrent training und Kraftausdauer; Klassisch-/Skatingbiomechanik und Techniklernen; Leistungsdiagnostik, Ökonomie, Sprint und Langdistanz; Pacing; Trainingslast und Fitness-Fatigue-Modelle; HRV, Schlaf und Regeneration; weibliche Athleten, Zyklussymptome und Energieverfügbarkeit; Ernährung und Verpflegung; Kälte, Höhe, Gesundheit und Verletzungs-/Überlastungsthemen; Sensoren, Wearables, Videoanalyse, Messgüte und adaptive Trainingssysteme.
+
+14.2 Recherche
+
+Durchsuche PubMed/MEDLINE, Europe PMC, Originaljournale und Hochschulrepositorien. Ergänze SPORTDiscus, Scopus und Web of Science, soweit verfügbar; nicht vorhandenen Zugriff offen festhalten. Verwende Google Scholar für zusätzliche Fundstellen und Zitationssuche, überprüfe bibliografische Angaben aber an Primärquellen.
+
+Kombiniere Begriffe wie cross-country skiing, Nordic skiing, roller skiing, double poling, ski skating und diagonal stride mit training, periodization, interval, strength, power, biomechanics, technique, motor learning, fatigue, recovery, HRV, sleep, female, menstrual, energy availability, nutrition, pacing und wearable. Ergänze lactate threshold, LT1, LT2, MLSS, OBLA, Dmax, incremental test, stage duration, capillary sampling, Lactate Scout, analyzer validity und measurement reliability. Suche über Literaturverzeichnisse rückwärts und über zitierende Arbeiten vorwärts. Für übertragbare Ausdauerforschung die Population ausdrücklich kennzeichnen.
+
+Protokolliere Datum, Datenbank, genaue Suchabfrage, Treffer-/Sichtungsschritte, Ausschlussgründe und Zugriffslücken. Dedupliziere DOI/PMID/Titel. Unterscheide Onlinejahr und Ausgabejahr. Prüfe Korrekturen, Rücknahmen und gemeinsame Athletendatensätze. Eine Arbeit über dieselbe Kohorte ist kein zusätzlicher unabhängiger Versuch.
+
+14.3 Evidenzextraktion
+
+Jede Quelle enthält Titel, Autoren, Jahr, DOI/PMID, Primärlink, Zugang und Lizenzstatus sowie Population, Geschlecht, Alter, Leistungsniveau, Stichprobe, Trainingserfahrung, Disziplin/Technik, Studiendesign, Intervention, Vergleich, Dauer, Ergebnisse, Effektgröße/Unsicherheit soweit verfügbar, Messverfahren, methodische Grenzen und Übertragbarkeit auf Jan/Karina beziehungsweise spätere Zielgruppen.
+
+Bearbeitungszustände: gefunden; bibliografisch geprüft; Abstract gelesen; Volltext gelesen; Evidenz extrahiert; fachlich beurteilt; konkrete Regel freigegeben. Nicht zugängliche Volltexte bleiben offen. Keine Paywall-Umgehung, erfundenen Zitate oder ungeprüfte Weiterverwendung von Texten/Abbildungen. Verfügbarkeit eines Open-Access-Artikels ist getrennt von der konkreten Lizenz für Wiederveröffentlichung zu prüfen.
+
+14.4 Vom Paper zur Regel
+
+Zwischen Quelle und App liegt ein EvidenceClaim. Dieser bezeichnet eine konkrete Aussage mit Fundstelle, Population, Gültigkeitsbereich und Unsicherheit. Eine CoachRule referenziert diese Aussage, definiert ihre Eingangsgrößen, Schwellen/Parameter, Anpassung und Ausschlussfälle und besitzt eine Version sowie Tests.
+
+Jede Regel kennzeichnet ihren Ursprung: direkt untersuchtes Protokoll, nachvollziehbare wissenschaftliche Übertragung, Trainerheuristik, Produktannahme oder persönliche Beobachtung. Ein Quellenlink macht einen Algorithmus noch nicht validiert. Eine Bibliothek mit vielen Papern ersetzt weder eine Synthese noch die fachliche Beurteilung widersprüchlicher Befunde.
+
+Elite-Beobachtungen über Jahresstunden oder Abstände intensiver Einheiten werden nicht als unveränderliche Regeln übernommen. Positive und negative Befunde sind gleichberechtigt zu erfassen. Biomechanische Korrelationen validieren keine komplette Übungsbibliothek. Das System muss erklären können, warum eine Erkenntnis für diese Person verwendet wird und wo ihre Grenze liegt.
+
+Die Bibliothek benötigt in der App eine Suche nach Thema, Technik, Trainingsziel und Evidenzstatus. Eine Empfehlung kann eine kurze verständliche Begründung und vertiefende Quellen zeigen. Das Entwicklerregister enthält die volle Ableitung; der Alltagsscreen wird dadurch nicht überladen.
+
+15. APPLE WATCH UND GERÄTEKONSISTENZ
+
+Die erste Watch-Version ist als iPhone-gekoppelte native Erweiterung vorgesehen. Sie zeigt Tagestraining, Dauer, Intensität, einfache Intervalle/Schritte, kurze Begründung, Datenstand und kompakte Rückmeldemöglichkeiten. Workout-Aufzeichnung, Live-Sensorik und haptische Intervallführung werden in einem eigenen, real getesteten Schritt ergänzt.
+
+Übertrage einen versionierten Snapshot mit Athlete-ID, Entscheidungs-ID/-Version, Planversion, lokalem Datum, Zeitzone, Erzeugungszeit, Gültigkeit und Einheitsdaten. Die Watch berechnet keine abweichende Empfehlung. Bei Profilwechsel, Abmeldung oder Berechtigungsentzug darf kein anderer Athlet auf veraltete Inhalte zugreifen.
+
+Ein aktueller Zustands-Snapshot und einzelne Ereignisse wie Check-ins werden getrennt synchronisiert. Sofortnachrichten benötigen Erreichbarkeit; ausstehende Ereignisse brauchen Warteschlange, Bestätigung und Deduplizierung. Die letzte gültige Einheit bleibt offline lesbar, ihr Alter sichtbar. Teste Wiederverbindung, Datumswechsel, App-Neustart und verspätete Ereignisse. Apples WatchConnectivity-Dokumentation ist maßgeblich, Quellen T02/T13/T14.
+
+Ein erfolgreicher Simulator-Build beweist keine reale Watch-Synchronisierung. Tests auf gekoppelten Geräten werden separat protokolliert. Eine vollständig unabhängige Watch-App ohne iPhone wäre eine zusätzliche Betriebsform mit eigener Datenversorgung und Anmeldung; sie wird nicht allein durch WatchConnectivity erreicht.
+
+16. SICHERHEIT, DATENFREIGABE UND BETRIEB
+
+Keine Secrets in Quellcode, ausgelieferten Apps, Screenshots oder Fehlerlogs. Sichere Betriebssystem-Speicher für lokale Credentials, geeignete geheime Konfiguration auf dem Backend, minimale Berechtigungen und getrennte Verbindungen je Athlet. Ein Client-Secret wird durch Kompilieren in Flutter nicht geheim.
+
+Prüfe Athletenberechtigungen serverseitig und in Hintergrundaufgaben, nicht nur in der UI. Für private Gesundheitsdaten gelten getrennte Freigaben. Ein zukünftiger Trainerzugriff und eine GIULIA-Anbindung benötigen ausdrücklich festgelegte Datenbereiche und Widerruf.
+
+Unterstütze Datenexport, Löschung, Trennung einer Verbindung, Sicherung und geprüfte Wiederherstellung. Dokumentiere Löschverhalten für Rohdaten, berechnete Werte, Geräte-Caches und Backups. Logs und Fehlerberichte enthalten keine unnötigen persönlichen oder Gesundheitsdaten. Testfixtures verwenden synthetische oder entsprechend bereinigte Daten.
+
+Kommerzielle Erweiterung: Berechtigungs-/Abo-Modul so abgrenzen, dass die Coach-Engine eigenständig bleibt. Externe Bezahl- und Store-Schritte sind eine spätere überprüfte Integration. Keine öffentliche Veröffentlichung, kostenpflichtige Beauftragung oder Beantragung im Namen des Nutzers ohne entsprechenden Auftrag. Benenne solche echten Abhängigkeiten konkret und arbeite an unabhängigen Teilen weiter.
+
+17. UMSETZUNG IN ABNAHMEFÄHIGEN ETAPPEN
+
+Etappe A – Bestand und Extraktion:
+Vorhandenen Coach, Daten und neue Projektteile prüfen; eigenes lauffähiges Grundprojekt herstellen; Datenmigration an Kopie; Profile getrennt; Tagesentscheidung reproduzierbar. Abnahme: dokumentierte Funktions-/Dateninventur, Migrationsergebnis, tatsächlicher Start und Vergleich mit dem vorhandenen Coach.
+
+Etappe B – Vollständiger Kernpfad:
+FIT-Import, Aktivitätsmodell, Kalender, Check-in, Workoutzuordnung, eigene Lastberechnung und adaptiver Loop. Abnahme: je Profil mindestens ein realer autorisierter Import bis zur nachvollziehbaren nächsten Empfehlung; keine doppelte Belastung; Offline-Nutzung mit späterem Abgleich.
+
+Etappe C – Eigene Planungs- und Analyseplattform:
+Dashboard, Workout-Editor, Saisonplanung, Detailanalyse, langfristige Diagramme, Tests/Bestleistungen, Exporte. Abnahme: interaktive Datenansichten statt Platzhaltern, nachvollziehbare Kennzahlen, Soll/Ist und versionierte Planänderungen.
+
+Laktat gehört in Etappe C: vollständige manuelle Messwerterfassung, standardisierte Testprotokolle, Kurven und Testvergleich. Fachlich geprüfte Schwellenmethoden und versionierte Zonenvorschläge folgen mit dem Evidenz-/Regelregister in Etappe D. Die direkte Geräteübertragung ist ein gesondert nachzuweisender Adapter und blockiert die eigene Diagnostik nicht.
+
+Etappe D – Wissenschaft, Kraft und Technik:
+Recherche und Evidenzregister laufen schon ab Etappe A parallel. Hier werden geprüfte Inhalte vollständig mit Kraft-/Technikbibliothek, Lernpfaden, Progression und Coach-Regeln verbunden. Abnahme: jede freigegebene Regel und jede konkrete fachliche Behauptung nachvollziehbar; nicht belegte Übungen klar als Praxisheuristik.
+
+Etappe E – Garmin-Gesundheit und persönliche Anpassung:
+Reale verfügbare Datenquellen, Recovery-Kontext, freiwillige Frauengesundheit und Verpflegung integrieren. Abnahme: Capability-Matrix, Datenherkunft, fehlende Werte, Datenschutz und Einfluss auf Empfehlungen nachgewiesen. Ein fehlender externer Zugang wird separat als Blocker geführt.
+
+Etappe F – Alle Geräte und Watch:
+Mobile/Tablet/Desktop-Bedienung fertigstellen, native Watch prüfen, echte geräteübergreifende Synchronisierung und Plattform-Builds. Infrastruktur und einfache Watch-Anzeige können vorher entstehen. Abnahmeberichte unterscheiden Code vorhanden, Build erfolgreich, Simulator getestet und reale Geräteprüfung.
+
+Etappe G – Spätere Produktanbindung:
+Mehrnutzerbetrieb, Bezahlberechtigungen, GIULIA-Integration, gegebenenfalls genehmigte TrainingPeaks-/Strava-Integration und verbleibende Paritätsfunktionen. Abnahme: Kern bleibt ohne diese Anbieter vollständig eigenständig nutzbar.
+
+Diese Reihenfolge ist keine Kürzung des Zielprodukts. Innerhalb einer Etappe arbeite bis zu einem benutzbaren Ergebnis; dokumentiere den Gesamtfortschritt über alle Anforderungen. Externe Blocker dürfen andere Module nicht aufhalten. Eine Teillieferung wird als Teillieferung benannt.
+
+18. VERBINDLICHE TESTS UND ABNAHMEKRITERIEN
+
+Prüfe mit aussagekräftigen Fällen, nicht mit Tests, die nur die eigene Implementierung wiederholen:
+
+1. Jan/Karina: Import, Suchergebnis, Cache, Kalender, Job und Watch-Nachricht sind dem richtigen Athleten zugeordnet; unberechtigter Zugriff scheitert.
+2. Migration: Zielzahl und Summen passen je Profil; Referenzen, Datumsgrenzen und Einheiten stimmen; Ausgangsdaten bleiben wiederherstellbar.
+3. Langlauf-FIT mit Tempo/Puls ohne Watt bleibt Langlauf und erzeugt keine erfundene Leistungsserie.
+4. Wiederholter Import derselben Datei sowie überlappende Anbieterimporte erzeugen eine fachliche Aktivität und eine Belastungsbuchung.
+5. Lücken, ungültige Sensorwerte, Timerpausen, unbekannte Felder und beschädigte Dateien haben definierte Ergebnisse.
+6. Winter-/Sommerzeit, Reisen, UTC-Tageswechsel und später eingegangene Schlafdaten werden korrekt zugeordnet.
+7. sRPE-Referenzfälle und Lastkurven stimmen mit unabhängig berechneten kleinen Beispielen überein; Grenz- und Fehlwertfälle sind abgedeckt.
+8. Historische Zonenänderung und Parserupdate sind versioniert; zukünftige Planlast verändert keine abgeschlossene Historie.
+9. Fehlende HRV ist unbekannt; zwei gegensätzliche Sensor-/Befindenssignale erzeugen eine nachvollziehbare Abwägung.
+10. Beschwerden oder Krankheit werden nicht durch einen hohen Modellscore überstimmt.
+11. Eine ausgelassene Einheit führt nicht automatisch zu zusätzlichem Hochintensitätstraining.
+12. Manuell fixierte Einheiten und angenommene Alternativen bleiben bei Neuberechnung konsistent. Die Historie laufender Workouts bleibt erhalten, während sichere Anpassung oder Abbruch der verbleibenden Schritte möglich ist. Ruhetage und Tage mit mehreren Einheiten funktionieren.
+13. App, Kalender, Wochenplan und Watch zeigen dieselbe Entscheidungs-ID/-Version oder einen ausdrücklich veralteten Zustand.
+14. Offline-Check-in plus Wiederverbindung, doppelte oder verspätete Ereignisse, Export-/Reimport-Schleifen und konkurrierende Geräteänderungen verursachen keine Datenverluste oder Doppelbuchungen. Widerrufene Verbindungen und gelöschte Daten bleiben auch nach Wiederverbindung gesperrt beziehungsweise gelöscht.
+15. Garmin-Verbindung und Tokenablauf werden mit tatsächlichem Zugangsmodell getestet; Feldverfügbarkeit und Workout-Geräteunterstützung sind nachgewiesen.
+16. Gesperrte Strava-Daten gelangen auch über abgeleitete Kennzahlen nicht in KI oder unzulässige Analysen.
+17. Literaturregel ohne geprüfte Quelle beziehungsweise ohne markierte Heuristik wird nicht still als gesicherte Erkenntnis freigegeben.
+18. Zyklusdaten bleiben optional und privat; keine Phase erzeugt allein eine standardisierte Trainingsvorgabe.
+19. Dashboard und Aktivitätsansicht werden auf kleinen/großen Displays mit realistischen langen Datenreihen, leeren Zuständen und großer Schrift visuell geprüft.
+20. Unterstützte Plattformen werden tatsächlich gebaut und soweit möglich gestartet. Fehlende SDKs, Signierung oder echte Geräte werden präzise als ungeprüfte Punkte ausgewiesen.
+21. Datensicherung/Wiederherstellung und Löschung einschließlich abgeleiteter Daten werden getestet.
+22. Empfehlungen werden mit plausiblen Langlauf-Fallszenarien fachlich beurteilt; sportwissenschaftliche Plausibilität wird nicht allein aus erfolgreichen Softwaretests abgeleitet.
+23. Laktatwerte werden in mmol/L mit Athlet, Probezeit, Teststufe und Methode gespeichert; Dezimalkomma, Korrekturen, fehlende Werte und Bereichsgrenzen funktionieren korrekt.
+24. Ein gemeinsam benutzter Lactate Scout vermischt keine Athleten. Wiederholte digitale Übernahme und zuvor manuell erfasste Proben erzeugen keine Doppelzählung.
+25. Probezeit, Intervall-/Stufenende und Herzfrequenzfenster stimmen überein oder sind als unsicher markiert. Geräte-Maximalpuls wird nicht als Stufenmittelwert übernommen.
+26. Ein Test mit unzureichender Stufenzahl oder ungeeigneter Qualität erzeugt keinen scheinbar exakten LT1-/LT2-Wert. Feste 2-/4-mmol-Referenzen werden nicht automatisch zu individuellen Schwellen.
+27. Laktatkurven, Protokolle und Schätzmethoden bleiben versioniert; ein Zonenvorschlag verändert weder ungefragt aktuelle Ziele noch rückwirkend historische Analysen.
+28. Tests anderer Sportarten/Techniken, Geräte oder Bedingungen werden nicht ungeprüft als identisch vergleichbar behandelt. Eine Stufentest-Schätzung wird nicht als gemessene MLSS ausgegeben.
+29. Geräteanbindung wird erst nach realem Übertragungstest als funktionsfähig gemeldet; manuelle Diagnostik bleibt bei unbekanntem Modell oder fehlender Schnittstelle nutzbar. Modellabhängige Betriebsbedingungen werden berücksichtigt.
+
+Lege nachvollziehbare Performance-Ziele für den vorhandenen Datensatz und lange mehrjährige Zeitreihen fest. Miss Importdauer, Öffnungszeit und Interaktion auf repräsentativen Zielgeräten. Ohne Messung keine Geschwindigkeitsbehauptung. Nach ausreichender risikobezogener Prüfung nicht wahllos weitere Tests hinzufügen.
+
+19. ERWARTETE ARBEITSERGEBNISSE UND BERICHTE
+
+Pflege im Projekt einen Produktauftrag, die Paritäts-/Anforderungsmatrix, Architekturentscheidungen, Datenmodell, Migrationsbericht, Connector-Capabilities, Metrikdefinitionen, Coach-Regelregister, Literaturregister, Suchprotokoll und Abnahmebericht. Konkrete Dateinamen können beispielsweise PRODUCT_SPEC.md, FEATURE_MATRIX.md, DATA_MODEL.md, METRICS.md, COACH_RULES.md, CONNECTORS.md und ACCEPTANCE.md sein; passe sie an vorhandene Konventionen an.
+
+Die Forschung benötigt zusätzlich ein maschinenlesbares Quellenregister, eine Evidenztabelle und menschenlesbare thematische Synthesen. Quellenstatus, Lizenz, Kohortenüberschneidungen, Widersprüche und offene Volltexte sind sichtbar. Wiederverwendbare Regeln und Formeln sind von erläuternden Texten getrennt.
+
+Jeder Fortschrittsbericht beantwortet: Was funktioniert konkret? Welche Daten und Plattform wurden tatsächlich verwendet? Was wurde getestet? Welche fachliche Annahme wurde getroffen? Was fehlt, und welcher konkrete externe oder technische Blocker verhindert es? Was wird als Nächstes fertiggestellt?
+
+Melde niemals eine komplette Garmin-Anbindung nach einem einzigen erfolgreichen Endpunkt, eine funktionierende Watch nach einem iPhone-Build, Wissenschaftlichkeit anhand einer Linkliste oder vollständige TrainingPeaks-Parität anhand eines Dashboards.
+
+20. STARTAUFTRAG
+
+Beginne mit dem tatsächlichen Bestand in /Users/jangspandl/Documents/Giulia und dem gegebenenfalls bereits existierenden eigenständigen Coach-Projekt. Prüfe zuerst den gemeinsamen Tages-/Wochenentscheid und die gerenderte Tagesansicht. Sichere anschließend den durchgehenden Pfad vom Import über eigene Daten und Kennzahlen bis zur gleichen Empfehlung in Kalender, App und Watch.
+
+Arbeite parallel an der verifizierten Wissensbasis. Danach erweitere anhand der Etappen und der Paritätsmatrix die eigene Plattform, bis das beschriebene Ziel abgedeckt ist. Stelle nur Fragen, wenn eine nicht verfügbare Information eine konkrete richtige Entscheidung verhindert. Technische Routineentscheidungen triffst und dokumentierst du selbst.
+
+Erfolg bedeutet: Jan und Karina können ihre Langlaufvorbereitung in unserem eigenen System planen, verstehen, durchführen und auswerten. Der Coach passt nachvollziehbar an ihre tatsächlichen Daten und Rückmeldungen an. Wissenschaft, Datenherkunft, technische Berechnung und praktische Entscheidung bleiben miteinander verknüpft.
+
+QUELLENANHANG
+
+Die folgende Startbibliografie wird mit ihrem tatsächlichen Prüf-/Lesestatus geführt. Bibliografisch geprüft bedeutet nicht Volltext ausgewertet oder als Coach-Regel freigegeben. Nicht als vollständig systematische Literaturübersicht bezeichnen.
+
+A. LANGLAUF: AUSDAUER, KRAFT, TECHNIK, DIAGNOSTIK UND SENSORIK
+Status B: Bibliografie geprüft. Status A: zusätzlich vollständiger Abstract gelesen. Für diese 22 Einträge wird keine abgeschlossene Volltextauswertung behauptet.
+
+XC01 | 2017 | Physiological Capacity and Training Routines of Elite Cross-Country Skiers: Approaching the Upper Limits of Human Endurance
+Typ: Übersichtsarbeit
+DOI: 10.1123/ijspp.2016-0749 | PMID: 28095083
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/28095083/
+Nutzung: Langlaufphysiologie und grundlegende Trainingsanforderungen
+Grenze: Elitebeschreibung liefert keine fertige Trainingsdosis für Freizeitsportler.
+Prüfstatus: B
+
+XC02 | 2017 | The Training Characteristics of the World's Most Successful Female Cross-Country Skier
+Typ: Retrospektive Einzelfallanalyse
+DOI: 10.3389/fphys.2017.01069 | PMID: 29326603
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/29326603/
+Nutzung: Langfristiger Trainingsaufbau, Einheitsdesign und Periodisierung
+Grenze: Eine außergewöhnlich erfolgreiche Athletin; keine allgemeingültigen Trainingsregeln ableiten.
+Prüfstatus: B
+
+XC03 | 2014 | The road to gold: training and peaking characteristics in the year prior to a gold medal endurance performance
+Typ: Retrospektive Trainingsanalyse
+DOI: 10.1371/journal.pone.0101796 | PMID: 25019608
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/25019608/
+Nutzung: Saisonplanung und Wettkampfvorbereitung in Langlauf und Biathlon
+Grenze: Keine randomisierte Prüfung optimaler Taperingregeln.
+Prüfstatus: B
+
+XC04 | 2016 | 5-week block periodization increases aerobic power in elite cross-country skiers
+Typ: Randomisierte kontrollierte Trainingsintervention
+DOI: 10.1111/sms.12418 | PMID: 25648345
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/25648345/
+Nutzung: Blockperiodisierung als mögliche Planungsstrategie
+Grenze: Kurze Untersuchung in Elitepopulation; kein allgemeiner Trainingsstandard.
+Prüfstatus: B
+Abweichendes Onlinejahr: 2015
+
+XC05 | 2025 | Day-To-Day Endurance Training Periodization of World-Class Cross-Country Skiers
+Typ: Retrospektive Trainingsanalyse
+DOI: 10.1002/ejsc.12322 | PMID: 40400090
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/40400090/
+Nutzung: Tägliche Trainingsabfolge und Entlastung
+Grenze: 17 Weltklasseathleten. Beobachtete mittlere Abstände sind keine verbindlichen Mindestabstände; Datensatzüberlappung mit anderen Walther-Arbeiten prüfen.
+Prüfstatus: B
+
+XC06 | 2021 | The Training Characteristics of World-Class Male Long-Distance Cross-Country Skiers
+Typ: Retrospektive Erhebung
+DOI: 10.3389/fspor.2021.641389 | PMID: 33718870
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/33718870/
+Nutzung: Langdistanz, Doppelstock und Trainingsspezifität
+Grenze: Zwölf männliche Weltklasseathleten; Erinnerungsverzerrung und eingeschränkte Übertragbarkeit beachten.
+Prüfstatus: A
+
+XC07 | 2019 | Energy system contribution during competitive cross-country skiing
+Typ: Physiologischer Review
+DOI: 10.1007/s00421-019-04158-x | PMID: 31076890
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/31076890/
+Nutzung: Aerobe und anaerobe Anforderungen nach Gelände und Teiltechnik
+Grenze: Keine Grundlage zur unmittelbaren Berechnung von Watt aus gewöhnlichem Skitempo.
+Prüfstatus: A
+
+XC08 | 2017 | Factors that Influence the Performance of Elite Sprint Cross-Country Skiers
+Typ: Systematischer Review
+DOI: 10.1007/s40279-016-0573-2 | PMID: 27334280
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/27334280/
+Nutzung: Sprintprofil und wiederholte Wettkampfdurchgänge
+Grenze: Heterogene Tests und wenige weibliche Teilnehmer begrenzen die Übertragbarkeit.
+Prüfstatus: B
+Abweichendes Onlinejahr: 2016
+
+XC09 | 2022 | A Systematic Review of the Effects of Strength and Power Training on Performance in Cross-Country Skiers
+Typ: Systematischer Review
+DOI: 10.52082/jssm.2022.555 | PMID: 36523891
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/36523891/
+Nutzung: Krafttraining und sportartspezifischer Leistungstransfer
+Grenze: Zwölf eingeschlossene Studien; methodische Qualität überwiegend niedrig bis mäßig, Leistungs- und Ökonomieeffekte uneinheitlich.
+Prüfstatus: B
+
+XC10 | 2011 | The effect of heavy strength training on muscle mass and physical performance in elite cross country skiers
+Typ: Kontrollierte Trainingsintervention
+DOI: 10.1111/j.1600-0838.2009.01074.x | PMID: 20136751
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/20136751/
+Nutzung: Schweres Krafttraining ergänzend zum Ausdauertraining
+Grenze: Zwölf Wochen, insgesamt 19 Männer und Frauen; Verbesserungen einzelner Tests garantieren keinen Rennzeitgewinn.
+Prüfstatus: A
+Abweichendes Onlinejahr: 2010
+
+XC11 | 2016 | Upper body heavy strength training does not affect performance in junior female cross-country skiers
+Typ: Kontrollierte Trainingsintervention
+DOI: 10.1111/sms.12517 | PMID: 26146761
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/26146761/
+Nutzung: Negatives beziehungsweise uneinheitliches Ergebnis zur Kraft-Leistungs-Übertragung
+Grenze: Zehn Wochen, 16 Juniorinnen; Kraftzuwachs bedeutet nicht automatisch Ausdauerleistungszuwachs.
+Prüfstatus: B
+Abweichendes Onlinejahr: 2015
+
+XC12 | 2018 | Strength training improves double-poling performance after prolonged submaximal exercise in cross-country skiers
+Typ: Trainingsintervention
+DOI: 10.1111/sms.12990 | PMID: 29024041
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/29024041/
+Nutzung: Krafttraining und Doppelstockleistung nach Vorermüdung
+Grenze: Ergebnis an konkretes Testprotokoll gebunden; kein pauschal validierter Durability-Score.
+Prüfstatus: B
+Abweichendes Onlinejahr: 2017
+
+XC13 | 2017 | Effects of upper-body sprint-interval training on strength and endurance capacities in female cross-country skiers
+Typ: Kontrollierte Trainingsintervention
+DOI: 10.1371/journal.pone.0172706 | PMID: 28241030
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/28241030/
+Nutzung: Oberkörper-Sprintintervalle und Doppelstocktraining bei Frauen
+Grenze: Achtwöchige Intervention bei trainierten Frauen; keine universell überlegene Trainingsverteilung belegt.
+Prüfstatus: B
+
+XC14 | 2026 | Strength Training Integration in Elite Cross-Country Skiers: A Retrospective Analysis of Real-World Training Practices
+Typ: Retrospektive Trainingsanalyse
+DOI: 10.1123/ijspp.2026-0012 | PMID: 42618034
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/42618034/
+Nutzung: Einordnung von Krafttraining in Mikrozyklen
+Grenze: 17 Medaillengewinner, zehn Männer und sieben Frauen. Beobachtete Praxis beweist keine optimale Reihenfolge. Datensatzüberlappung mit anderen Walther-Arbeiten prüfen.
+Prüfstatus: A
+Abweichendes Onlinejahr: 2026
+
+XC15 | 2020 | Biomechanical determinants of cross-country skiing performance: A systematic review
+Typ: Systematischer Review
+DOI: 10.1080/02640414.2020.1775375 | PMID: 32552520
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/32552520/
+Nutzung: Technikmerkmale und Leistungszusammenhänge
+Grenze: 46 Artikel; korrelierte Kinematik ist keine Wirksamkeitsprüfung jeder daraus abgeleiteten Technikübung.
+Prüfstatus: A
+
+XC16 | 2013 | Biomechanical and energetic determinants of technique selection in classical cross-country skiing
+Typ: Biomechanische Laboruntersuchung
+DOI: 10.1016/j.humov.2013.07.010 | PMID: 24071549
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/24071549/
+Nutzung: Technikwahl in Abhängigkeit von Geschwindigkeit und Steigung
+Grenze: Zehn Männer auf Rollski; keine universellen Umschaltgrenzen für Schnee, Frauen und andere Leistungsgruppen.
+Prüfstatus: A
+
+XC17 | 2021 | Observational vs coaching feedback on non-dominant whole-body motor skill performance - application to technique training
+Typ: Techniktrainingsstudie
+DOI: 10.1111/sms.14030 | PMID: 34351642
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/34351642/
+Nutzung: Video-, Eigenbeobachtungs- und Trainerfeedback
+Grenze: Jugendliche Wettkampfläufer und konkrete Technikaufgabe; keine automatische Videoanalyse validiert.
+Prüfstatus: B
+
+XC18 | 2022 | Performance Effects of Video- and Sensor-Based Feedback for Implementing a Terrain-Specific Micropacing Strategy in Cross-Country Skiing
+Typ: Randomisierte Interventionsstudie
+DOI: 10.1123/ijspp.2022-0106 | PMID: 36270625
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/36270625/
+Nutzung: Geländespezifisches Feedback und Renneinteilung
+Grenze: Konkrete Intervention; keine universelle optimale Pacing-Kurve belegt.
+Prüfstatus: B
+
+XC19 | 2018 | Pacing and predictors of performance during cross-country skiing races: A systematic review
+Typ: Systematischer Review
+DOI: 10.1016/j.jshs.2018.09.005 | PMID: 30450246
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/30450246/
+Nutzung: Zusammenhänge zwischen Gelände, Teiltechniken und Rennleistung
+Grenze: 27 korrelative Studien; keine eingeschlossene experimentelle Pacingprüfung, externe Bedingungen unvollständig berücksichtigt.
+Prüfstatus: A
+
+XC20 | 2014 | Automatic classification of the sub-techniques (gears) used in cross-country ski skating employing a mobile phone
+Typ: Technische Validierungsstudie
+DOI: 10.3390/s141120589 | PMID: 25365459
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/25365459/
+Nutzung: Machbarkeit sensorbasierter Bewegungsklassifikation
+Grenze: Elf Rollskiläufer, Smartphone am Brustgurt und Laboraufbau; keine Apple-Watch-Validierung.
+Prüfstatus: B
+
+XC21 | 2018 | Automatic Classification of Sub-Techniques in Classical Cross-Country Skiing Using a Machine Learning Algorithm on Micro-Sensor Data
+Typ: Technische Validierungsstudie
+DOI: 10.3390/s18010075 | PMID: 29283421
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/29283421/
+Nutzung: Technikerkennung mit zwei IMUs an Arm und Brust
+Grenze: 24 Datensätze von zehn Personen. 93,9 Prozent Genauigkeit auf damaligen Testdaten ist kein Leistungsversprechen für eine einzelne Uhr. Online 28.12.2017, Ausgabe 18(1) 2018.
+Prüfstatus: A
+Abweichendes Onlinejahr: 2017
+
+XC22 | 2023 | Test-retest reliability of ski-specific aerobic, sprint, and neuromuscular performance tests in highly trained cross-country skiers
+Typ: Test-Retest-Reliabilitätsstudie
+DOI: 10.1111/sms.14473 | PMID: 37635277
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/37635277/
+Nutzung: Standardisierte Diagnostik, Messfehler und minimale nachweisbare Veränderung
+Grenze: 39 Trainierte mit Teilgruppen je Test; Zuverlässigkeit dieser Protokolle validiert nicht jeden späteren App-Score.
+Prüfstatus: A
+
+B. BELASTUNGSMODELLE, REGENERATION, FRAUENGESUNDHEIT UND ERNÄHRUNG
+Der Status bezieht sich jeweils auf die konkret geprüften Bestandteile. Teilweise gelesene Volltexte sind keine vollständige methodische Auswertung.
+
+M01 | 2001 | Foster et al. | A new approach to monitoring exercise training
+Typ: Vergleichende Validierungsstudie
+DOI: hier nicht verifiziert; PMID verwenden | PMID: 11708692
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/11708692/?dopt=Abstract
+Nutzung: sRPE als subjektive innere Belastung
+Grenze: Untersucht Rad-/Basketballbelastungen; keine automatische metrische Gleichsetzung mit HR-Last oder TSS.
+Prüfstatus: Abstract gelesen
+
+M02 | 2003 | Busso | Variable dose-response relationship between exercise training and performance
+Typ: Modell-/Interventionsstudie
+DOI: 10.1249/01.MSS.0000074465.13621.37 | PMID: 12840641
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/12840641/
+Nutzung: Individuelle Trainingsantwort und variable Ermüdungsreaktion
+Grenze: Sechs zuvor Untrainierte; besserer Fit ist nicht automatisch bessere Vorhersage bei Langläufern.
+Prüfstatus: Abstract gelesen
+
+M03 | 2017 | Bourdon et al. | Monitoring Athlete Training Loads: Consensus Statement
+Typ: Konsenspapier
+DOI: 10.1123/IJSPP.2017-0208 | PMID: 28463642
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/28463642/
+Nutzung: Innere/äußere Last, Monitoringkonzept
+Grenze: Kein universeller Algorithmus und keine validierte persönliche Verletzungswahrscheinlichkeit.
+Prüfstatus: Abstract gelesen
+
+M04 | 2022 | Vermeire et al. | The Fitness-Fatigue Model: What's in the Numbers?
+Typ: Kommentar
+DOI: 10.1123/ijspp.2021-0494 | PMID: 35320776
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/35320776/
+Nutzung: Parameterkritik und Modellgrenzen
+Grenze: Startwerte, Schätzverfahren und Belastungsmethode beeinflussen Parameter; allgemeine Konstanten bilden Individualität nicht ab.
+Prüfstatus: Abstract gelesen
+
+M05 | 2025 | Marchal et al. | Statistical flaws of the fitness-fatigue sports performance prediction model
+Typ: Statistische Modellstudie
+DOI: 10.1038/s41598-025-88153-7 | PMID: 39881202
+Primärnachweis: https://pmc.ncbi.nlm.nih.gov/articles/PMC11779798/
+Nutzung: Modellvalidierung, Identifizierbarkeit, Out-of-sample-Prüfung
+Grenze: Shorttrack-Datensätze; Evidenz für Modellprobleme, keine definitive Widerlegung aller Belastungsindikatoren.
+Prüfstatus: Abstract sowie Einleitung/Methoden im Volltext gelesen, kein vollständiges Volltext-Review
+
+M06 | 2021 | Düking et al. | Monitoring and adapting endurance training on the basis of heart rate variability monitored by wearable technologies: A systematic review with meta-analysis
+Typ: Systematischer Review/Metaanalyse
+DOI: 10.1016/j.jsams.2021.04.012 | PMID: 34489178
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/34489178/
+Nutzung: HRV als ein Anpassungssignal
+Grenze: 8 Studien/198 Teilnehmende; Leistungs-/VO2peak-Effekte klein und nicht signifikant; keine Überlegenheitsgarantie.
+Prüfstatus: Abstract gelesen
+
+M07 | 2016 | Saw, Main & Gastin | Monitoring the athlete training response: subjective self-reported measures trump commonly used objective measures: a systematic review
+Typ: Systematischer Review
+DOI: 10.1136/bjsports-2015-094758 | PMID: 26423706
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/26423706/
+Nutzung: Subjektive Check-ins als eigenes Signal
+Grenze: Kein Beleg, Sensoren zu ersetzen; verschiedene Instrumente/Populationen.
+Prüfstatus: Metadaten und Abstract-Suchauszug; Volltext noch auswerten
+
+M08 | 2021 | Walsh et al. | Sleep and the athlete: narrative review and 2021 expert consensus recommendations
+Typ: Narrativer Review/Expertenkonsens
+DOI: 10.1136/bjsports-2020-102025 | PMID: 33144349
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/33144349/
+Nutzung: Schlafbedarf und Messgrenzen
+Grenze: Online zuerst 2020; Ausgabe/Empfehlungen 2021. Keine Einheits-Schlafvorgabe oder Verwechslung Wearable-Schlafstadien mit Labor.
+Prüfstatus: Abstract gelesen
+
+M09 | 2020 | McNulty et al. | The Effects of Menstrual Cycle Phase on Exercise Performance in Eumenorrheic Women: A Systematic Review and Meta-Analysis
+Typ: Systematischer Review/Metaanalyse
+DOI: 10.1007/s40279-020-01319-3 | PMID: 32661839
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/32661839/
+Nutzung: Individuelle, symptomorientierte Zyklusberücksichtigung
+Grenze: Triviale Gruppenwirkung/geringe Evidenzqualität; keine pauschalen Phase→Trainingsart-Regeln.
+Prüfstatus: Abstract/Ergebnis- und Schlussabschnitt gelesen
+
+M10 | 2020 | Solli et al. | Changes in Self-Reported Physical Fitness, Performance, and Side Effects Across the Phases of the Menstrual Cycle Among Competitive Endurance Athletes
+Typ: Fragebogen-Beobachtungsstudie
+DOI: 10.1123/ijspp.2019-0616 | PMID: 32957079
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/32957079/
+Nutzung: Symptom- und Erfahrungsprotokoll im Langlauf/Biathlon
+Grenze: 140 Athletinnen; retrospektive Selbstauskunft, keine objektive Wirksamkeitsprüfung phasenbasierter Pläne.
+Prüfstatus: Abstract gelesen
+
+M11 | 2023 | De Martin Topranin et al. | The Influence of Menstrual-Cycle Phase on Measures of Recovery Status in Endurance Athletes: The Female Endurance Athlete Project
+Typ: Prospektive Beobachtungsstudie
+DOI: 10.1123/ijspp.2022-0325 | PMID: 37726100
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/37726100/
+Nutzung: Zyklus als Kontext für Ruhepuls/Schlaf/Readiness
+Grenze: 41 Athletinnen; geringe bis vernachlässigbare Effekte, Zyklusphase nur einer vieler Stressoren.
+Prüfstatus: Abstract gelesen
+
+M12 | 2023 | Mountjoy et al. | 2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs)
+Typ: Konsenspapier
+DOI: 10.1136/bjsports-2023-106994 | PMID: 37752011
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/37752011/
+Nutzung: Gesundheitsorientierte Energieverfügbarkeit, fachliche Eskalation
+Grenze: REDs bei Frauen und Männern; keine automatische Diagnose aus Uhrkalorien oder Zykluseintrag, klinische Beurteilung erforderlich.
+Prüfstatus: Abstract gelesen
+
+M13 | 2023 | Kettunen et al. | Nutritional intake and anthropometric characteristics are associated with endurance performance and markers of low energy availability in young female cross-country skiers
+Typ: Einjährige Beobachtungsstudie
+DOI: 10.1080/15502783.2023.2226639 | PMID: 37342913
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/37342913/
+Nutzung: Ernährung, Leistungsfähigkeit und Energieverfügbarkeit
+Grenze: 23 junge Skilangläuferinnen/Biathletinnen; Zusammenhänge begründen weder Kausalität noch Gewichtsverlustvorgaben.
+Prüfstatus: Abstract gelesen
+
+M14 | 2023 | Kettunen et al. | Carbohydrate intake in young female cross-country skiers is lower than recommended and affects competition performance
+Typ: Einjährige Beobachtungsstudie
+DOI: 10.3389/fspor.2023.1196659 | PMID: 37528891
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/37528891/
+Nutzung: Energie-/Kohlenhydratversorgung über Trainingsphasen
+Grenze: 25 Athletinnen; trotz kausalem Titel beobachtendes Design. Kohortenüberlappung mit M13 prüfen.
+Prüfstatus: Abstract gelesen
+
+M15 | 2016 | Poole et al. | Critical Power: An Important Fatigue Threshold in Exercise Physiology
+Typ: Review
+DOI: 10.1249/MSS.0000000000000939 | PMID: 27031742
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/27031742/
+Nutzung: Power-Duration-/CP-/W'-Modell
+Grenze: Valide Leistungsmessung und geeignete Tests nötig; keine Watt aus Skitempo, keine Gleichsetzung CP=FTP=Laktatschwelle.
+Prüfstatus: Abstract gelesen
+
+M16 | 2021 | Maunder et al. | The Importance of 'Durability' in the Physiological Profiling of Endurance Athletes
+Typ: Review
+DOI: 10.1007/s40279-021-01459-0 | PMID: 33886100
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/33886100/
+Nutzung: Leistungsprofil unter fortdauernder Belastung
+Grenze: Durability nicht gleich einfache Pulsdrift; Schnee/Gelände/Temperatur/Verpflegung kontrollieren.
+Prüfstatus: Abstract gelesen
+
+M17 | 2018 | Schmitt et al. | Influence of Training Load and Altitude on Heart Rate Variability Fatigue Patterns in Elite Nordic Skiers
+Typ: Langzeit-Beobachtungsstudie
+DOI: 10.1055/a-0577-4429 | PMID: 29902811
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/29902811/
+Nutzung: HRV-Muster, Höhe, individuelle Erholung
+Grenze: 57 Athleten/1063 Tests; protokollspezifische liegende/stehende Messungen, nicht direkt auf nächtliche Garmin-Werte übertragbar.
+Prüfstatus: Abstract gelesen
+
+M18 | 2023 | Yu et al. | Relationship between methods of monitoring training load and physiological indicators changes during 4 weeks cross-country skiing altitude training
+Typ: Beobachtungsstudie
+DOI: 10.1371/journal.pone.0295960 | PMID: 38100499
+Primärnachweis: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295960
+Nutzung: Langlaufspezifischer Vergleich verschiedener Belastungsmethoden
+Grenze: Kleine männliche Elitekohorte im Höhentraining; keine allgemeine Validierung für Jan und Karina.
+Prüfstatus: Metadaten und Abstract-/Methoden-Suchauszüge; Volltext noch auswerten
+
+C. OFFIZIELLE TECHNISCHE QUELLEN
+Recherche-/Abrufstand: 26. November 2026. Zugangsmodelle, Bedingungen, APIs und unterstützte Plattformversionen vor Implementierung und Veröffentlichung erneut prüfen. Diese Anweisung belegt keinen erteilten Zugang und keine fachliche Freigabe des später implementierten Produkts.
+
+T01 | Flutter: Supported deployment platforms
+https://docs.flutter.dev/reference/supported-platforms
+
+T02 | Apple: Watch Connectivity
+https://developer.apple.com/documentation/watchconnectivity.md
+
+T03 | Garmin: Program Overview, Personal / Starter / Enterprise
+https://developer.garmin.com/gc-developer-program/overview/
+
+T04 | Garmin: Personal API FAQ
+https://developer.garmin.com/gc-developer-program/personal/personal-faq/
+
+T05 | Garmin: Personal API, Einrichtung und Tokenbezug
+https://developer.garmin.com/gc-developer-program/personal/personal-api/
+
+T06 | Garmin: Developer Program FAQ
+https://developer.garmin.com/gc-developer-program/enterprise/program-faq/
+
+T07 | Garmin: Health API
+https://developer.garmin.com/gc-developer-program/enterprise/health-api/
+
+T08 | Garmin: Women’s Health API
+https://developer.garmin.com/gc-developer-program/enterprise/womens-health-api/
+
+T09 | Garmin: Training API
+https://developer.garmin.com/gc-developer-program/enterprise/training-api/
+
+T10 | Strava: API Agreement, wirksam ab 1. Juni 2026
+https://www.strava.com/legal/api
+
+T11 | Strava: API Policy, insbesondere Abschnitte 5.2–5.5
+https://www.strava.com/legal/api_policy
+
+T12 | TrainingPeaks: API-Zugang
+https://help.trainingpeaks.com/hc/en-us/articles/234441128-TrainingPeaks-API
+
+T13 | Apple: WCSession
+https://developer.apple.com/documentation/watchconnectivity/wcsession.md
+
+T14 | Apple: transferUserInfo
+https://developer.apple.com/documentation/watchconnectivity/wcsession/transferuserinfo(_:).md
+
+T15 | Apple: Creating independent watchOS apps
+https://developer.apple.com/documentation/watchos-apps/creating-independent-watchos-apps.md
+
+T16 | Garmin: FIT Protocol
+https://developer.garmin.com/fit/articles/fit-protocol/fit_protocol.html
+
+T17 | Topografix: GPX 1.1 Schema Documentation
+https://www.topografix.com/GPX/1/1/index.htm
+
+T18 | TrainingPeaks: Athlete User Guide
+https://help.trainingpeaks.com/hc/en-us/articles/231472468-TrainingPeaks-Athlete-User-Guide
+
+T19 | TrainingPeaks: Analyze 360
+https://help.trainingpeaks.com/hc/en-us/articles/36837856738957-Analyze-360
+
+T20 | TrainingPeaks: Complete Athlete User Guide, einschließlich Strength Builder
+https://www.trainingpeaks.com/learn/trainingpeaks-athlete-user-guide/
+
+T21 | Garmin: Activity API
+https://developer.garmin.com/gc-developer-program/enterprise/activity-api/
+
+T22 | Strava: Authentication, für einen später zulässigen Adapter
+https://developers.strava.com/docs/authentication/
+
+T23 | Strava: Webhooks, für einen später zulässigen Adapter
+https://developers.strava.com/docs/webhooks/
+
+T24 | Strava: Rate Limits, für einen später zulässigen Adapter
+https://developers.strava.com/docs/rate-limits/
+
+D. WEITERE RECHERCHESCHWERPUNKTE
+Die Startbibliografie ist gezielt begrenzt. Auszubauen sind insbesondere Tapering-Metaanalysen und Langlauf-Tapering, verschiedene Intervallprotokolle und Trainingsintensitätsverteilungen, Übungsdetails und motorisches Lernen, Verletzungen und Atemwege bei Kälte, Höhenanpassung, Ernährung in Kälte/Langdistanz, neuere Frauensportforschung einschließlich hormoneller Kontrazeption und Lebensphasen, Validität konkreter Wearables sowie prospektive Prüfung adaptiver Trainingssysteme. Auch abweichende und negative Befunde erfassen.
+Die verbleibenden Titel aus früheren Chatnachrichten werden als Recherchekandidaten übernommen und vor Verwendung einzeln verifiziert. Keine nicht erneut geprüfte PMID oder DOI als gesicherten Beleg ausgeben.
+
+E. LAKTATDIAGNOSTIK UND MESSQUALITÄT – ERGÄNZUNG 26. NOVEMBER 2026
+Sieben ergänzende wissenschaftliche Arbeiten. Die Lesestatus bleiben getrennt von einer späteren fachlichen Regel-Freigabe.
+
+LA01 | 2009 | Faude, Kindermann und Meyer | Lactate threshold concepts: how valid are they?
+Typ: Übersichtsarbeit
+DOI: 10.2165/00007256-200939060-00003 | PMID: 19453206
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/19453206/
+Nutzung: Unterschiedliche Schwellenkonzepte, erster Laktatanstieg, feste Konzentrationen und Schätzungen der maximalen Dauerbelastbarkeit methodisch unterscheiden.
+Grenze: 25 Konzepte mit unterschiedlichen Zielgrößen; gute Gruppenkorrelation mit Leistung beweist keine individuelle Übereinstimmung mit MLSS. Kein universeller Grenzwert für Jan oder Karina.
+Prüfstatus: Bibliografie geprüft; vollständiger Abstract gelesen
+
+LA02 | 2018 | Jamnick et al. | Manipulating graded exercise test variables affects the validity of the lactate threshold and V̇O2peak
+Typ: Methodenvergleich mit wiederholten Belastungstests
+DOI: 10.1371/journal.pone.0199794 | PMID: 30059543
+Primärnachweis: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0199794
+Nutzung: Testprotokoll, Stufendauer, Belastungsinkremente, Probenzeitpunkte und Schwellenmethode gemeinsam versionieren; Protokolländerungen beim Verlauf berücksichtigen.
+Grenze: 17 trainierte männliche Radfahrer; die günstige Kombination einer bestimmten modifizierten Dmax-Methode mit einem 4-Minuten-Protokoll ist keine universelle Empfehlung für Langlauf, Frauen oder jedes Handmessgerät.
+Prüfstatus: Bibliografie, vollständiger Abstract und relevante Methodenteile gelesen; keine vollständige methodische Evidenzauswertung
+
+LA03 | 2019 | Jakobsson und Malm | Maximal Lactate Steady State and Lactate Thresholds in the Cross-Country Skiing Sub-Technique Double Poling
+Typ: Vergleich von Stufentest-Schwellen und konstanten Belastungstests
+DOI: 10.70252/CGKZ2153 | PMID: 30899341
+Primärnachweis: https://intjexersci.com/ijes/vol12/iss2/2/
+Nutzung: Langlauf-/Doppelstock-spezifische Schwellen; OBLA und die untersuchte individuelle Kurvenmethode nicht automatisch mit MLSS gleichsetzen.
+Grenze: Acht gut trainierte Langläufer; Gruppenmittel nicht als neue feste Zielkonzentration übernehmen. MLSS wurde durch separate konstante Belastungstests bestimmt, nicht allein aus einer Stufenkurve gemessen.
+Prüfstatus: Bibliografie geprüft; vollständiger Abstract auf Originalverlagsseite gelesen
+
+LA04 | 2024 | Mentzoni et al. | Precision and accuracy of four handheld blood lactate analyzers across low to high exercise intensities
+Typ: Analytischer Gerätevergleich
+DOI: 10.1007/s00421-024-05572-6 | PMID: 39158591
+Primärnachweis: https://link.springer.com/article/10.1007/s00421-024-05572-6
+Nutzung: Modellabhängige Messabweichungen und Wiederholbarkeit beachten; enthält ausdrücklich Lactate Scout 4. Gerät, Messbedingungen und Qualität zu jedem Wert speichern.
+Grenze: Venöse Proben eines trainierten männlichen Radfahrers, je zwei neue Geräte pro Modell und untersuchter Konzentrationsbereich circa 0,88–4,89 mmol/L. Keine direkte Validierung aller kapillären Feldmessungen, anderer Scout-Generationen oder individueller Gerätekorrekturfaktoren.
+Prüfstatus: Bibliografie, vollständiger Abstract sowie relevante Einleitungs- und Methodenteile gelesen; keine vollständige methodische Evidenzauswertung
+
+LA05 | 2026 | Bruno et al. | Validity and Reliability of Portable Blood Lactate Analyzers: A Systematic Review with COSMIN and GRADE Assessment
+Typ: Systematischer Review mit Qualitätsbewertung
+DOI: 10.1186/s40798-026-00979-1 | PMID: 41876912
+Primärnachweis: https://link.springer.com/article/10.1186/s40798-026-00979-1
+Nutzung: Messqualität, Probenstelle, Zeitpunkt, Umgebungsbedingungen, Standardisierung und Gerätemodell als Grundlage für Interpretation und Vergleichbarkeit berücksichtigen.
+Grenze: 25 heterogene Studien; Korrelation ist keine Austauschbarkeit. Unzureichende Repräsentation mancher Populationen und systematische Geräteabweichungen. Keine gemeinsame garantierte Genauigkeit aller Lactate-Scout-Modelle.
+Prüfstatus: Bibliografie, vollständiger Abstract, Kernaussagen und relevante Methodenabschnitte gelesen; keine vollständige methodische Evidenzauswertung
+
+LA06 | 2025 | Micheli et al. | Analysis of the factors influencing the proximity and agreement between critical power and maximal lactate steady state: a systematic review and meta-analyses
+Typ: Systematischer Review und Metaanalysen
+DOI: 10.7717/peerj.19060 | PMID: 40124604
+Primärnachweis: https://pubmed.ncbi.nlm.nih.gov/40124604/
+Nutzung: CP und MLSS nach Ermittlungsmethode getrennt führen; Übereinstimmung und individuelle Abweichungen statt bloßer Korrelation bewerten.
+Grenze: Nähe hängt von Testdesign, Intensitätsmaß und Population ab; keine automatische Gleichsetzung mit einem aus der Laktatkurve geschätzten LT2 oder mit FTP.
+Prüfstatus: Bibliografie und indexierte Abstract-Auszüge an PubMed sowie Autorenrepositorien geprüft; Volltextabruf blockiert
+
+LA07 | 2026 | Faude, Ledergerber, Meyer, Roecker und Königstein | Lactate Thresholds in Sports Medicine – an Updated Physiological Perspective on Endurance Exercise
+Typ: Klinische Übersichtsarbeit
+DOI: 10.5960/dzsm.2026.683 | PMID: hier nicht verifiziert; DOI verwenden
+Primärnachweis: https://www.germanjournalsportsmedicine.com/current-issue/online-publications/lactate-thresholds-in-sports-medicine-an-updated-physiological-perspective-on-endurance-exercise
+Nutzung: Aktualisierte Einordnung von Laktat, Schwellen und Protokoll-/Kontextabhängigkeit; Interpretation in Verbindung mit Trainingsziel und übrigen Leistungsdaten.
+Grenze: Keine Validierung unseres App-Algorithmus; niedrigere Werte allein beweisen keine Leistungssteigerung. Onlineveröffentlichung 25. November 2026.
+Prüfstatus: Bibliografie, Summary und relevante Volltextabschnitte gelesen; keine vollständige methodische Evidenzauswertung
+
+ERGÄNZENDE OFFIZIELLE GERÄTEQUELLEN
+
+T25 | EKF Diagnostics: Lactate Scout Sport – Produktseite und dokumentierte Konnektivität
+https://www.ekfdiagnostics.com/point-of-care/sports/lactate-scout-sport/
+
+T26 | EKF Diagnostics: Lactate Scout Sport Instruction Manual, Rev. 01, 08/2023
+https://www.ekfdiagnostics.com/wp-content/uploads/2025/02/LSSport-Manual-EN-EU-Rev-1.0-08-2023.pdf
+Relevante Abschnitte: 4.2 Herzfrequenz im Stufentest, 5 Datenübertragung und 8 technische Spezifikationen. Eigenschaften gelten für dieses Modell; Jans genaue Gerätevariante ist noch offen.
+
+ENDE DER KOMPLETTANWEISUNG

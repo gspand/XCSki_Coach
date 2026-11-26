@@ -1,0 +1,2417 @@
+{
+  "version": "1.2.0",
+  "as_of": "2026-11-26",
+  "sources": [
+    {
+      "id": "XC01",
+      "title": "Physiological Capacity and Training Routines of Elite Cross-Country Skiers: Approaching the Upper Limits of Human Endurance.",
+      "authors": [
+        "Øyvind Sandbakk",
+        "Hans-Christer Holmberg"
+      ],
+      "journal": "International journal of sports physiology and performance",
+      "issue_year": "2017",
+      "online_year": "2017",
+      "pmid": "28095083",
+      "pmcid": null,
+      "doi": "10.1123/ijspp.2016-0749",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/28095083/",
+        "https://europepmc.org/article/MED/28095083"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Übersichtsarbeit",
+      "research_topic": "Langlaufphysiologie und grundlegende Trainingsanforderungen",
+      "transfer_limit_supplied": "Elitebeschreibung liefert keine fertige Trainingsdosis für Freizeitsportler.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC01"
+    },
+    {
+      "id": "XC02",
+      "title": "The Training Characteristics of the World's Most Successful Female Cross-Country Skier.",
+      "authors": [
+        "Guro S Solli",
+        "Espen Tønnessen",
+        "Øyvind Sandbakk"
+      ],
+      "journal": "Frontiers in physiology",
+      "issue_year": "2017",
+      "online_year": "2017",
+      "pmid": "29326603",
+      "pmcid": "PMC5741652",
+      "doi": "10.3389/fphys.2017.01069",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/29326603/",
+        "https://europepmc.org/article/MED/29326603"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Retrospektive Einzelfallanalyse",
+      "research_topic": "Langfristiger Trainingsaufbau, Einheitsdesign und Periodisierung",
+      "transfer_limit_supplied": "Eine außergewöhnlich erfolgreiche Athletin; keine allgemeingültigen Trainingsregeln ableiten.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC02"
+    },
+    {
+      "id": "XC03",
+      "title": "The road to gold: training and peaking characteristics in the year prior to a gold medal endurance performance.",
+      "authors": [
+        "Espen Tønnessen",
+        "Øystein Sylta",
+        "Thomas A Haugen",
+        "Erlend Hem",
+        "Ida S Svendsen",
+        "Stephen Seiler"
+      ],
+      "journal": "PloS one",
+      "issue_year": "2014",
+      "online_year": "2014",
+      "pmid": "25019608",
+      "pmcid": "PMC4096917",
+      "doi": "10.1371/journal.pone.0101796",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/25019608/",
+        "https://europepmc.org/article/MED/25019608"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Retrospektive Trainingsanalyse",
+      "research_topic": "Saisonplanung und Wettkampfvorbereitung in Langlauf und Biathlon",
+      "transfer_limit_supplied": "Keine randomisierte Prüfung optimaler Taperingregeln.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC03"
+    },
+    {
+      "id": "XC04",
+      "title": "5-week block periodization increases aerobic power in elite cross-country skiers.",
+      "authors": [
+        "B R Rønnestad",
+        "J Hansen",
+        "V Thyli",
+        "T A Bakken",
+        "Ø Sandbakk"
+      ],
+      "journal": "Scandinavian journal of medicine & science in sports",
+      "issue_year": "2016",
+      "online_year": "2015",
+      "pmid": "25648345",
+      "pmcid": null,
+      "doi": "10.1111/sms.12418",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/25648345/",
+        "https://europepmc.org/article/MED/25648345"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Comparative Study",
+        "Journal Article",
+        "Randomized Controlled Trial"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Randomisierte kontrollierte Trainingsintervention",
+      "research_topic": "Blockperiodisierung als mögliche Planungsstrategie",
+      "transfer_limit_supplied": "Kurze Untersuchung in Elitepopulation; kein allgemeiner Trainingsstandard.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC04"
+    },
+    {
+      "id": "XC05",
+      "title": "Day-To-Day Endurance Training Periodization of World-Class Cross-Country Skiers.",
+      "authors": [
+        "Jacob Walther",
+        "Jan Kocbach",
+        "Øyvind Sandbakk"
+      ],
+      "journal": "European journal of sport science",
+      "issue_year": "2025",
+      "online_year": null,
+      "pmid": "40400090",
+      "pmcid": "PMC12094961",
+      "doi": "10.1002/ejsc.12322",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40400090/",
+        "https://europepmc.org/article/MED/40400090"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Retrospektive Trainingsanalyse",
+      "research_topic": "Tägliche Trainingsabfolge und Entlastung",
+      "transfer_limit_supplied": "17 Weltklasseathleten. Beobachtete mittlere Abstände sind keine verbindlichen Mindestabstände; Datensatzüberlappung mit anderen Walther-Arbeiten prüfen.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "selected_full_text_sections": [
+        "Methods, Participants and training analysis"
+      ],
+      "cohort_overlap": {
+        "other_source": "XC14",
+        "status": "possible",
+        "handling": "Bis zur Prüfung identischer Teilnehmender bei der Synthese nicht als unabhängige Replikation werten."
+      },
+      "primary_claim_id": "C-XC05"
+    },
+    {
+      "id": "XC06",
+      "title": "The Training Characteristics of World-Class Male Long-Distance Cross-Country Skiers.",
+      "authors": [
+        "Per-Øyvind Torvik",
+        "Guro Strøm Solli",
+        "Øyvind Sandbakk"
+      ],
+      "journal": "Frontiers in sports and active living",
+      "issue_year": "2021",
+      "online_year": "2021",
+      "pmid": "33718870",
+      "pmcid": "PMC7947281",
+      "doi": "10.3389/fspor.2021.641389",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/33718870/",
+        "https://europepmc.org/article/MED/33718870"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Retrospektive Erhebung",
+      "research_topic": "Langdistanz, Doppelstock und Trainingsspezifität",
+      "transfer_limit_supplied": "Zwölf männliche Weltklasseathleten; Erinnerungsverzerrung und eingeschränkte Übertragbarkeit beachten.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC06"
+    },
+    {
+      "id": "XC07",
+      "title": "Energy system contribution during competitive cross-country skiing.",
+      "authors": [
+        "Thomas Losnegard"
+      ],
+      "journal": "European journal of applied physiology",
+      "issue_year": "2019",
+      "online_year": "2019",
+      "pmid": "31076890",
+      "pmcid": "PMC6647095",
+      "doi": "10.1007/s00421-019-04158-x",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/31076890/",
+        "https://europepmc.org/article/MED/31076890"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Physiologischer Review",
+      "research_topic": "Aerobe und anaerobe Anforderungen nach Gelände und Teiltechnik",
+      "transfer_limit_supplied": "Keine Grundlage zur unmittelbaren Berechnung von Watt aus gewöhnlichem Skitempo.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC07"
+    },
+    {
+      "id": "XC08",
+      "title": "Factors that Influence the Performance of Elite Sprint Cross-Country Skiers.",
+      "authors": [
+        "Kim Hébert-Losier",
+        "Christoph Zinner",
+        "Simon Platt",
+        "Thomas Stöggl",
+        "Hans-Christer Holmberg"
+      ],
+      "journal": "Sports medicine (Auckland, N.Z.)",
+      "issue_year": "2017",
+      "online_year": null,
+      "pmid": "27334280",
+      "pmcid": "PMC5266777",
+      "doi": "10.1007/s40279-016-0573-2",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/27334280/",
+        "https://europepmc.org/article/MED/27334280"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review",
+      "research_topic": "Sprintprofil und wiederholte Wettkampfdurchgänge",
+      "transfer_limit_supplied": "Heterogene Tests und wenige weibliche Teilnehmer begrenzen die Übertragbarkeit.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC08"
+    },
+    {
+      "id": "XC09",
+      "title": "A Systematic Review of the Effects of Strength and Power Training on Performance in Cross-Country Skiers.",
+      "authors": [
+        "Thomas Stöggl",
+        "Hans-Christer Holmberg"
+      ],
+      "journal": "Journal of sports science & medicine",
+      "issue_year": "2022",
+      "online_year": "2022",
+      "pmid": "36523891",
+      "pmcid": "PMC9741725",
+      "doi": "10.52082/jssm.2022.555",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/36523891/",
+        "https://europepmc.org/article/MED/36523891"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": "cc by-nc-nd",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Systematic Review",
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review",
+      "research_topic": "Krafttraining und sportartspezifischer Leistungstransfer",
+      "transfer_limit_supplied": "Zwölf eingeschlossene Studien; methodische Qualität überwiegend niedrig bis mäßig, Leistungs- und Ökonomieeffekte uneinheitlich.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC09"
+    },
+    {
+      "id": "XC10",
+      "title": "The effect of heavy strength training on muscle mass and physical performance in elite cross country skiers.",
+      "authors": [
+        "T Losnegard",
+        "K Mikkelsen",
+        "B R Rønnestad",
+        "J Hallén",
+        "B Rud",
+        "T Raastad"
+      ],
+      "journal": "Scandinavian journal of medicine & science in sports",
+      "issue_year": "2011",
+      "online_year": "2010",
+      "pmid": "20136751",
+      "pmcid": null,
+      "doi": "10.1111/j.1600-0838.2009.01074.x",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/20136751/",
+        "https://europepmc.org/article/MED/20136751"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Kontrollierte Trainingsintervention",
+      "research_topic": "Schweres Krafttraining ergänzend zum Ausdauertraining",
+      "transfer_limit_supplied": "Zwölf Wochen, insgesamt 19 Männer und Frauen; Verbesserungen einzelner Tests garantieren keinen Rennzeitgewinn.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC10"
+    },
+    {
+      "id": "XC11",
+      "title": "Upper body heavy strength training does not affect performance in junior female cross-country skiers.",
+      "authors": [
+        "Ø Skattebo",
+        "J Hallén",
+        "B R Rønnestad",
+        "T Losnegard"
+      ],
+      "journal": "Scandinavian journal of medicine & science in sports",
+      "issue_year": "2016",
+      "online_year": "2015",
+      "pmid": "26146761",
+      "pmcid": null,
+      "doi": "10.1111/sms.12517",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/26146761/",
+        "https://europepmc.org/article/MED/26146761"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Kontrollierte Trainingsintervention",
+      "research_topic": "Negatives beziehungsweise uneinheitliches Ergebnis zur Kraft-Leistungs-Übertragung",
+      "transfer_limit_supplied": "Zehn Wochen, 16 Juniorinnen; Kraftzuwachs bedeutet nicht automatisch Ausdauerleistungszuwachs.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC11"
+    },
+    {
+      "id": "XC12",
+      "title": "Strength training improves double-poling performance after prolonged submaximal exercise in cross-country skiers.",
+      "authors": [
+        "S Øfsteng",
+        "Ø Sandbakk",
+        "M van Beekvelt",
+        "D Hammarström",
+        "R Kristoffersen",
+        "J Hansen",
+        "G Paulsen",
+        "B R Rønnestad"
+      ],
+      "journal": "Scandinavian journal of medicine & science in sports",
+      "issue_year": "2018",
+      "online_year": "2017",
+      "pmid": "29024041",
+      "pmcid": null,
+      "doi": "10.1111/sms.12990",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/29024041/",
+        "https://europepmc.org/article/MED/29024041"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Trainingsintervention",
+      "research_topic": "Krafttraining und Doppelstockleistung nach Vorermüdung",
+      "transfer_limit_supplied": "Ergebnis an konkretes Testprotokoll gebunden; kein pauschal validierter Durability-Score.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC12"
+    },
+    {
+      "id": "XC13",
+      "title": "Effects of upper-body sprint-interval training on strength and endurance capacities in female cross-country skiers.",
+      "authors": [
+        "Kristine Vandbakk",
+        "Boye Welde",
+        "Andrea Hovstein Kruken",
+        "Julia Baumgart",
+        "Gertjan Ettema",
+        "Trine Karlsen",
+        "Øyvind Sandbakk"
+      ],
+      "journal": "PloS one",
+      "issue_year": "2017",
+      "online_year": "2017",
+      "pmid": "28241030",
+      "pmcid": "PMC5328397",
+      "doi": "10.1371/journal.pone.0172706",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/28241030/",
+        "https://europepmc.org/article/MED/28241030"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Kontrollierte Trainingsintervention",
+      "research_topic": "Oberkörper-Sprintintervalle und Doppelstocktraining bei Frauen",
+      "transfer_limit_supplied": "Achtwöchige Intervention bei trainierten Frauen; keine universell überlegene Trainingsverteilung belegt.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC13"
+    },
+    {
+      "id": "XC14",
+      "title": "Strength Training Integration in Elite Cross-Country Skiers: A Retrospective Analysis of Real-World Training Practices.",
+      "authors": [
+        "Jacob Walther",
+        "Jan Kocbach",
+        "Thomas Haugen",
+        "Moritz Schumann",
+        "Øyvind Sandbakk"
+      ],
+      "journal": "International journal of sports physiology and performance",
+      "issue_year": "2026",
+      "online_year": "2026",
+      "pmid": "42618034",
+      "pmcid": null,
+      "doi": "10.1123/ijspp.2026-0012",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/42618034/",
+        "https://europepmc.org/article/MED/42618034"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Retrospektive Trainingsanalyse",
+      "research_topic": "Einordnung von Krafttraining in Mikrozyklen",
+      "transfer_limit_supplied": "17 Medaillengewinner, zehn Männer und sieben Frauen. Beobachtete Praxis beweist keine optimale Reihenfolge. Datensatzüberlappung mit anderen Walther-Arbeiten prüfen.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "other_source": "XC05",
+        "status": "possible",
+        "handling": "Bis zur Prüfung identischer Teilnehmender bei der Synthese nicht als unabhängige Replikation werten."
+      },
+      "primary_claim_id": "C-XC14"
+    },
+    {
+      "id": "XC15",
+      "title": "Biomechanical determinants of cross-country skiing performance: A systematic review.",
+      "authors": [
+        "Chiara Zoppirolli",
+        "Kim Hébert-Losier",
+        "Hans-Christer Holmberg",
+        "Barbara Pellegrini"
+      ],
+      "journal": "Journal of sports sciences",
+      "issue_year": "2020",
+      "online_year": "2020",
+      "pmid": "32552520",
+      "pmcid": null,
+      "doi": "10.1080/02640414.2020.1775375",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/32552520/",
+        "https://europepmc.org/article/MED/32552520"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review",
+      "research_topic": "Technikmerkmale und Leistungszusammenhänge",
+      "transfer_limit_supplied": "46 Artikel; korrelierte Kinematik ist keine Wirksamkeitsprüfung jeder daraus abgeleiteten Technikübung.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC15"
+    },
+    {
+      "id": "XC16",
+      "title": "Biomechanical and energetic determinants of technique selection in classical cross-country skiing.",
+      "authors": [
+        "Barbara Pellegrini",
+        "Chiara Zoppirolli",
+        "Lorenzo Bortolan",
+        "Hans-Christer Holmberg",
+        "Paola Zamparo",
+        "Federico Schena"
+      ],
+      "journal": "Human movement science",
+      "issue_year": "2013",
+      "online_year": "2013",
+      "pmid": "24071549",
+      "pmcid": null,
+      "doi": "10.1016/j.humov.2013.07.010",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/24071549/",
+        "https://europepmc.org/article/MED/24071549"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Biomechanische Laboruntersuchung",
+      "research_topic": "Technikwahl in Abhängigkeit von Geschwindigkeit und Steigung",
+      "transfer_limit_supplied": "Zehn Männer auf Rollski; keine universellen Umschaltgrenzen für Schnee, Frauen und andere Leistungsgruppen.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC16"
+    },
+    {
+      "id": "XC17",
+      "title": "Observational vs coaching feedback on non-dominant whole-body motor skill performance - application to technique training.",
+      "authors": [
+        "Ove Sollie",
+        "Kristian Holmsen",
+        "Christian Steinbo",
+        "Yngvar Ommundsen",
+        "Thomas Losnegard"
+      ],
+      "journal": "Scandinavian journal of medicine & science in sports",
+      "issue_year": "2021",
+      "online_year": "2021",
+      "pmid": "34351642",
+      "pmcid": null,
+      "doi": "10.1111/sms.14030",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/34351642/",
+        "https://europepmc.org/article/MED/34351642"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Techniktrainingsstudie",
+      "research_topic": "Video-, Eigenbeobachtungs- und Trainerfeedback",
+      "transfer_limit_supplied": "Jugendliche Wettkampfläufer und konkrete Technikaufgabe; keine automatische Videoanalyse validiert.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC17"
+    },
+    {
+      "id": "XC18",
+      "title": "Performance Effects of Video- and Sensor-Based Feedback for Implementing a Terrain-Specific Micropacing Strategy in Cross-Country Skiing.",
+      "authors": [
+        "Trine M Seeberg",
+        "Jan Kocbach",
+        "Rune Kjøsen Talsnes",
+        "Frederic Meyer",
+        "Thomas Losnegard",
+        "Johannes Tjønnås",
+        "Øyvind Sandbakk",
+        "Guro Strøm Solli"
+      ],
+      "journal": "International journal of sports physiology and performance",
+      "issue_year": "2022",
+      "online_year": "2022",
+      "pmid": "36270625",
+      "pmcid": null,
+      "doi": "10.1123/ijspp.2022-0106",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/36270625/",
+        "https://europepmc.org/article/MED/36270625"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": "cc by-nc",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Randomized Controlled Trial"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Randomisierte Interventionsstudie",
+      "research_topic": "Geländespezifisches Feedback und Renneinteilung",
+      "transfer_limit_supplied": "Konkrete Intervention; keine universelle optimale Pacing-Kurve belegt.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC18"
+    },
+    {
+      "id": "XC19",
+      "title": "Pacing and predictors of performance during cross-country skiing races: A systematic review.",
+      "authors": [
+        "Thomas Stöggl",
+        "Barbara Pellegrini",
+        "Hans-Christer Holmberg"
+      ],
+      "journal": "Journal of sport and health science",
+      "issue_year": "2018",
+      "online_year": "2018",
+      "pmid": "30450246",
+      "pmcid": "PMC6234023",
+      "doi": "10.1016/j.jshs.2018.09.005",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30450246/",
+        "https://europepmc.org/article/MED/30450246"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by-nc-nd",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review",
+      "research_topic": "Zusammenhänge zwischen Gelände, Teiltechniken und Rennleistung",
+      "transfer_limit_supplied": "27 korrelative Studien; keine eingeschlossene experimentelle Pacingprüfung, externe Bedingungen unvollständig berücksichtigt.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC19"
+    },
+    {
+      "id": "XC20",
+      "title": "Automatic classification of the sub-techniques (gears) used in cross-country ski skating employing a mobile phone.",
+      "authors": [
+        "Thomas Stöggl",
+        "Anders Holst",
+        "Arndt Jonasson",
+        "Erik Andersson",
+        "Tobias Wunsch",
+        "Christer Norström",
+        "Hans-Christer Holmberg"
+      ],
+      "journal": "Sensors (Basel, Switzerland)",
+      "issue_year": "2014",
+      "online_year": "2014",
+      "pmid": "25365459",
+      "pmcid": "PMC4279501",
+      "doi": "10.3390/s141120589",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/25365459/",
+        "https://europepmc.org/article/MED/25365459"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Technische Validierungsstudie",
+      "research_topic": "Machbarkeit sensorbasierter Bewegungsklassifikation",
+      "transfer_limit_supplied": "Elf Rollskiläufer, Smartphone am Brustgurt und Laboraufbau; keine Apple-Watch-Validierung.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC20"
+    },
+    {
+      "id": "XC21",
+      "title": "Automatic Classification of Sub-Techniques in Classical Cross-Country Skiing Using a Machine Learning Algorithm on Micro-Sensor Data.",
+      "authors": [
+        "Ole Marius Hoel Rindal",
+        "Trine M Seeberg",
+        "Johannes Tjønnås",
+        "Pål Haugnes",
+        "Øyvind Sandbakk"
+      ],
+      "journal": "Sensors (Basel, Switzerland)",
+      "issue_year": "2017",
+      "online_year": "2017",
+      "pmid": "29283421",
+      "pmcid": "PMC5795945",
+      "doi": "10.3390/s18010075",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/29283421/",
+        "https://europepmc.org/article/MED/29283421"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Technische Validierungsstudie",
+      "research_topic": "Technikerkennung mit zwei IMUs an Arm und Brust",
+      "transfer_limit_supplied": "24 Datensätze von zehn Personen. 93,9 Prozent Genauigkeit auf damaligen Testdaten ist kein Leistungsversprechen für eine einzelne Uhr. Online 28.12.2017, Ausgabe 18(1) 2018.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC21"
+    },
+    {
+      "id": "XC22",
+      "title": "Test-retest reliability of ski-specific aerobic, sprint, and neuromuscular performance tests in highly trained cross-country skiers.",
+      "authors": [
+        "Elias Bucher",
+        "Grégoire P Millet",
+        "Jon P Wehrlin",
+        "Thomas Steiner"
+      ],
+      "journal": "Scandinavian journal of medicine & science in sports",
+      "issue_year": "2023",
+      "online_year": "2023",
+      "pmid": "37635277",
+      "pmcid": null,
+      "doi": "10.1111/sms.14473",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/37635277/",
+        "https://europepmc.org/article/MED/37635277"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": "cc by-nc-nd",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Test-Retest-Reliabilitätsstudie",
+      "research_topic": "Standardisierte Diagnostik, Messfehler und minimale nachweisbare Veränderung",
+      "transfer_limit_supplied": "39 Trainierte mit Teilgruppen je Test; Zuverlässigkeit dieser Protokolle validiert nicht jeden späteren App-Score.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-XC22"
+    },
+    {
+      "id": "M01",
+      "title": "A new approach to monitoring exercise training.",
+      "authors": [
+        "C Foster",
+        "J A Florhaug",
+        "J Franklin",
+        "L Gottschall",
+        "L A Hrovatin",
+        "S Parker",
+        "P Doleshal",
+        "C Dodge"
+      ],
+      "journal": "Journal of strength and conditioning research",
+      "issue_year": "2001",
+      "online_year": null,
+      "pmid": "11708692",
+      "pmcid": null,
+      "doi": "10.1519/1533-4287(2001)015<0109:anatme>2.0.co;2",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/11708692/",
+        "https://europepmc.org/article/MED/11708692"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Comparative Study",
+        "Evaluation Study",
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Vergleichende Validierungsstudie",
+      "research_topic": "sRPE als subjektive innere Belastung",
+      "transfer_limit_supplied": "Untersucht Rad-/Basketballbelastungen; keine automatische metrische Gleichsetzung mit HR-Last oder TSS.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M01"
+    },
+    {
+      "id": "M02",
+      "title": "Variable dose-response relationship between exercise training and performance.",
+      "authors": [
+        "Thierry Busso"
+      ],
+      "journal": "Medicine and science in sports and exercise",
+      "issue_year": "2003",
+      "online_year": null,
+      "pmid": "12840641",
+      "pmcid": null,
+      "doi": "10.1249/01.MSS.0000074465.13621.37",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/12840641/",
+        "https://europepmc.org/article/MED/12840641"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Modell-/Interventionsstudie",
+      "research_topic": "Individuelle Trainingsantwort und variable Ermüdungsreaktion",
+      "transfer_limit_supplied": "Sechs zuvor Untrainierte; besserer Fit ist nicht automatisch bessere Vorhersage bei Langläufern.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M02"
+    },
+    {
+      "id": "M03",
+      "title": "Monitoring Athlete Training Loads: Consensus Statement.",
+      "authors": [
+        "Pitre C Bourdon",
+        "Marco Cardinale",
+        "Andrew Murray",
+        "Paul Gastin",
+        "Michael Kellmann",
+        "Matthew C Varley",
+        "Tim J Gabbett",
+        "Aaron J Coutts",
+        "Darren J Burgess",
+        "Warren Gregson",
+        "N Timothy Cable"
+      ],
+      "journal": "International journal of sports physiology and performance",
+      "issue_year": "2017",
+      "online_year": null,
+      "pmid": "28463642",
+      "pmcid": null,
+      "doi": "10.1123/IJSPP.2017-0208",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/28463642/",
+        "https://europepmc.org/article/MED/28463642"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Consensus Statement"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Konsenspapier",
+      "research_topic": "Innere/äußere Last, Monitoringkonzept",
+      "transfer_limit_supplied": "Kein universeller Algorithmus und keine validierte persönliche Verletzungswahrscheinlichkeit.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M03"
+    },
+    {
+      "id": "M04",
+      "title": "The Fitness-Fatigue Model: What's in the Numbers?",
+      "authors": [
+        "Kobe Vermeire",
+        "Michael Ghijs",
+        "Jan G Bourgois",
+        "Jan Boone"
+      ],
+      "journal": "International journal of sports physiology and performance",
+      "issue_year": "2022",
+      "online_year": "2022",
+      "pmid": "35320776",
+      "pmcid": null,
+      "doi": "10.1123/ijspp.2021-0494",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/35320776/",
+        "https://europepmc.org/article/MED/35320776"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Kommentar",
+      "research_topic": "Parameterkritik und Modellgrenzen",
+      "transfer_limit_supplied": "Startwerte, Schätzverfahren und Belastungsmethode beeinflussen Parameter; allgemeine Konstanten bilden Individualität nicht ab.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M04"
+    },
+    {
+      "id": "M05",
+      "title": "Statistical flaws of the fitness-fatigue sports performance prediction model.",
+      "authors": [
+        "Alexandre Marchal",
+        "Othmène Benazieb",
+        "Yisakor Weldegebriel",
+        "Thibaut Méline",
+        "Frank Imbach"
+      ],
+      "journal": "Scientific reports",
+      "issue_year": "2025",
+      "online_year": "2025",
+      "pmid": "39881202",
+      "pmcid": "PMC11779798",
+      "doi": "10.1038/s41598-025-88153-7",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39881202/",
+        "https://europepmc.org/article/MED/39881202"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by-nc-nd",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [
+        {
+          "source": "PPR",
+          "id": "PPR907054",
+          "type": "Preprint in",
+          "note": "CrossRef Pre-print loader",
+          "orderIn": 10002
+        }
+      ],
+      "study_design_supplied": "Statistische Modellstudie",
+      "research_topic": "Modellvalidierung, Identifizierbarkeit, Out-of-sample-Prüfung",
+      "transfer_limit_supplied": "Shorttrack-Datensätze; Evidenz für Modellprobleme, keine definitive Widerlegung aller Belastungsindikatoren.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M05"
+    },
+    {
+      "id": "M06",
+      "title": "Monitoring and adapting endurance training on the basis of heart rate variability monitored by wearable technologies: A systematic review with meta-analysis.",
+      "authors": [
+        "Peter Düking",
+        "Christoph Zinner",
+        "Khaled Trabelsi",
+        "Jennifer L Reed",
+        "Hans-Christer Holmberg",
+        "Philipp Kunz",
+        "Billy Sperlich"
+      ],
+      "journal": "Journal of science and medicine in sport",
+      "issue_year": "2021",
+      "online_year": "2021",
+      "pmid": "34489178",
+      "pmcid": null,
+      "doi": "10.1016/j.jsams.2021.04.012",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/34489178/",
+        "https://europepmc.org/article/MED/34489178"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Meta-Analysis",
+        "Systematic Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review/Metaanalyse",
+      "research_topic": "HRV als ein Anpassungssignal",
+      "transfer_limit_supplied": "8 Studien/198 Teilnehmende; Leistungs-/VO2peak-Effekte klein und nicht signifikant; keine Überlegenheitsgarantie.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M06"
+    },
+    {
+      "id": "M07",
+      "title": "Monitoring the athlete training response: subjective self-reported measures trump commonly used objective measures: a systematic review.",
+      "authors": [
+        "Anna E Saw",
+        "Luana C Main",
+        "Paul B Gastin"
+      ],
+      "journal": "British journal of sports medicine",
+      "issue_year": "2016",
+      "online_year": "2015",
+      "pmid": "26423706",
+      "pmcid": "PMC4789708",
+      "doi": "10.1136/bjsports-2015-094758",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/26423706/",
+        "https://europepmc.org/article/MED/26423706"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by-nc",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't",
+        "Systematic Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review",
+      "research_topic": "Subjektive Check-ins als eigenes Signal",
+      "transfer_limit_supplied": "Kein Beleg, Sensoren zu ersetzen; verschiedene Instrumente/Populationen.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M07"
+    },
+    {
+      "id": "M08",
+      "title": "Sleep and the athlete: narrative review and 2021 expert consensus recommendations.",
+      "authors": [
+        "Neil P Walsh",
+        "Shona L Halson",
+        "Charli Sargent",
+        "Gregory D Roach",
+        "Mathieu Nédélec",
+        "Luke Gupta",
+        "Jonathan Leeder",
+        "Hugh H Fullagar",
+        "Aaron J Coutts",
+        "Ben J Edwards",
+        "Samuel A Pullinger",
+        "Colin M Robertson",
+        "Jatin G Burniston",
+        "Michele Lastella",
+        "Yann Le Meur",
+        "Christophe Hausswirth",
+        "Amy M Bender",
+        "Michael A Grandner",
+        "Charles H Samuels"
+      ],
+      "journal": "British journal of sports medicine",
+      "issue_year": "2020",
+      "online_year": "2020",
+      "pmid": "33144349",
+      "pmcid": null,
+      "doi": "10.1136/bjsports-2020-102025",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/33144349/",
+        "https://europepmc.org/article/MED/33144349"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Narrativer Review/Expertenkonsens",
+      "research_topic": "Schlafbedarf und Messgrenzen",
+      "transfer_limit_supplied": "Online zuerst 2020; Ausgabe/Empfehlungen 2021. Keine Einheits-Schlafvorgabe oder Verwechslung Wearable-Schlafstadien mit Labor.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M08"
+    },
+    {
+      "id": "M09",
+      "title": "The Effects of Menstrual Cycle Phase on Exercise Performance in Eumenorrheic Women: A Systematic Review and Meta-Analysis.",
+      "authors": [
+        "Kelly Lee McNulty",
+        "Kirsty Jayne Elliott-Sale",
+        "Eimear Dolan",
+        "Paul Alan Swinton",
+        "Paul Ansdell",
+        "Stuart Goodall",
+        "Kevin Thomas",
+        "Kirsty Marie Hicks"
+      ],
+      "journal": "Sports medicine (Auckland, N.Z.)",
+      "issue_year": "2020",
+      "online_year": null,
+      "pmid": "32661839",
+      "pmcid": "PMC7497427",
+      "doi": "10.1007/s40279-020-01319-3",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/32661839/",
+        "https://europepmc.org/article/MED/32661839"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review",
+        "Network Meta-Analysis"
+      ],
+      "corrections_pubmed_or_crossref": [
+        {
+          "type": "CommentIn",
+          "citation": "Sports Med. 2021 May;51(5):1111-1113. doi: 10.1007/s40279-020-01383-9.",
+          "pmid": "33332009"
+        },
+        {
+          "type": "CommentIn",
+          "citation": "Sports Med. 2021 May;51(5):1107-1109. doi: 10.1007/s40279-020-01384-8.",
+          "pmid": "33332010"
+        }
+      ],
+      "corrections_europe_pmc": [
+        {
+          "source": "MED",
+          "id": "33332009",
+          "reference": "Sports Med. 2021 May;51(5):1111-1113. doi: 10.1007/s40279-020-01383-9.",
+          "type": "Comment in",
+          "orderIn": 1
+        },
+        {
+          "source": "MED",
+          "id": "33332010",
+          "reference": "Sports Med. 2021 May;51(5):1107-1109. doi: 10.1007/s40279-020-01384-8.",
+          "type": "Comment in",
+          "orderIn": 2
+        }
+      ],
+      "study_design_supplied": "Systematischer Review/Metaanalyse",
+      "research_topic": "Individuelle, symptomorientierte Zyklusberücksichtigung",
+      "transfer_limit_supplied": "Triviale Gruppenwirkung/geringe Evidenzqualität; keine pauschalen Phase→Trainingsart-Regeln.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M09"
+    },
+    {
+      "id": "M10",
+      "title": "Changes in Self-Reported Physical Fitness, Performance, and Side Effects Across the Phases of the Menstrual Cycle Among Competitive Endurance Athletes.",
+      "authors": [
+        "Guro S Solli",
+        "Silvana B Sandbakk",
+        "Dionne A Noordhof",
+        "Johanna K Ihalainen",
+        "Øyvind Sandbakk"
+      ],
+      "journal": "International journal of sports physiology and performance",
+      "issue_year": "2020",
+      "online_year": "2020",
+      "pmid": "32957079",
+      "pmcid": null,
+      "doi": "10.1123/ijspp.2019-0616",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/32957079/",
+        "https://europepmc.org/article/MED/32957079"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Fragebogen-Beobachtungsstudie",
+      "research_topic": "Symptom- und Erfahrungsprotokoll im Langlauf/Biathlon",
+      "transfer_limit_supplied": "140 Athletinnen; retrospektive Selbstauskunft, keine objektive Wirksamkeitsprüfung phasenbasierter Pläne.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M10"
+    },
+    {
+      "id": "M11",
+      "title": "The Influence of Menstrual-Cycle Phase on Measures of Recovery Status in Endurance Athletes: The Female Endurance Athlete Project.",
+      "authors": [
+        "Virginia De Martin Topranin",
+        "Tina Pettersen Engseth",
+        "Maria Hrozanova",
+        "Madison Taylor",
+        "Øyvind Sandbakk",
+        "Dionne A Noordhof"
+      ],
+      "journal": "International journal of sports physiology and performance",
+      "issue_year": "2023",
+      "online_year": "2023",
+      "pmid": "37726100",
+      "pmcid": null,
+      "doi": "10.1123/ijspp.2022-0325",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/37726100/",
+        "https://europepmc.org/article/MED/37726100"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Prospektive Beobachtungsstudie",
+      "research_topic": "Zyklus als Kontext für Ruhepuls/Schlaf/Readiness",
+      "transfer_limit_supplied": "41 Athletinnen; geringe bis vernachlässigbare Effekte, Zyklusphase nur einer vieler Stressoren.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M11"
+    },
+    {
+      "id": "M12",
+      "title": "2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs).",
+      "authors": [
+        "Margo Mountjoy",
+        "Kathryn E Ackerman",
+        "David M Bailey",
+        "Louise M Burke",
+        "Naama Constantini",
+        "Anthony C Hackney",
+        "Ida Aliisa Heikura",
+        "Anna Melin",
+        "Anne Marte Pensgaard",
+        "Trent Stellingwerff",
+        "Jorunn Kaiander Sundgot-Borgen",
+        "Monica Klungland Torstveit",
+        "Astrid Uhrenholdt Jacobsen",
+        "Evert Verhagen",
+        "Richard Budgett",
+        "Lars Engebretsen",
+        "Uğur Erdener"
+      ],
+      "journal": "British journal of sports medicine",
+      "issue_year": "2023",
+      "online_year": null,
+      "pmid": "37752011",
+      "pmcid": null,
+      "doi": "10.1136/bjsports-2023-106994",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/37752011/",
+        "https://europepmc.org/article/MED/37752011"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Consensus Statement"
+      ],
+      "corrections_pubmed_or_crossref": [
+        {
+          "type": "ErratumIn",
+          "citation": "Br J Sports Med. 2024 Feb 7;58(3):e4. doi: 10.1136/bjsports-2023-106994corr1.",
+          "pmid": "38325885"
+        }
+      ],
+      "corrections_europe_pmc": [
+        {
+          "source": "MED",
+          "id": "38325885",
+          "reference": "Br J Sports Med. 2024 Feb 7;58(3):e4. doi: 10.1136/bjsports-2023-106994corr1.",
+          "type": "Erratum in",
+          "orderIn": 1
+        }
+      ],
+      "study_design_supplied": "Konsenspapier",
+      "research_topic": "Gesundheitsorientierte Energieverfügbarkeit, fachliche Eskalation",
+      "transfer_limit_supplied": "REDs bei Frauen und Männern; keine automatische Diagnose aus Uhrkalorien oder Zykluseintrag, klinische Beurteilung erforderlich.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "linked_notice_review": "PMID 38325885, DOI 10.1136/bjsports-2023-106994corr1 als Erratum verifiziert. Inhalt der Korrektur in dieser Fassung nicht vollständig ausgewertet.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M12"
+    },
+    {
+      "id": "M13",
+      "title": "Nutritional intake and anthropometric characteristics are associated with endurance performance and markers of low energy availability in young female cross-country skiers.",
+      "authors": [
+        "Oona Kettunen",
+        "Ritva Mikkonen",
+        "Vesa Linnamo",
+        "Jaakko Mursu",
+        "Heikki Kyröläinen",
+        "Johanna K Ihalainen"
+      ],
+      "journal": "Journal of the International Society of Sports Nutrition",
+      "issue_year": "2023",
+      "online_year": null,
+      "pmid": "37342913",
+      "pmcid": "PMC10286690",
+      "doi": "10.1080/15502783.2023.2226639",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/37342913/",
+        "https://europepmc.org/article/MED/37342913"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Observational Study",
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Einjährige Beobachtungsstudie",
+      "research_topic": "Ernährung, Leistungsfähigkeit und Energieverfügbarkeit",
+      "transfer_limit_supplied": "23 junge Skilangläuferinnen/Biathletinnen; Zusammenhänge begründen weder Kausalität noch Gewichtsverlustvorgaben.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "selected_full_text_sections": [
+        "Methods, Participants"
+      ],
+      "cohort_overlap": {
+        "other_source": "M14",
+        "status": "possible",
+        "handling": "Bis zur Prüfung identischer Teilnehmender bei der Synthese nicht als unabhängige Replikation werten."
+      },
+      "primary_claim_id": "C-M13"
+    },
+    {
+      "id": "M14",
+      "title": "Carbohydrate intake in young female cross-country skiers is lower than recommended and affects competition performance.",
+      "authors": [
+        "Oona Kettunen",
+        "Ritva Mikkonen",
+        "Jaakko Mursu",
+        "Vesa Linnamo",
+        "Johanna K Ihalainen"
+      ],
+      "journal": "Frontiers in sports and active living",
+      "issue_year": "2023",
+      "online_year": "2023",
+      "pmid": "37528891",
+      "pmcid": "PMC10388101",
+      "doi": "10.3389/fspor.2023.1196659",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/37528891/",
+        "https://europepmc.org/article/MED/37528891"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Einjährige Beobachtungsstudie",
+      "research_topic": "Energie-/Kohlenhydratversorgung über Trainingsphasen",
+      "transfer_limit_supplied": "25 Athletinnen; trotz kausalem Titel beobachtendes Design. Kohortenüberlappung mit M13 prüfen.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "other_source": "M13",
+        "status": "possible",
+        "handling": "Bis zur Prüfung identischer Teilnehmender bei der Synthese nicht als unabhängige Replikation werten."
+      },
+      "primary_claim_id": "C-M14"
+    },
+    {
+      "id": "M15",
+      "title": "Critical Power: An Important Fatigue Threshold in Exercise Physiology.",
+      "authors": [
+        "David C Poole",
+        "Mark Burnley",
+        "Anni Vanhatalo",
+        "Harry B Rossiter",
+        "Andrew M Jones"
+      ],
+      "journal": "Medicine and science in sports and exercise",
+      "issue_year": "2016",
+      "online_year": null,
+      "pmid": "27031742",
+      "pmcid": "PMC5070974",
+      "doi": "10.1249/MSS.0000000000000939",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/27031742/",
+        "https://europepmc.org/article/MED/27031742"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Review",
+        "Research Support, Non-U.S. Gov't",
+        "Research Support, N.I.H., Extramural"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Review",
+      "research_topic": "Power-Duration-/CP-/W'-Modell",
+      "transfer_limit_supplied": "Valide Leistungsmessung und geeignete Tests nötig; keine Watt aus Skitempo, keine Gleichsetzung CP=FTP=Laktatschwelle.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M15"
+    },
+    {
+      "id": "M16",
+      "title": "The Importance of 'Durability' in the Physiological Profiling of Endurance Athletes.",
+      "authors": [
+        "Ed Maunder",
+        "Stephen Seiler",
+        "Mathew J Mildenhall",
+        "Andrew E Kilding",
+        "Daniel J Plews"
+      ],
+      "journal": "Sports medicine (Auckland, N.Z.)",
+      "issue_year": "2021",
+      "online_year": "2021",
+      "pmid": "33886100",
+      "pmcid": null,
+      "doi": "10.1007/s40279-021-01459-0",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/33886100/",
+        "https://europepmc.org/article/MED/33886100"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Review",
+      "research_topic": "Leistungsprofil unter fortdauernder Belastung",
+      "transfer_limit_supplied": "Durability nicht gleich einfache Pulsdrift; Schnee/Gelände/Temperatur/Verpflegung kontrollieren.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M16"
+    },
+    {
+      "id": "M17",
+      "title": "Influence of Training Load and Altitude on Heart Rate Variability Fatigue Patterns in Elite Nordic Skiers.",
+      "authors": [
+        "Laurent Schmitt",
+        "Jacques Regnard",
+        "Nicolas Coulmy",
+        "Gregoire P Millet"
+      ],
+      "journal": "International journal of sports medicine",
+      "issue_year": "2018",
+      "online_year": "2018",
+      "pmid": "29902811",
+      "pmcid": null,
+      "doi": "10.1055/a-0577-4429",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/29902811/",
+        "https://europepmc.org/article/MED/29902811"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Langzeit-Beobachtungsstudie",
+      "research_topic": "HRV-Muster, Höhe, individuelle Erholung",
+      "transfer_limit_supplied": "57 Athleten/1063 Tests; protokollspezifische liegende/stehende Messungen, nicht direkt auf nächtliche Garmin-Werte übertragbar.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M17"
+    },
+    {
+      "id": "M18",
+      "title": "Relationship between methods of monitoring training load and physiological indicators changes during 4 weeks cross-country skiing altitude training.",
+      "authors": [
+        "Yichao Yu",
+        "Dongye Li",
+        "Yifan Lu",
+        "Jing Mi"
+      ],
+      "journal": "PloS one",
+      "issue_year": "2023",
+      "online_year": "2023",
+      "pmid": "38100499",
+      "pmcid": "PMC10723660",
+      "doi": "10.1371/journal.pone.0295960",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/38100499/",
+        "https://europepmc.org/article/MED/38100499"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Beobachtungsstudie",
+      "research_topic": "Langlaufspezifischer Vergleich verschiedener Belastungsmethoden",
+      "transfer_limit_supplied": "Kleine männliche Elitekohorte im Höhentraining; keine allgemeine Validierung für Jan und Karina.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-M18"
+    },
+    {
+      "id": "LA01",
+      "title": "Lactate threshold concepts: how valid are they?",
+      "authors": [
+        "Oliver Faude",
+        "Wilfried Kindermann",
+        "Tim Meyer"
+      ],
+      "journal": "Sports medicine (Auckland, N.Z.)",
+      "issue_year": "2009",
+      "online_year": null,
+      "pmid": "19453206",
+      "pmcid": null,
+      "doi": "10.2165/00007256-200939060-00003",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/19453206/",
+        "https://europepmc.org/article/MED/19453206"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": false,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Review"
+      ],
+      "corrections_pubmed_or_crossref": [
+        {
+          "type": "CommentIn",
+          "citation": "Sports Med. 2010 Feb 1;40(2):179-80; author reply 180-2. doi: 10.2165/11319680-000000000-00000.",
+          "pmid": "20095653"
+        }
+      ],
+      "corrections_europe_pmc": [
+        {
+          "source": "MED",
+          "id": "20095653",
+          "reference": "Sports Med. 2010 Feb 1;40(2):179-80; author reply 180-2. doi: 10.2165/11319680-000000000-00000",
+          "type": "Comment in",
+          "orderIn": 1
+        }
+      ],
+      "study_design_supplied": "Übersichtsarbeit",
+      "research_topic": "Unterschiedliche Schwellenkonzepte, erster Laktatanstieg, feste Konzentrationen und Schätzungen der maximalen Dauerbelastbarkeit methodisch unterscheiden.",
+      "transfer_limit_supplied": "25 Konzepte mit unterschiedlichen Zielgrößen; gute Gruppenkorrelation mit Leistung beweist keine individuelle Übereinstimmung mit MLSS. Kein universeller Grenzwert für Jan oder Karina.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-LA01"
+    },
+    {
+      "id": "LA02",
+      "title": "Manipulating graded exercise test variables affects the validity of the lactate threshold and \n  \n    \n      \n        \n          V\n          ˙\n        \n        ⁢\n        O\n      \n      \n        2\n        ⁢\n        peak\n      \n    \n  \n.",
+      "authors": [
+        "Nicholas A Jamnick",
+        "Javier Botella",
+        "David B Pyne",
+        "David J Bishop"
+      ],
+      "journal": "PloS one",
+      "issue_year": "2018",
+      "online_year": "2018",
+      "pmid": "30059543",
+      "pmcid": "PMC6066218",
+      "doi": "10.1371/journal.pone.0199794",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30059543/",
+        "https://europepmc.org/article/MED/30059543"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Methodenvergleich mit wiederholten Belastungstests",
+      "research_topic": "Testprotokoll, Stufendauer, Belastungsinkremente, Probenzeitpunkte und Schwellenmethode gemeinsam versionieren; Protokolländerungen beim Verlauf berücksichtigen.",
+      "transfer_limit_supplied": "17 trainierte männliche Radfahrer; die günstige Kombination einer bestimmten modifizierten Dmax-Methode mit einem 4-Minuten-Protokoll ist keine universelle Empfehlung für Langlauf, Frauen oder jedes Handmessgerät.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "selected_full_text_sections": [
+        "Materials and methods, Participants"
+      ],
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-LA02"
+    },
+    {
+      "id": "LA03",
+      "title": "Maximal Lactate Steady State and Lactate Thresholds in the Cross-Country Skiing Sub-Technique Double Poling.",
+      "authors": [
+        "Johan Jakobsson",
+        "Christer Malm"
+      ],
+      "journal": "International journal of exercise science",
+      "issue_year": "2019",
+      "online_year": "2019",
+      "pmid": "30899341",
+      "pmcid": "PMC6413839",
+      "doi": "10.70252/CGKZ2153",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED",
+        "Originalverlag IJES"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/30899341/",
+        "https://europepmc.org/article/MED/30899341",
+        "https://intjexersci.com/ijes/vol12/iss2/2/",
+        "https://intjexersci.com/files/ijes/vol12/iss2/2.pdf"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Vergleich von Stufentest-Schwellen und konstanten Belastungstests",
+      "research_topic": "Langlauf-/Doppelstock-spezifische Schwellen; OBLA und die untersuchte individuelle Kurvenmethode nicht automatisch mit MLSS gleichsetzen.",
+      "transfer_limit_supplied": "Acht gut trainierte Langläufer; Gruppenmittel nicht als neue feste Zielkonzentration übernehmen. MLSS wurde durch separate konstante Belastungstests bestimmt, nicht allein aus einer Stufenkurve gemessen.",
+      "status": "full_text_read",
+      "approved_for_prescription": false,
+      "full_text_review": "read_and_extracted",
+      "screening_scope": "Verlagsvolltext gelesen, Originaltabellen und Abbildungen im Seitenbild geprüft. Extraktion ohne unabhängige Rohdatenanalyse oder individuelle Trainingsfreigabe.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-LA03",
+      "full_text_audit": {
+        "date": "2026-11-26",
+        "url": "https://intjexersci.com/files/ijes/vol12/iss2/2.pdf",
+        "sha256": "6b9996a395819d7cce39edf0fa185b0780c851aa4bc0c8d27ffa4ff68e7654ea",
+        "printed_pages": "57–68",
+        "pages": 12,
+        "tables_visual_checked": [
+          1,
+          2
+        ],
+        "figures_visual_checked": [
+          1,
+          2,
+          3
+        ],
+        "record": "LA03.md",
+        "independent_expert_review": false
+      }
+    },
+    {
+      "id": "LA04",
+      "title": "Precision and accuracy of four handheld blood lactate analyzers across low to high exercise intensities.",
+      "authors": [
+        "Fredrik Mentzoni",
+        "Martin Skaugen",
+        "Ingrid Eythorsdottir",
+        "Stian Roterud",
+        "Espen Spro Johansen",
+        "Thomas Losnegard"
+      ],
+      "journal": "European journal of applied physiology",
+      "issue_year": "2024",
+      "online_year": "2024",
+      "pmid": "39158591",
+      "pmcid": "PMC11568978",
+      "doi": "10.1007/s00421-024-05572-6",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/39158591/",
+        "https://europepmc.org/article/MED/39158591"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false,
+        "article_license_verified": "CC BY 4.0; Einschränkungen bei gesondert gekennzeichnetem Fremdmaterial.",
+        "license_locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11568978/#article-aaff"
+      },
+      "publication_types": [
+        "Comparative Study",
+        "Journal Article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Analytischer Gerätevergleich",
+      "research_topic": "Modellabhängige Messabweichungen und Wiederholbarkeit beachten; enthält ausdrücklich Lactate Scout 4. Gerät, Messbedingungen und Qualität zu jedem Wert speichern.",
+      "transfer_limit_supplied": "Venöse Proben eines trainierten männlichen Radfahrers, je zwei neue Geräte pro Modell und untersuchter Konzentrationsbereich circa 0,88–4,89 mmol/L. Keine direkte Validierung aller kapillären Feldmessungen, anderer Scout-Generationen oder individueller Gerätekorrekturfaktoren.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "selected_full_text_sections": [
+        "Methods, Experimental design"
+      ],
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-LA04"
+    },
+    {
+      "id": "LA05",
+      "title": "Validity and Reliability of Portable Blood Lactate Analyzers: A Systematic Review with COSMIN and GRADE Assessment.",
+      "authors": [
+        "João Bruno",
+        "Rohit Kumar Thapa",
+        "Ângelo Santos",
+        "Raynier Montoro-Bombú",
+        "Hugo Sarmento"
+      ],
+      "journal": "Sports medicine - open",
+      "issue_year": "2026",
+      "online_year": "2026",
+      "pmid": "41876912",
+      "pmcid": "PMC13013956",
+      "doi": "10.1186/s40798-026-00979-1",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/41876912/",
+        "https://europepmc.org/article/MED/41876912"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by-nc-nd",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review mit Qualitätsbewertung",
+      "research_topic": "Messqualität, Probenstelle, Zeitpunkt, Umgebungsbedingungen, Standardisierung und Gerätemodell als Grundlage für Interpretation und Vergleichbarkeit berücksichtigen.",
+      "transfer_limit_supplied": "25 heterogene Studien; Korrelation ist keine Austauschbarkeit. Unzureichende Repräsentation mancher Populationen und systematische Geräteabweichungen. Keine gemeinsame garantierte Genauigkeit aller Lactate-Scout-Modelle.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-LA05"
+    },
+    {
+      "id": "LA06",
+      "title": "Analysis of the factors influencing the proximity and agreement between critical power and maximal lactate steady state: a systematic review and meta-analyses.",
+      "authors": [
+        "Lorenzo Micheli",
+        "Francesco Lucertini",
+        "Tommaso Grossi",
+        "Silvia Pogliaghi",
+        "Daniel A Keir",
+        "Carlo Ferri Marini"
+      ],
+      "journal": "PeerJ",
+      "issue_year": "2025",
+      "online_year": "2025",
+      "pmid": "40124604",
+      "pmcid": "PMC11927562",
+      "doi": "10.7717/peerj.19060",
+      "bibliography_sources": [
+        "PubMed EFetch",
+        "Europe PMC MED"
+      ],
+      "primary_urls": [
+        "https://pubmed.ncbi.nlm.nih.gov/40124604/",
+        "https://europepmc.org/article/MED/40124604"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": true,
+        "license_indexed": "cc by",
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Systematischer Review und Metaanalysen",
+      "research_topic": "CP und MLSS nach Ermittlungsmethode getrennt führen; Übereinstimmung und individuelle Abweichungen statt bloßer Korrelation bewerten.",
+      "transfer_limit_supplied": "Nähe hängt von Testdesign, Intensitätsmaß und Population ab; keine automatische Gleichsetzung mit einem aus der Laktatkurve geschätzten LT2 oder mit FTP.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-LA06"
+    },
+    {
+      "id": "LA07",
+      "title": "Lactate Thresholds in Sports Medicine – an Updated Physiological Perspective on Endurance Exercise",
+      "authors": [
+        "Oliver Faude",
+        "Romina Ledergeber",
+        "Tim Meyer",
+        "Kai Roecker",
+        "Karsten Königstein"
+      ],
+      "journal": "German Journal of Sports Medicine",
+      "issue_year": "2026",
+      "online_year": "2026",
+      "pmid": null,
+      "pmcid": null,
+      "doi": "10.5960/dzsm.2026.683",
+      "bibliography_sources": [
+        "Crossref",
+        "Originalverlag"
+      ],
+      "primary_urls": [
+        "https://www.germanjournalsportsmedicine.com/current-issue/online-publications/lactate-thresholds-in-sports-medicine-an-updated-physiological-perspective-on-endurance-exercise",
+        "https://api.crossref.org/works/10.5960/dzsm.2026.683"
+      ],
+      "source_date": "2026-11-26",
+      "access": {
+        "open_access_in_europe_pmc": null,
+        "license_indexed": null,
+        "reuse_verified": false
+      },
+      "publication_types": [
+        "journal-article"
+      ],
+      "corrections_pubmed_or_crossref": [],
+      "corrections_europe_pmc": [],
+      "study_design_supplied": "Klinische Übersichtsarbeit",
+      "research_topic": "Aktualisierte Einordnung von Laktat, Schwellen und Protokoll-/Kontextabhängigkeit; Interpretation in Verbindung mit Trainingsziel und übrigen Leistungsdaten.",
+      "transfer_limit_supplied": "Keine Validierung unseres App-Algorithmus; niedrigere Werte allein beweisen keine Leistungssteigerung. Onlineveröffentlichung 25. November 2026.",
+      "status": "abstract_read",
+      "approved_for_prescription": false,
+      "full_text_review": "pending",
+      "screening_scope": "Titelabgleich und Abstract; verknüpfte Hinweise in den abgefragten Registern.",
+      "cohort_overlap": {
+        "status": "not_established",
+        "handling": "Keine vollständige paarweise Prüfung aller Kohorten abgeschlossen."
+      },
+      "primary_claim_id": "C-LA07"
+    }
+  ]
+}

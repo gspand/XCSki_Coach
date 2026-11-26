@@ -1,0 +1,221 @@
+{
+  "version": "1.0.1",
+  "origins": {
+    "direct_protocol": "Direkt untersuchtes Protokoll",
+    "scientific_transfer": "Nachvollziehbare wissenschaftliche Übertragung",
+    "coach_heuristic": "Trainerheuristik",
+    "product_assumption": "Produktannahme",
+    "personal_observation": "Persönliche Beobachtung"
+  },
+  "release_requirements": [
+    "Volltext, Messverfahren und fachlich relevante Korrekturen geprüft",
+    "Übertragbarkeit, Abhängigkeiten und widersprüchliche Befunde bewertet",
+    "Fachverantwortliche Person, Datum, Version und Quellen festgehalten",
+    "Konkrete Parameter und Ausschlussfälle spezifiziert und implementierte Tests bestanden",
+    "Zeitlich korrektes Replay, individueller Beobachtungsmodus, dokumentierte Freigabe"
+  ],
+  "rules": [
+    {
+      "id": "R-INTENSITY",
+      "version": "0.1.0",
+      "title": "Häufigkeit intensiver Einheiten",
+      "origin": "scientific_transfer",
+      "claim_ids": [
+        "C-XC03",
+        "C-XC04",
+        "C-XC05"
+      ],
+      "inputs": "Trainingshistorie, Leistungsniveau, aktueller Plan, Rückmeldung zur Verträglichkeit",
+      "parameters": "Keine freigegebene feste Zahl von Tagen oder Jahresstunden.",
+      "proposed_action": "Häufigkeit und Erholung als Vergleichsfragen im Planreview zeigen.",
+      "exclusions": "Elite-Mittelwert ohne individuelle Daten; akute Beschwerden; fehlender Ausgangsplan.",
+      "test_specification": "Bei drei Tagen Abstand ohne persönliche Historie erfolgt keine automatische Planung.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    },
+    {
+      "id": "R-STRENGTH",
+      "version": "0.1.0",
+      "title": "Krafttransfer bewerten",
+      "origin": "scientific_transfer",
+      "claim_ids": [
+        "C-XC09",
+        "C-XC10",
+        "C-XC11",
+        "C-XC12",
+        "C-XC13"
+      ],
+      "inputs": "Krafttest, skispezifischer Test derselben Technik, Vorermüdung und Protokoll",
+      "parameters": "Kein Mindestzuwachs oder universelles Satzschema aus diesen Studien.",
+      "proposed_action": "Kraft- und Skitest als getrennte Endpunkte vergleichen.",
+      "exclusions": "Wechsel des Testprotokolls oder der Sportart; unzureichende Vergleichsdaten.",
+      "test_specification": "Steigt die Zugkraft ohne Änderung des Skitests, wird kein Skileistungsgewinn behauptet.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    },
+    {
+      "id": "R-HRV",
+      "version": "0.1.0",
+      "title": "HRV im Erholungskontext",
+      "origin": "scientific_transfer",
+      "claim_ids": [
+        "C-M06",
+        "C-M07",
+        "C-M08",
+        "C-M17"
+      ],
+      "inputs": "Messgerät, Messprotokoll, persönlicher Verlauf, Befinden, Messdatum",
+      "parameters": "Keine validierte domänenübergreifende HRV-Grenze.",
+      "proposed_action": "Protokollgleichen persönlichen Verlauf und subjektive Rückmeldung zusammen anzeigen.",
+      "exclusions": "Fehlende oder veraltete Messung, geänderte HRV-Methode, fehlende Erlaubnis für Gesundheitsdaten.",
+      "test_specification": "Eine fehlende nächtliche HRV wird weder null noch Zeichen ausreichender Erholung.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    },
+    {
+      "id": "R-CYCLE",
+      "version": "0.1.0",
+      "title": "Freiwilliger Symptomkontext",
+      "origin": "product_assumption",
+      "claim_ids": [
+        "C-M09",
+        "C-M10",
+        "C-M11"
+      ],
+      "inputs": "Zweckgebundene Freigabe, freiwillig berichtetes Symptom, Datum, individueller Verlauf",
+      "parameters": "Keine kalendarische Phasengrenze zur Dosierung.",
+      "proposed_action": "Persönlichen Kontext auf ausdrücklichen Wunsch sichtbar machen.",
+      "exclusions": "Fehlende Freigabe, fremdes Profil, Kalenderphase ohne freiwillige Rückmeldung.",
+      "test_specification": "Eine alleinige Phasenschätzung ändert die Belastung nicht; ein Widerruf entfernt diese Eingangsgröße.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    },
+    {
+      "id": "R-MODEL",
+      "version": "0.1.0",
+      "title": "Modellwerte kennzeichnen",
+      "origin": "scientific_transfer",
+      "claim_ids": [
+        "C-M02",
+        "C-M03",
+        "C-M04",
+        "C-M05",
+        "C-M16"
+      ],
+      "inputs": "Lastdefinition, Quelle, Zeitbereich, zeitlich getrennte Referenzleistung",
+      "parameters": "Keine zugelassene optimale Zeitkonstante oder klinische Grenze.",
+      "proposed_action": "Fitness-/Ermüdungskurven mit Modellbezeichnung, Ausgangslage und Datenlücken anzeigen.",
+      "exclusions": "Unvergleichbare Lastquellen, Validierung an späteren Informationen, fehlende Daten.",
+      "test_specification": "Gute In-Sample-Anpassung ohne chronologischen Test führt zu keiner Vorhersagefreigabe.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    },
+    {
+      "id": "R-LACTATE",
+      "version": "0.1.1",
+      "title": "Schwellenverfahren auseinanderhalten",
+      "origin": "scientific_transfer",
+      "claim_ids": [
+        "C-LA01",
+        "C-LA02",
+        "C-LA03",
+        "C-LA04",
+        "C-LA05",
+        "C-LA06",
+        "C-LA07",
+        "C-XC22"
+      ],
+      "inputs": "Technik, Stufenprotokoll, Gerät, Entnahmestelle, Einheit, Referenz-Dauerlast",
+      "parameters": "Keine feste Konzentration oder Gerätekorrektur als individuelle MLSS.",
+      "proposed_action": "Befunde methodenspezifisch darstellen und mit gültigem Vergleichsprotokoll prüfen.",
+      "exclusions": "Keine identischen Einheiten, unbekannte Stufendauer, fehlende Referenz oder Gerät gewechselt.",
+      "test_specification": "Ein Wert von 4 mmol/l oder eine Einzelstufe wird nicht als gemessene MLSS ausgegeben.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null,
+      "claim_review_note": "C-LA03 v1.1.0 ergänzt Einschluss-/Ausschlusseffekt und uneindeutiges Vorzeichen in Tabelle 2. Die bestehende Sperre für individuelle Vorgaben wurde erneut geprüft."
+    },
+    {
+      "id": "R-TECHNIQUE",
+      "version": "0.1.0",
+      "title": "Technikerkennung einordnen",
+      "origin": "scientific_transfer",
+      "claim_ids": [
+        "C-XC15",
+        "C-XC17",
+        "C-XC18",
+        "C-XC20",
+        "C-XC21"
+      ],
+      "inputs": "Sensorposition, Technik, Gelände, Videoreferenz, Testpopulation",
+      "parameters": "Keine aus der Brustsensorstudie übernommene Watch-Genauigkeit.",
+      "proposed_action": "Validierung je Geräteposition und Wechselphase ausweisen.",
+      "exclusions": "Anderer Gerätesitz oder fehlende Referenzkennzeichnung.",
+      "test_specification": "Bei ausschließlich am Handgelenk gemessenen Daten wird keine Brustsensor-Trefferrate angegeben.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    },
+    {
+      "id": "R-DURABILITY",
+      "version": "0.1.0",
+      "title": "Leistung nach vergleichbarer Vorbelastung",
+      "origin": "scientific_transfer",
+      "claim_ids": [
+        "C-M15",
+        "C-M16",
+        "C-XC12"
+      ],
+      "inputs": "Echte Leistung oder standardisierte Geschwindigkeit, Technik, Vorbelastung, Oberfläche",
+      "parameters": "Keine Power-Umrechnung aus Ski-GPS allein.",
+      "proposed_action": "Ermüdete und frische Tests unter vergleichbaren Bedingungen gegenüberstellen.",
+      "exclusions": "Schnee-, Wind-, Geräte- oder Technikwechsel ohne dokumentierten Kontext.",
+      "test_specification": "Zwei gleich schnelle Einheiten mit unterschiedlichem Gelände erhalten keine unterstellte Wattgleichheit.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    },
+    {
+      "id": "R-ENERGY",
+      "version": "0.1.0",
+      "title": "Energieverfügbarkeit fachlich einordnen",
+      "origin": "product_assumption",
+      "claim_ids": [
+        "C-M12",
+        "C-M13",
+        "C-M14"
+      ],
+      "inputs": "Freiwillige Angaben und Freigabe für deren Nutzung",
+      "parameters": "Keine automatisierte Diagnose- oder Gewichtsgrenze.",
+      "proposed_action": "Auf Wunsch den Kontext separat für eine qualifizierte Betreuung zusammenstellen.",
+      "exclusions": "Keine Einwilligung oder fremdes Profil. Offener Erratum- und Kohortenabgleich.",
+      "test_specification": "Aus Ernährungsprotokoll und Belastungsdaten wird keine REDs-Diagnose errechnet.",
+      "implementation_test_status": "not_executed_for_this_candidate",
+      "review_state": "proposed",
+      "release_status": "not_released",
+      "can_drive_training": false,
+      "reviewer": null
+    }
+  ]
+}

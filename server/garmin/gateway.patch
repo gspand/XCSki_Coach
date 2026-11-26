@@ -1,0 +1,125 @@
+diff --git a/server/giulia/src/server.js b/server/giulia/src/server.js
+index 3a8aae6..0c1104d 100644
+--- a/server/giulia/src/server.js
++++ b/server/giulia/src/server.js
+@@ -6,6 +6,7 @@ import path from "node:path";
+ import { fileURLToPath } from "node:url";
+ 
+ import { decryptJson, encryptJson, requireEncryptionKey } from "./token_crypto.js";
++import { XcHistory, requestHistory } from "./xc_history.js";
+ import { XcGarminInbox } from "./xc_garmin.js";
+ import { findAccountSession } from "./session_account.js";
+ import {
+@@ -202,6 +203,37 @@ const installRate = new Map();
+ await ensureStore();
+ const xcPath = path.join(dataDir, "xc-garmin.sqlite");
+ const xc = new XcGarminInbox(xcPath, tokenEncryptionKey);
++const history = new XcHistory(xc.db);
++let historyBusy = false;
++async function advanceHistory() {
++  if (historyBusy) return;
++  historyBusy = true;
++  try {
++    const now = Math.floor(Date.now()/1000);
++    const job = history.next(now);
++    if (!job) return;
++    const session = accountSession(job.owner,"garmin");
++    const settings = session?.account?.user_id && xc.settings(job.owner,session.account.user_id);
++    if (!settings || session.status !== "connected" || !Array.isArray(session.garmin_permissions)) {
++      xc.db.prepare("UPDATE xc_history SET retry_s=? WHERE owner=?").run(now+3600,job.owner);
++      return;
++    }
++    history.enroll(job.owner,session.garmin_permissions,Boolean(settings.cycle),now);
++    await history.step(job,now,async (feed,start,end) => {
++      const token = await validGarminToken(session);
++      if (accountSession(job.owner,"garmin") !== session || session.status !== "connected" ||
++          !xc.settings(job.owner,session.account.user_id) ||
++          !history.status(job.owner).some(row => row.feed === feed && row.first_s === job.first_s)) {
++        throw new Error("Garmin access changed");
++      }
++      return requestHistory(token,feed,start,end);
++    });
++  } catch {
++    // Network failures keep the same interval for the next worker pass.
++    console.error("xc Garmin history awaiting retry");
++  } finally { historyBusy = false; }
++}
++setInterval(() => void advanceHistory(), 62000).unref();
+ await fs.chmod(xcPath,0o600);
+ const xcFilesTimer = setInterval(() => void processXcFiles().catch(() => console.error("xc file queue unavailable")), 60_000);
+ xcFilesTimer.unref();
+@@ -269,7 +301,7 @@ async function handleRequest(req, res) {
+     return;
+   }
+ 
+-  if (["/xc/garmin/settings", "/xc/garmin/inbox", "/xc/garmin/ack"].includes(apiPath)) {
++  if (["/xc/garmin/settings", "/xc/garmin/inbox", "/xc/garmin/ack", "/xc/garmin/history"].includes(apiPath)) {
+     await handleXcInbox(req, res, apiPath);
+     return;
+   }
+@@ -830,6 +862,7 @@ async function completeGarminSession(req, res) {
+       const subject = session.account?.user_id;
+       if (!subject) throw new Error("garmin_user_missing");
+       xc.enroll(ownerUserId, subject, session.xc_cycle === true);
++      xc.db.prepare("UPDATE xc_history SET state='pending',retry_s=0 WHERE owner=? AND state IN ('denied','unavailable')").run(ownerUserId);
+     }
+     session.status = "connected";
+     session.error = null;
+@@ -1095,9 +1128,19 @@ async function handleXcInbox(req, res, route) {
+       }
+     }
+     if (!current || body.cycle !== undefined) xc.enroll(owner, subject, body.cycle === true);
++    if (body.cycle !== undefined && history.status(owner).length) {
++      history.enroll(owner, session.garmin_permissions, body.cycle, Math.floor(Date.now()/1000));
++    }
+     return sendJson(res, 200, {cycle: Boolean(xc.settings(owner,subject).cycle), permissions: session.garmin_permissions});
+   }
+   if (!current) return sendJson(res, 409, {error: "xc_not_enrolled"});
++  if (route.endsWith("/history") && req.method === "POST") {
++    if (!Array.isArray(session.garmin_permissions)) return sendJson(res,409,{error:"permissions_unknown"});
++    const before = history.status(owner);
++    history.enroll(owner,session.garmin_permissions,Boolean(current.cycle),Math.floor(Date.now()/1000));
++    if (!before.length) void advanceHistory();
++    return sendJson(res,200,{feeds:history.status(owner)});
++  }
+   if (route.endsWith("/inbox") && req.method === "GET") {
+     return sendJson(res, 200, {records: xc.page(owner), cycle: Boolean(current.cycle)});
+   }
+@@ -1262,6 +1305,13 @@ async function processGarminPush(payload) {
+     for (const session of garminSessionsOf(userId)) {
+       xc.restrict(session.owner_user_id,permissions);
+       session.garmin_permissions = permissions;
++      if (history.status(session.owner_user_id).length) {
++        const settings = xc.settings(session.owner_user_id,userId);
++        if (settings) {
++          history.enroll(session.owner_user_id,permissions,Boolean(settings.cycle),Math.floor(Date.now()/1000));
++          xc.db.prepare("UPDATE xc_history SET state='pending',retry_s=0 WHERE owner=? AND state='denied'").run(session.owner_user_id);
++        }
++      }
+       session.updated_at = new Date().toISOString();
+       changed = true;
+     }
+diff --git a/server/giulia/test/xc_garmin.test.js b/server/giulia/test/xc_garmin.test.js
+index 94ec6b0..8e3b8fe 100644
+--- a/server/giulia/test/xc_garmin.test.js
++++ b/server/giulia/test/xc_garmin.test.js
+@@ -119,3 +119,19 @@ test("signed push survives restart; profile-bound ack, cycle consent, correction
+   await push({deregistrations:[{userId:"karina"}]});
+   assert.equal((await call(0,"/xc/garmin/inbox")).status,409);
+ });
++
++test("large FIT pages survive replay, retain oversized first record and isolate owners", () => {
++  const inbox = new XcGarminInbox(":memory:",Buffer.alloc(32));
++  try {
++    inbox.enroll("one","source",false);
++    for (let id=1;id<=3;id++) inbox.put("one","source","activity","activityFiles",{activityId:id,samples:"x".repeat(820000)});
++    for(let id=1;id<=3;id++){
++      const page=inbox.page("one");
++      assert.equal(page.length,1);
++      assert.equal(page[0].data.activityId,id);
++      assert.deepEqual(inbox.page("one").map(r=>r.receipt),[page[0].receipt]);
++      assert.deepEqual(inbox.page("two"),[]);
++      inbox.ack("one",[page[0].receipt]);
++    }
++  } finally { inbox.db.close(); }
++});

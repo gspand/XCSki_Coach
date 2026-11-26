@@ -1,0 +1,7 @@
+{
+  "name": "xc-garmin-inbox",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": { "test": "node --test" }
+}

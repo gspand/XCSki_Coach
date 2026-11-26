@@ -1,0 +1,740 @@
+{
+  "as_of": "2026-11-26",
+  "scope": "Orientierende Recherche. Je Suchstrang erste fünf zurückgegebene Datensätze, keine vollständige systematische Suche.",
+  "source_verification": {
+    "pubmed": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=28095083%2C29326603%2C25019608%2C25648345%2C40400090%2C33718870%2C31076890%2C27334280%2C36523891%2C20136751%2C26146761%2C29024041%2C28241030%2C42618034%2C32552520%2C24071549%2C34351642%2C36270625%2C30450246%2C25365459%2C29283421%2C37635277%2C11708692%2C12840641%2C28463642%2C35320776%2C39881202%2C34489178%2C26423706%2C33144349%2C32661839%2C32957079%2C37726100%2C37752011%2C37342913%2C37528891%2C27031742%2C33886100%2C29902811%2C38100499%2C19453206%2C30059543%2C30899341%2C39158591%2C41876912%2C40124604&retmode=xml",
+    "Europe PMC": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=SRC%3AMED+AND+%28EXT_ID%3A28095083+OR+EXT_ID%3A29326603+OR+EXT_ID%3A25019608+OR+EXT_ID%3A25648345+OR+EXT_ID%3A40400090+OR+EXT_ID%3A33718870+OR+EXT_ID%3A31076890+OR+EXT_ID%3A27334280+OR+EXT_ID%3A36523891+OR+EXT_ID%3A20136751+OR+EXT_ID%3A26146761+OR+EXT_ID%3A29024041+OR+EXT_ID%3A28241030+OR+EXT_ID%3A42618034+OR+EXT_ID%3A32552520+OR+EXT_ID%3A24071549+OR+EXT_ID%3A34351642+OR+EXT_ID%3A36270625+OR+EXT_ID%3A30450246+OR+EXT_ID%3A25365459+OR+EXT_ID%3A29283421+OR+EXT_ID%3A37635277+OR+EXT_ID%3A11708692+OR+EXT_ID%3A12840641+OR+EXT_ID%3A28463642+OR+EXT_ID%3A35320776+OR+EXT_ID%3A39881202+OR+EXT_ID%3A34489178+OR+EXT_ID%3A26423706+OR+EXT_ID%3A33144349+OR+EXT_ID%3A32661839+OR+EXT_ID%3A32957079+OR+EXT_ID%3A37726100+OR+EXT_ID%3A37752011+OR+EXT_ID%3A37342913+OR+EXT_ID%3A37528891+OR+EXT_ID%3A27031742+OR+EXT_ID%3A33886100+OR+EXT_ID%3A29902811+OR+EXT_ID%3A38100499+OR+EXT_ID%3A19453206+OR+EXT_ID%3A30059543+OR+EXT_ID%3A30899341+OR+EXT_ID%3A39158591+OR+EXT_ID%3A41876912+OR+EXT_ID%3A40124604%29&format=json&resultType=core&pageSize=100",
+    "Crossref": "https://api.crossref.org/works/10.5960/dzsm.2026.683"
+  },
+  "title_records": 65,
+  "title_screening_counts": {
+    "already_registered": 9,
+    "queued": 38,
+    "excluded": 11,
+    "duplicate": 7
+  },
+  "searches": [
+    {
+      "strand": "Kraft und Transfer",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiing%22+OR+TITLE_ABS%3A%22cross-country+skiers%22%29+AND+%28TITLE_ABS%3A%22strength+training%22+OR+TITLE_ABS%3A%22power+training%22%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiing\" OR TITLE_ABS:\"cross-country skiers\") AND (TITLE_ABS:\"strength training\" OR TITLE_ABS:\"power training\") AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 35,
+      "records": [
+        {
+          "title": "Strength Training Integration in Elite Cross-Country Skiers: A Retrospective Analysis of Real-World Training Practices.",
+          "doi": "10.1123/ijspp.2026-0012",
+          "pmid": "42618034",
+          "year": "2026",
+          "title_screening": "already_registered",
+          "canonical": "XC14",
+          "reason": "Bibliografischer Treffer im Startregister."
+        },
+        {
+          "title": "Quantitative Analysis of Annual Training Volume and Periodization Patterns in Elite Female Cross-Country Skiers Using GPS Monitoring: A Three-Athlete Case Study.",
+          "doi": "10.3390/bioengineering13040429",
+          "pmid": "42072223",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-42072223",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Elite Cross-Country Skiers Develop Greater Physiological Adaptations Than Biathletes in Summer Macrocycle.",
+          "doi": "10.1519/jsc.0000000000005108",
+          "pmid": "40440539",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-40440539",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "The fine line between deliberate play and deliberate practice within talent development in grassroots football: evidence from a one-year longitudinal case study.",
+          "doi": "10.3389/fspor.2026.1799878",
+          "pmid": "42125639",
+          "year": "2026",
+          "title_screening": "excluded",
+          "canonical": "MED-42125639",
+          "reason": "Fußball-Nachwuchs, ohne nordischen Trainingsbezug."
+        },
+        {
+          "title": "Endurance Training in Olympic Winter Sports: A Narrative Review of the Current Literature and Future Research Priorities.",
+          "doi": "10.1111/sms.70220",
+          "pmid": "41673933",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41673933",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        }
+      ]
+    },
+    {
+      "strand": "Schwelle im Langlauf",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiing%22+OR+TITLE_ABS%3A%22double+poling%22+OR+TITLE_ABS%3A%22roller+skiing%22%29+AND+%28TITLE_ABS%3A%22lactate+threshold%22+OR+TITLE_ABS%3A%22maximal+lactate+steady+state%22%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiing\" OR TITLE_ABS:\"double poling\" OR TITLE_ABS:\"roller skiing\") AND (TITLE_ABS:\"lactate threshold\" OR TITLE_ABS:\"maximal lactate steady state\") AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 22,
+      "records": [
+        {
+          "title": "Associations Between Laboratory-Based Performance Indicators and On-Snow Competitive Success in Elite Cross-Country Skiing: A 15-Year Analysis of the Swiss National Team.",
+          "doi": "10.1123/ijspp.2025-0230",
+          "pmid": "41764999",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41764999",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Heart Rate-Blood Lactate Profiling in World-Class Biathletes During Cross-Country Skiing: The Difference Between Laboratory and Field Tests.",
+          "doi": "10.1123/ijspp.2023-0011",
+          "pmid": "37207998",
+          "year": "2023",
+          "title_screening": "queued",
+          "canonical": "MED-37207998",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Relationship between methods of monitoring training load and physiological indicators changes during 4 weeks cross-country skiing altitude training.",
+          "doi": "10.1371/journal.pone.0295960",
+          "pmid": "38100499",
+          "year": "2023",
+          "title_screening": "already_registered",
+          "canonical": "M18",
+          "reason": "Bibliografischer Treffer im Startregister."
+        },
+        {
+          "title": "Elite Aerobic Endurance Performance: Is It Really Related to Lactate Threshold Expressed Relative to Peak Oxygen Uptake?",
+          "doi": "10.1123/ijspp.2024-0528",
+          "pmid": "40239962",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-40239962",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Maximal Lactate Steady State and Lactate Thresholds in the Cross-Country Skiing Sub-Technique Double Poling.",
+          "doi": "10.70252/cgkz2153",
+          "pmid": "30899341",
+          "year": "2019",
+          "title_screening": "already_registered",
+          "canonical": "LA03",
+          "reason": "Bibliografischer Treffer im Startregister."
+        }
+      ]
+    },
+    {
+      "strand": "Messverfahren",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22Lactate+Scout%22+OR+TITLE_ABS%3A%22handheld+blood+lactate%22%29+AND+%28TITLE_ABS%3Avalidity+OR+TITLE_ABS%3Aprecision+OR+TITLE_ABS%3Areliability%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"Lactate Scout\" OR TITLE_ABS:\"handheld blood lactate\") AND (TITLE_ABS:validity OR TITLE_ABS:precision OR TITLE_ABS:reliability) AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 7,
+      "records": [
+        {
+          "title": "Validity and Reliability of Portable Blood Lactate Analyzers: A Systematic Review with COSMIN and GRADE Assessment.",
+          "doi": "10.1186/s40798-026-00979-1",
+          "pmid": "41876912",
+          "year": "2026",
+          "title_screening": "already_registered",
+          "canonical": "LA05",
+          "reason": "Bibliografischer Treffer im Startregister."
+        },
+        {
+          "title": "Precision and accuracy of four handheld blood lactate analyzers across low to high exercise intensities.",
+          "doi": "10.1007/s00421-024-05572-6",
+          "pmid": "39158591",
+          "year": "2024",
+          "title_screening": "already_registered",
+          "canonical": "LA04",
+          "reason": "Bibliografischer Treffer im Startregister."
+        },
+        {
+          "title": "Reliability of the Lactate Scout point-of-care instrument for the determination of blood L-lactate concentration in sheep.",
+          "doi": "10.1111/vcp.12288",
+          "pmid": "26348369",
+          "year": "2015",
+          "title_screening": "excluded",
+          "canonical": "MED-26348369",
+          "reason": "Veterinärmedizin, Messungen bei Schafen."
+        },
+        {
+          "title": "Evaluation of 4 point-of-care units for the determination of blood l-lactate concentration in cattle.",
+          "doi": "10.1111/jvim.12204",
+          "pmid": "24118259",
+          "year": "2013",
+          "title_screening": "excluded",
+          "canonical": "MED-24118259",
+          "reason": "Veterinärmedizin, Untersuchung von Rindern."
+        },
+        {
+          "title": "Reliability and accuracy of six hand-held blood lactate analysers.",
+          "doi": null,
+          "pmid": "25729309",
+          "year": "2015",
+          "title_screening": "queued",
+          "canonical": "MED-25729309",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        }
+      ]
+    },
+    {
+      "strand": "Erholung und Gesundheit",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiers%22+OR+TITLE_ABS%3A%22Nordic+skiers%22%29+AND+%28TITLE_ABS%3A%22heart+rate+variability%22+OR+TITLE_ABS%3A%22menstrual+cycle%22+OR+TITLE_ABS%3Asleep+OR+TITLE_ABS%3A%22energy+availability%22%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiers\" OR TITLE_ABS:\"Nordic skiers\") AND (TITLE_ABS:\"heart rate variability\" OR TITLE_ABS:\"menstrual cycle\" OR TITLE_ABS:sleep OR TITLE_ABS:\"energy availability\") AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 22,
+      "records": [
+        {
+          "title": "Seasonal changes in energy intake and emerging indicators of energy availability in young elite Nordic skiers.",
+          "doi": "10.1080/15502783.2026.2634184",
+          "pmid": "41723749",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41723749",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "The Prevalence of Low Energy Availability in Cross-Country Skiers during the Annual Cycle.",
+          "doi": "10.3390/nu16142279",
+          "pmid": "39064722",
+          "year": "2024",
+          "title_screening": "queued",
+          "canonical": "MED-39064722",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Comparison of cheese with and without &lt;i&gt;Propionibacterium freudenreichii&lt;/i&gt; subsp. &lt;i&gt;shermanii&lt;/i&gt; LMGT 2951 on off-season muscle strength and VO&lt;sub&gt;2&lt;/sub&gt; max development in Nordic skiers: a randomized clinical trial.",
+          "doi": "10.1080/15502783.2025.2566373",
+          "pmid": "41025612",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-41025612",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "The Effect of an Educational Session to Improve Knowledge About the Menstrual Cycle and Hormonal Contraceptives in Junior Endurance Athletes and Their Coaches: An Exploratory Investigation.",
+          "doi": "10.1123/ijspp.2025-0068",
+          "pmid": "40945928",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-40945928",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Carbohydrate intake in young female cross-country skiers is lower than recommended and affects competition performance.",
+          "doi": "10.3389/fspor.2023.1196659",
+          "pmid": "37528891",
+          "year": "2023",
+          "title_screening": "already_registered",
+          "canonical": "M14",
+          "reason": "Bibliografischer Treffer im Startregister."
+        }
+      ]
+    },
+    {
+      "strand": "Techniklernen",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiing%22+OR+TITLE_ABS%3A%22cross-country+skiers%22%29+AND+%28TITLE_ABS%3A%22motor+learning%22+OR+TITLE_ABS%3Afeedback+OR+TITLE_ABS%3Abiomechanics%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiing\" OR TITLE_ABS:\"cross-country skiers\") AND (TITLE_ABS:\"motor learning\" OR TITLE_ABS:feedback OR TITLE_ABS:biomechanics) AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 23,
+      "records": [
+        {
+          "title": "Olympic Snow Sports: Current Insights and Future Directions for Milano Cortina 2026 and Beyond.",
+          "doi": "10.1111/sms.70222",
+          "pmid": "41653367",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41653367",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Mind-Muscle-Environment Interactions: Psychophysiological Determinants of Optimal Pacing in Olympic Winter Endurance Sports.",
+          "doi": "10.1111/sms.70215",
+          "pmid": "41665741",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41665741",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Contribution and effectiveness of ski and pole forces in selected roller skiing techniques on treadmill at moderate inclines.",
+          "doi": "10.3389/fspor.2023.948919",
+          "pmid": "36909359",
+          "year": "2023",
+          "title_screening": "queued",
+          "canonical": "MED-36909359",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Biomechanics of Double Poling in Paralympic Cross-Country Skiing-A Cross-Sectional Study Comparing the Standing and Sitting Positions in Healthy Male Subjects.",
+          "doi": "10.3390/medicina58020201",
+          "pmid": "35208527",
+          "year": "2022",
+          "title_screening": "queued",
+          "canonical": "MED-35208527",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Best-Practice Training Characteristics Within Olympic Endurance Sports as Described by Norwegian World-Class Coaches.",
+          "doi": "10.1186/s40798-025-00848-3",
+          "pmid": "40278987",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-40278987",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        }
+      ]
+    },
+    {
+      "strand": "Last und Planung",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiing%22+OR+TITLE_ABS%3A%22Nordic+skiing%22%29+AND+%28TITLE_ABS%3Aperiodization+OR+TITLE_ABS%3Atapering+OR+TITLE_ABS%3A%22training+load%22%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiing\" OR TITLE_ABS:\"Nordic skiing\") AND (TITLE_ABS:periodization OR TITLE_ABS:tapering OR TITLE_ABS:\"training load\") AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 16,
+      "records": [
+        {
+          "title": "Quantitative Analysis of Annual Training Volume and Periodization Patterns in Elite Female Cross-Country Skiers Using GPS Monitoring: A Three-Athlete Case Study.",
+          "doi": "10.3390/bioengineering13040429",
+          "pmid": "42072223",
+          "year": "2026",
+          "title_screening": "duplicate",
+          "canonical": "MED-42072223",
+          "reason": "Identische PMID/DOI oder übereinstimmender normalisierter Titel. Zeitschriftenfassung vorrangig."
+        },
+        {
+          "title": "Training type and vascular health in young male athletes: A comparison of brachial and central blood pressure and pulse wave velocity",
+          "doi": "10.21203/rs.3.rs-10968670/v1",
+          "pmid": null,
+          "year": "2026",
+          "title_screening": "excluded",
+          "canonical": "10.21203/rs.3.rs-10968670/v1",
+          "reason": "Vaskulärer Populationsvergleich ohne Bezug zur gesuchten Trainingssteuerung."
+        },
+        {
+          "title": "Relationship between methods of monitoring training load and physiological indicators changes during 4 weeks cross-country skiing altitude training.",
+          "doi": "10.1371/journal.pone.0295960",
+          "pmid": "38100499",
+          "year": "2023",
+          "title_screening": "already_registered",
+          "canonical": "M18",
+          "reason": "Bibliografischer Treffer im Startregister."
+        },
+        {
+          "title": "The Training Characteristics of World-Class Male Long-Distance Cross-Country Skiers.",
+          "doi": "10.3389/fspor.2021.641389",
+          "pmid": "33718870",
+          "year": "2021",
+          "title_screening": "already_registered",
+          "canonical": "XC06",
+          "reason": "Bibliografischer Treffer im Startregister."
+        },
+        {
+          "title": "Best-Practice Training Characteristics Within Olympic Endurance Sports as Described by Norwegian World-Class Coaches.",
+          "doi": "10.1186/s40798-025-00848-3",
+          "pmid": "40278987",
+          "year": "2025",
+          "title_screening": "duplicate",
+          "canonical": "MED-40278987",
+          "reason": "Identische PMID/DOI oder übereinstimmender normalisierter Titel. Zeitschriftenfassung vorrangig."
+        }
+      ]
+    },
+    {
+      "strand": "Vorwärtssuche LA03",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/30899341/citations?format=json&pageSize=5",
+      "query": null,
+      "count": 7,
+      "records": [
+        {
+          "title": "Lactate Thresholds and Performance in Young Cross-Country Skiers Before and After the Competitive Season: Insights from Laboratory Roller-Ski Tests in Normoxic and Hypoxic Conditions.",
+          "doi": null,
+          "pmid": "41150479",
+          "year": 2025,
+          "title_screening": "queued",
+          "canonical": "MED-41150479",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Evaluating plasma lactate running speed derived parameters for predicting maximal lactate steady state in teaching horses.",
+          "doi": null,
+          "pmid": "39956344",
+          "year": 2025,
+          "title_screening": "excluded",
+          "canonical": "MED-39956344",
+          "reason": "Pferderennen, keine menschlichen Athleten."
+        },
+        {
+          "title": "Intensity and Pace Calculation of Ultra Short Race Pace Training (USRPT) in Swimming-Take-Home Messages and Statements for Swimming Coaches.",
+          "doi": null,
+          "pmid": "39195603",
+          "year": 2024,
+          "title_screening": "excluded",
+          "canonical": "MED-39195603",
+          "reason": "Schwimm-Pacing bei ultraschnellem Wiederholungstraining, keine skispezifische Kalibrierung."
+        },
+        {
+          "title": "Comparison of lactate measurements from earlobe and fingertip capillary blood using Biosen S-Line and lactate scout analyzers.",
+          "doi": null,
+          "pmid": "39164441",
+          "year": 2025,
+          "title_screening": "queued",
+          "canonical": "MED-39164441",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Predicting maximal lactate steady state from lactate thresholds determined using methods based on an incremental exercise test in beagle dogs: A study using univariate and multivariate approaches.",
+          "doi": null,
+          "pmid": "36081252",
+          "year": 2022,
+          "title_screening": "excluded",
+          "canonical": "MED-36081252",
+          "reason": "Hunde, keine menschlichen Athleten."
+        }
+      ]
+    },
+    {
+      "strand": "Rückwärtssuche LA03",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/MED/30899341/references?format=json&pageSize=5",
+      "query": null,
+      "count": 43,
+      "records": [
+        {
+          "title": "Muscle as a consumer of lactate.",
+          "doi": null,
+          "pmid": "10776895",
+          "year": 2000,
+          "title_screening": "queued",
+          "canonical": "MED-10776895",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Dependence of the maximal lactate steady state on the motor pattern of exercise.",
+          "doi": null,
+          "pmid": "11375880",
+          "year": 2001,
+          "title_screening": "queued",
+          "canonical": "MED-11375880",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Physiological determinants of cross-country ski racing performance.",
+          "doi": null,
+          "pmid": "11474341",
+          "year": 2001,
+          "title_screening": "queued",
+          "canonical": "MED-11474341",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Lactate release, concentration in blood, and apparent distribution volume after intense bicycling.",
+          "doi": null,
+          "pmid": "11492954",
+          "year": 2001,
+          "title_screening": "queued",
+          "canonical": "MED-11492954",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Methods to determine aerobic endurance.",
+          "doi": null,
+          "pmid": "12196030",
+          "year": 2002,
+          "title_screening": "queued",
+          "canonical": "MED-12196030",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        }
+      ]
+    },
+    {
+      "strand": "Kälte und Atemwege",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiers%22+OR+TITLE_ABS%3A%22Nordic+skiing%22%29+AND+%28TITLE_ABS%3Acold+OR+TITLE_ABS%3Abronchoconstriction%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiers\" OR TITLE_ABS:\"Nordic skiing\") AND (TITLE_ABS:cold OR TITLE_ABS:bronchoconstriction) AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 37,
+      "records": [
+        {
+          "title": "Immunity, Inflammation and Airway Dysfunction in Elite Cross-Country Skiers and Ice Hockey Players: A Systematic Review.",
+          "doi": "10.1111/sms.70046",
+          "pmid": "40223161",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-40223161",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Cross-country skiers often experience respiratory symptoms during and after exercise but have a low prevalence of prolonged cough.",
+          "doi": "10.1136/bmjsem-2022-001502",
+          "pmid": "37342789",
+          "year": "2023",
+          "title_screening": "queued",
+          "canonical": "MED-37342789",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "A Review of Central and Peripheral Limitations to Endurance Exercise Performance on the Road to the Milano-Cortina 2026 Olympics.",
+          "doi": "10.1111/sms.70266",
+          "pmid": "41845944",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41845944",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Thermoregulatory responses in elite cross-country skiers during international competitions and training.",
+          "doi": "10.3389/fphys.2025.1709093",
+          "pmid": "41458384",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-41458384",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Elite skiers' experiences of heat- and moisture-exchanging devices and training and competition in the cold: A qualitative survey.",
+          "doi": "10.1002/hsr2.1511",
+          "pmid": "37662540",
+          "year": "2023",
+          "title_screening": "queued",
+          "canonical": "MED-37662540",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        }
+      ]
+    },
+    {
+      "strand": "Überlastung und Verletzung",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiing%22+OR+TITLE_ABS%3A%22cross-country+skiers%22%29+AND+%28TITLE_ABS%3Ainjury+OR+TITLE_ABS%3Aoveruse%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiing\" OR TITLE_ABS:\"cross-country skiers\") AND (TITLE_ABS:injury OR TITLE_ABS:overuse) AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 74,
+      "records": [
+        {
+          "title": "Fracture distribution in cross-country skiing accidents: an observational study from the Swedish Fracture Register.",
+          "doi": "10.1007/s00590-026-04695-0",
+          "pmid": "41787113",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41787113",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Winter Sports Injuries in Elite Female Athletes: A Narrative Review.",
+          "doi": "10.3390/ijerph20105815",
+          "pmid": "37239544",
+          "year": "2023",
+          "title_screening": "queued",
+          "canonical": "MED-37239544",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Lower Extremity Injuries in Elite Snowsport Athletes: A Retrospective Survey.",
+          "doi": "10.3390/jcm15020695",
+          "pmid": "41598634",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41598634",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Strength and Speed Training Practices for Olympic Endurance Sports: Insights From World-Class Coaches.",
+          "doi": "10.1519/jsc.0000000000005447",
+          "pmid": "42172297",
+          "year": "2026",
+          "title_screening": "excluded",
+          "canonical": "MED-42172297",
+          "reason": "Trainerbefragung zu Kraft und Schnelligkeit, keine Verletzungsendpunkte für diesen Suchstrang."
+        },
+        {
+          "title": "The fine line between deliberate play and deliberate practice within talent development in grassroots football: evidence from a one-year longitudinal case study.",
+          "doi": "10.3389/fspor.2026.1799878",
+          "pmid": "42125639",
+          "year": "2026",
+          "title_screening": "duplicate",
+          "canonical": "MED-42125639",
+          "reason": "Identische PMID/DOI oder übereinstimmender normalisierter Titel. Zeitschriftenfassung vorrangig."
+        }
+      ]
+    },
+    {
+      "strand": "Verpflegung und Langdistanz",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiing%22+OR+TITLE_ABS%3A%22double+poling%22%29+AND+%28TITLE_ABS%3Afueling+OR+TITLE_ABS%3A%22carbohydrate+intake%22+OR+TITLE_ABS%3Ahydration%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiing\" OR TITLE_ABS:\"double poling\") AND (TITLE_ABS:fueling OR TITLE_ABS:\"carbohydrate intake\" OR TITLE_ABS:hydration) AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 6,
+      "records": [
+        {
+          "title": "Carbohydrate Storage and Supplementation Strategies for Peak Performance in Cross-Country Skiing.",
+          "doi": "10.1111/sms.70242",
+          "pmid": "41755452",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41755452",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "[Effects of different fat-tocarbohydrate ratio in crosscountry skiers on time \"until exhaustion\" and competitive performance].",
+          "doi": "10.33029/0042-8833-2025-94-6-118-128",
+          "pmid": "41543065",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-41543065",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Effects of supplementing with an 18% carbohydrate-hydrogel drink versus a placebo during whole-body exercise in -5 °C with elite cross-country ski athletes: a crossover study.",
+          "doi": "10.1186/s12970-019-0317-4",
+          "pmid": "31655603",
+          "year": "2019",
+          "title_screening": "queued",
+          "canonical": "MED-31655603",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Carbohydrate Loading Followed by High Carbohydrate Intake During Prolonged Physical Exercise and Its Impact on Glucose Control in Individuals With Diabetes Type 1-An Exploratory Study.",
+          "doi": "10.3389/fendo.2019.00571",
+          "pmid": "31496994",
+          "year": "2019",
+          "title_screening": "excluded",
+          "canonical": "MED-31496994",
+          "reason": "Spezifische klinische Diabetes-Typ-1-Population außerhalb der allgemeinen Verpflegungsfrage."
+        },
+        {
+          "title": "Evaluation of glucose control when a new strategy of increased carbohydrate supply is implemented during prolonged physical exercise in type 1 diabetes.",
+          "doi": "10.1007/s00421-015-3251-4",
+          "pmid": "26341091",
+          "year": "2015",
+          "title_screening": "excluded",
+          "canonical": "MED-26341091",
+          "reason": "Spezifische klinische Diabetes-Typ-1-Population außerhalb der allgemeinen Verpflegungsfrage."
+        }
+      ]
+    },
+    {
+      "strand": "Adaptive Planung und Wearables",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiing%22+OR+TITLE_ABS%3A%22Nordic+skiing%22%29+AND+%28TITLE_ABS%3A%22machine+learning%22+OR+TITLE_ABS%3Awearable+OR+TITLE_ABS%3A%22adaptive+training%22%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiing\" OR TITLE_ABS:\"Nordic skiing\") AND (TITLE_ABS:\"machine learning\" OR TITLE_ABS:wearable OR TITLE_ABS:\"adaptive training\") AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 13,
+      "records": [
+        {
+          "title": "Real-time thermoregulatory and cardiovascular monitoring of non-acclimatised mountaineers in extreme cold: a 10-day field expedition study.",
+          "doi": "10.3389/fphys.2026.1727132",
+          "pmid": "41847342",
+          "year": "2026",
+          "title_screening": "excluded",
+          "canonical": "MED-41847342",
+          "reason": "Bergexpedition ohne skispezifische Population."
+        },
+        {
+          "title": "A Machine Learning-Based Model for Comprehensive Assessment and Classification of Cross-Country Skiing Athletes.",
+          "doi": "10.1080/02701367.2025.2559379",
+          "pmid": "41071958",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41071958",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Quantitative Analysis of Annual Training Volume and Periodization Patterns in Elite Female Cross-Country Skiers Using GPS Monitoring: A Three-Athlete Case Study.",
+          "doi": "10.3390/bioengineering13040429",
+          "pmid": "42072223",
+          "year": "2026",
+          "title_screening": "duplicate",
+          "canonical": "MED-42072223",
+          "reason": "Identische PMID/DOI oder übereinstimmender normalisierter Titel. Zeitschriftenfassung vorrangig."
+        },
+        {
+          "title": "Micro-pacing and performance determinants in skiathlon: linking speed profiles, sub-technique selection, and cycle characteristics.",
+          "doi": "10.1186/s13102-026-01547-6",
+          "pmid": "41566553",
+          "year": "2026",
+          "title_screening": "queued",
+          "canonical": "MED-41566553",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Optically Non-Contact Cross-Country Skiing Action Recognition Based on Key-Point Collaborative Estimation and Motion Feature Extraction.",
+          "doi": "10.3390/s23073639",
+          "pmid": "37050699",
+          "year": "2023",
+          "title_screening": "queued",
+          "canonical": "MED-37050699",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        }
+      ]
+    },
+    {
+      "strand": "Höhe und Tapering",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28TITLE_ABS%3A%22cross-country+skiers%22+OR+TITLE_ABS%3A%22cross-country+skiing%22%29+AND+%28TITLE_ABS%3Aaltitude+OR+TITLE_ABS%3Atapering%29+AND+FIRST_PDATE%3A%5B1900-01-01+TO+2026-11-26%5D&format=json&pageSize=5&resultType=lite",
+      "query": "(TITLE_ABS:\"cross-country skiers\" OR TITLE_ABS:\"cross-country skiing\") AND (TITLE_ABS:altitude OR TITLE_ABS:tapering) AND FIRST_PDATE:[1900-01-01 TO 2026-11-26]",
+      "count": 50,
+      "records": [
+        {
+          "title": "Artificially induced altitudes aerobic and anaerobic performance differences on double-poling ergometer in elite young cross-country skiers",
+          "doi": "10.12688/f1000research.166884.1",
+          "pmid": null,
+          "year": "2025",
+          "title_screening": "duplicate",
+          "canonical": "MED-41312211",
+          "reason": "Identische PMID/DOI oder übereinstimmender normalisierter Titel. Zeitschriftenfassung vorrangig."
+        },
+        {
+          "title": "Artificially induced altitudes aerobic and anaerobic performance differences on double-poling ergometer in elite young cross-country skiers.",
+          "doi": "10.12688/f1000research.166884.2",
+          "pmid": "41312211",
+          "year": "2025",
+          "title_screening": "queued",
+          "canonical": "MED-41312211",
+          "reason": "Titel für eine Abstract- und anschließend ggf. Volltextprüfung zum dokumentierten Suchstrang zurückgestellt."
+        },
+        {
+          "title": "Artificially induced altitudes aerobic and anaerobic performance differences on double-poling ergometer in elite young cross-country skiers",
+          "doi": "10.12688/f1000research.166884.2",
+          "pmid": null,
+          "year": "2025",
+          "title_screening": "duplicate",
+          "canonical": "MED-41312211",
+          "reason": "Identische PMID/DOI oder übereinstimmender normalisierter Titel. Zeitschriftenfassung vorrangig."
+        },
+        {
+          "title": "Relationship between methods of monitoring training load and physiological indicators changes during 4 weeks cross-country skiing altitude training.",
+          "doi": "10.1371/journal.pone.0295960",
+          "pmid": "38100499",
+          "year": "2023",
+          "title_screening": "already_registered",
+          "canonical": "M18",
+          "reason": "Bibliografischer Treffer im Startregister."
+        },
+        {
+          "title": "A Review of Central and Peripheral Limitations to Endurance Exercise Performance on the Road to the Milano-Cortina 2026 Olympics.",
+          "doi": "10.1111/sms.70266",
+          "pmid": "41845944",
+          "year": "2026",
+          "title_screening": "duplicate",
+          "canonical": "MED-41845944",
+          "reason": "Identische PMID/DOI oder übereinstimmender normalisierter Titel. Zeitschriftenfassung vorrangig."
+        }
+      ]
+    }
+  ],
+  "external_access": [
+    {
+      "database": "Originaljournale",
+      "query": "LA03 und LA07 nach exaktem Titel bzw. DOI",
+      "status": "Originalseite und Abstract geprüft.",
+      "urls": [
+        "https://intjexersci.com/ijes/vol12/iss2/2/",
+        "https://www.germanjournalsportsmedicine.com/current-issue/online-publications/lactate-thresholds-in-sports-medicine-an-updated-physiological-perspective-on-endurance-exercise"
+      ]
+    },
+    {
+      "database": "Hochschulrepositorium JYX (Universität Jyväskylä)",
+      "query": "Kettunen, energy availability and cross-country skiers, identifizierter PDF-Eintrag",
+      "url": "https://jyx.jyu.fi/bitstream/handle/123456789/75935/1/kettunenym.pdf",
+      "status": "Direktabruf HTTP 503. Nicht als gelesener oder bestätigter Volltext gezählt."
+    },
+    {
+      "database": "Google Scholar",
+      "query": "\"double poling\" \"maximal lactate steady state\"",
+      "url": "https://scholar.google.com/scholar?q=%22double+poling%22+%22maximal+lactate+steady+state%22",
+      "status": "Direktabruf HTTP 403. Keine Trefferzahl, keine aus Scholar übernommenen Daten. Zitationssuche als Ersatz bei Europe PMC."
+    },
+    {
+      "database": "SPORTDiscus, Scopus, Web of Science",
+      "status": "Institutioneller Vollzugang in dieser Recherche nicht nachgewiesen. Keine Suche oder Treffer aus diesen Indizes gezählt."
+    },
+    {
+      "database": "International Journal of Exercise Science",
+      "query": "LA03 · DOI 10.70252/CGKZ2153 · Verlags-PDF",
+      "url": "https://intjexersci.com/files/ijes/vol12/iss2/2.pdf",
+      "status": "Alle zwölf Seiten gelesen. Tabellen 1–2 und Abbildungen 1–3 gerendert geprüft. Volltextextraktion im Quelleneintrag dokumentiert."
+    }
+  ]
+}

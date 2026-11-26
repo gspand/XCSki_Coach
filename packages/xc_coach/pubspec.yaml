@@ -1,0 +1,27 @@
+name: xc_coach
+description: Langlaufplanung, Trainingsdaten und Coaching-Oberflächen aus GIULIA.
+version: 0.1.0
+publish_to: none
+resolution: workspace
+environment:
+  sdk: ^3.12.2
+dependencies:
+  flutter:
+    sdk: flutter
+  crypto: ^3.0.7
+  file_selector: ^1.1.0
+  fit_sdk: 0.3.0
+  http: ^1.2.0
+  pdf: ^3.11.1
+  meta: ^1.17.0
+  path_provider: ^2.1.5
+  share_plus: ^10.1.4
+  sqlite3: ^2.9.4
+  url_launcher: ^6.3.3
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/fonts/
