@@ -96,6 +96,30 @@ void main() {
       expect(HealthMeasure.cycle.series(a, end), everyElement(isNull));
     },
   );
+  testWidgets(
+    'dashboard card order and visibility are saved only for the selected athlete',
+    (tester) async {
+      final store = CoachStore(GiuliaDatabase.inMemory())..createProfiles();
+      addTearDown(store.db.dispose);
+      await tester.pumpWidget(MaterialApp(home: CoachHome(store: store)));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byTooltip('Übersicht anpassen'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.byTooltip('Nach oben').last);
+      await tester.pumpAndSettle();
+      await tester.tap(find.byType(Checkbox).last);
+      await tester.tap(find.text('Speichern'));
+      await tester.pumpAndSettle();
+      final jan = GarminArchive(store, 'own-athlete');
+      expect(jan.setting('dashboardOrder'), 'training,garmin,recovery');
+      expect(jan.setting('dashboardHidden'), 'recovery');
+      expect(
+        GarminArchive(store, 'karina-puercher').setting('dashboardOrder'),
+        isNull,
+      );
+      await tester.pumpWidget(const SizedBox());
+    },
+  );
   final path = Platform.environment['XC_PREVIEW_ARCHIVE'];
   testWidgets(
     'real archive renders both dashboards and opens the correct planning day',

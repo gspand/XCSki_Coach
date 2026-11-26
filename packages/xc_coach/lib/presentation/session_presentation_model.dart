@@ -107,8 +107,13 @@ class SessionPresentationModel {
     final strokePwr = ext.workPhaseAveragePowerWatt != null
         ? '${ext.workPhaseAveragePowerWatt!.toStringAsFixed(0)} W'
         : null;
+    final cadenceUnit = switch (session.modality) {
+      XcModality.cycling => 'U/min',
+      XcModality.ercolinaDoublePoling => CanonicalTerminology.unitStrokesPerMin,
+      _ => '/min',
+    };
     final cadence = ext.strokeOrCadenceRate != null
-        ? '${ext.strokeOrCadenceRate!.toStringAsFixed(0)} ${CanonicalTerminology.unitStrokesPerMin}'
+        ? '${ext.strokeOrCadenceRate!.toStringAsFixed(0)} $cadenceUnit'
         : null;
     final dist = session.distanceKm != null
         ? '${session.distanceKm!.toStringAsFixed(1)} km'

@@ -25,6 +25,14 @@ import '../design_system.dart';
 import '../ercolina/session_inspector_screen.dart';
 import '../session/session_report_screen.dart';
 
+String _recordedDuration(int seconds) {
+  final h = seconds ~/ 3600;
+  final m = (seconds % 3600) ~/ 60;
+  final s = seconds % 60;
+  if (h > 0) return '${h} h ${m} min ${s} s';
+  return m > 0 ? '${m} min ${s} s' : '${s} s';
+}
+
 class UnifiedAnalysisScreen extends StatelessWidget {
   const UnifiedAnalysisScreen({
     super.key,
@@ -209,7 +217,7 @@ class _UnifiedSessionRow extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '${model.training.durationMinutes} min',
+                      _recordedDuration(session.movingTimeSeconds),
                       style: text.labelMedium?.copyWith(
                         color: GiuliaTokens.accent,
                         fontWeight: FontWeight.bold,
@@ -325,7 +333,9 @@ class _SessionDetailScreen extends StatelessWidget {
             child: Column(
               children: [
                 _DetailRow(label: 'Sportart', value: model.training.modalityLabel),
-                _DetailRow(label: 'Dauer', value: '${model.training.durationMinutes} min'),
+                _DetailRow(label: 'Gesamtdauer', value: _recordedDuration(session.durationSeconds)),
+                if (session.movingTimeSeconds != session.durationSeconds)
+                  _DetailRow(label: 'Bewegungszeit', value: _recordedDuration(session.movingTimeSeconds)),
                 if (model.training.workKiloJoule != null)
                   _DetailRow(label: 'Arbeit', value: model.training.workKiloJoule!),
                 if (model.training.averageStrokePowerWatt != null)
